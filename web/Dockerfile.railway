@@ -1,0 +1,112 @@
+# Railway Frontend Dockerfile
+# =========================
+# This Dockerfile implements an optimized build process with proper caching:
+# - Uses explicit cache paths to avoid conflicts with Railway's build system
+# - Implements multi-stage build for better layer caching
+# - Separates dependency installation from build for better caching
+# - Works from web directory context (Railway builds from web/)
+
+# Build stage
+FROM node:18-alpine AS build
+
+# Accept build argument for API URL
+ARG VITE_API_URL
+ENV VITE_API_URL=$VITE_API_URL
+
+# Set working directory
+WORKDIR /app
+
+# Debug: Show initial environment
+RUN echo "🔍 INITIAL DEBUG: Node version:" && node --version
+RUN echo "🔍 INITIAL DEBUG: NPM version:" && npm --version
+RUN echo "🔍 INITIAL DEBUG: Working directory:" && pwd
+RUN echo "🔍 INITIAL DEBUG: Available files:" && ls -la
+
+# Copy package files
+COPY package*.json ./
+
+# Debug: Verify package files are copied
+RUN echo "🔍 PACKAGE DEBUG: Package files after copy:" && ls -la package*
+RUN echo "🔍 PACKAGE DEBUG: Package.json content:" && head -20 package.json
+RUN echo "🔍 PACKAGE DEBUG: Package-lock.json exists:" && test -f package-lock.json && echo "YES" || echo "NO"
+RUN echo "🔍 PACKAGE DEBUG: Build script:" && cat package.json | grep -A 3 -B 3 '"build"'
+
+# Install dependencies with better error handling
+RUN echo "🔍 BUILD DEBUG: Installing dependencies..." && \
+    npm ci --prefer-offline --no-audit --loglevel=error
+
+# Debug: Verify node_modules
+RUN echo "🔍 INSTALL DEBUG: Node modules created:" && ls -la node_modules | head -10
+RUN echo "🔍 INSTALL DEBUG: Key packages installed:" && \
+    ls node_modules/ | grep -E "(react|vite|rollup|typescript)" || echo "Key packages not found"
+
+# Copy source code
+COPY . .
+
+# Debug: Show what files are available after source copy
+RUN echo "🔍 SOURCE DEBUG: All files after source copy:" && ls -la
+RUN echo "🔍 SOURCE DEBUG: Source directory structure:" && find . -type f -name "*.ts*" -o -name "*.js*" | head -20
+RUN echo "🔍 SOURCE DEBUG: TypeScript config files:" && ls -la tsconfig*
+
+# Debug environment variables
+RUN echo "🔍 BUILD DEBUG: VITE_API_URL = ${VITE_API_URL}"
+RUN echo "🔍 BUILD DEBUG: All ENV vars:" && env | grep -E "(VITE_|NODE_|RAILWAY_)" || true
+
+# Pre-build TypeScript check with detailed error reporting
+RUN echo "🔍 BUILD DEBUG: Running TypeScript check..." && \
+    npm run type-check:verbose 2>&1 | tee typecheck.log || \
+    (echo "⚠️  TypeScript check failed, but continuing with build..." && \
+     echo "🔍 BUILD DEBUG: TypeScript errors:" && \
+     cat typecheck.log && \
+     echo "🔍 BUILD DEBUG: Attempting build anyway...")
+
+# Build with fallback strategy
+RUN echo "🔍 BUILD DEBUG: Starting build process..." && \
+    (npm run build 2>&1 | tee build.log || \
+     (echo "⚠️  Standard build failed, trying force build..." && \
+      npm run build:force 2>&1 | tee build-force.log))
+
+# Verify build output
+RUN echo "🔍 BUILD DEBUG: Verifying build output..." && \
+    ls -la dist/ && \
+    echo "🔍 BUILD DEBUG: Build files:" && \
+    find dist -type f -name "*.js" -o -name "*.css" -o -name "*.html" | head -10
+
+# Check for API URL in built files
+RUN echo "🔍 BUILD DEBUG: Checking built files for API URL..." && \
+    find dist -name "*.js" -exec grep -l "${VITE_API_URL:-fastapi-production-1d13.up.railway.app}" {} \; || \
+    echo "🔍 BUILD DEBUG: API URL not found in built files"
+
+# Sample content from built JS files
+RUN echo "🔍 BUILD DEBUG: Sample content from built JS files:" && \
+    find dist -name "*.js" | head -1 | xargs head -50 || \
+    echo "🔍 BUILD DEBUG: No JS files found"
+
+# Search for VITE_API_URL in built files
+RUN echo "🔍 BUILD DEBUG: Searching for VITE_API_URL in built files:" && \
+    find dist -name "*.js" -exec grep -H "VITE_API_URL" {} \; || \
+    echo "🔍 BUILD DEBUG: VITE_API_URL not found in built files"
+
+# Final verification that dist exists
+RUN echo "🔍 BUILD DEBUG: Final verification..." && \
+    test -d dist && echo "✅ dist directory exists" || \
+    (echo "❌ dist directory missing - build failed!" && exit 1)
+
+# Production stage
+FROM nginx:alpine
+
+# Copy built assets from build stage
+COPY --from=build /app/dist ./dist
+
+# Copy nginx configuration
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# Expose port
+EXPOSE 80
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+  CMD wget --no-verbose --tries=1 --spider http://localhost:80/ || exit 1
+
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"] 

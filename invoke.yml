@@ -1,0 +1,19 @@
+# invoke.yml (simplified to delegate env mgmt to uv via npm scripts)
+tasks:
+  create-env:
+    - npm run env:full
+
+  update-env:
+    - npm run env:sync
+
+  dev:
+    - npm run dev
+
+  test:
+    - .venv\Scripts\python.exe -m pytest api/tests -v --cov=api --cov-report=xml
+
+  lint:
+    - .venv\Scripts\python.exe -m black --check api
+    - .venv\Scripts\python.exe -m isort --check-only api
+    - .venv\Scripts\python.exe -m flake8 api
+

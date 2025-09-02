@@ -1,0 +1,7 @@
+{
+  "rawEnvInput": "dev",
+  "targetEnv": "dev",
+  "forceLocal": false,
+  "hadProcessEnv": true,
+  "final": "http://localhost:8000/api/v1"
+}

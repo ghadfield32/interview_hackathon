@@ -1,0 +1,201 @@
+# Centralized configuration for all environments
+# This file is the single source of truth for all configurable values
+# Environment variables still override these values (12-factor app compliance)
+
+default:
+  # MLflow Configuration
+  MLFLOW_EXPERIMENT: "ml_fullstack_models"
+  MLFLOW_TRACKING_URI: "file:api/mlruns_local"
+  MLFLOW_REGISTRY_URI: "file:api/mlruns_local"
+  RETAIN_RUNS_PER_MODEL: 5
+  MLFLOW_GC_AFTER_TRAIN: 1
+
+  # Rate Limiting Configuration
+  RATE_LIMIT_WINDOW: 60
+  RATE_LIMIT_WINDOW_LIGHT: 300
+  RATE_LIMIT_LOGIN_WINDOW: 20
+  ENABLE_RATE_LIMIT: 1
+
+  # Quality Gate Thresholds
+  QUALITY_GATE_ACCURACY_THRESHOLD: 0.85
+  QUALITY_GATE_F1_THRESHOLD: 0.85
+
+  # MLOps Configuration
+  ENVIRONMENT: "development"
+  REQUIRE_MODEL_APPROVAL: 0
+  AUTO_PROMOTE_TO_PRODUCTION: 0
+  ENABLE_MODEL_COMPARISON: 1
+  MODEL_AUDIT_ENFORCEMENT: "warn"
+  MAX_MODEL_VERSIONS_PER_MODEL: 10
+
+  # JAX/XLA Configuration
+  XLA_FLAGS: "--xla_force_host_platform_device_count=1"
+  PYTENSOR_FLAGS: "device=cpu,floatX=float32"
+
+  # Model Training Flags
+  SKIP_BACKGROUND_TRAINING: 0
+  AUTO_TRAIN_MISSING: 1
+  UNIT_TESTING: 0
+
+  # Debug Flags
+  DEBUG_RATELIMIT: 0
+
+  # Security
+  ACCESS_TOKEN_EXPIRE_MINUTES: 30
+
+  # Prediction caching (Redis)
+  CACHE_ENABLED: 0           # 0 = disabled, 1 = enabled
+  CACHE_TTL_MINUTES: 60      # how long to cache predictions (in minutes)
+
+  # Canonical API base URLs (NOT auto-exposed to frontend – no VITE_ prefix)
+  # Local developer FastAPI port
+  LOCAL_VITE_API_BASE: "http://127.0.0.1:8000"
+  # Staging base (can override below; fallback -> local if not set)
+  STAGING_VITE_API_BASE: "http://127.0.0.1:8000"
+  # Railway production public FastAPI base
+  RAILWAY_VITE_API_BASE: "https://fastapi-production-1d13.up.railway.app"
+
+dev:
+  # Database
+  DATABASE_URL: "sqlite+aiosqlite:///./app.db"
+  SECRET_KEY: "dev-secret-key-change-in-production"
+  VITE_API_URL: "http://127.0.0.1:8000"
+
+  # CORS
+  ALLOWED_ORIGINS: "http://localhost:3000,http://127.0.0.1:3000"
+
+  # Redis Configuration
+  REDIS_URL: "redis://localhost:6379"
+
+  # Rate Limiting (relaxed for development)
+  RATE_LIMIT_DEFAULT: 120
+  RATE_LIMIT_CANCER: 60
+  RATE_LIMIT_LOGIN: 10
+  RATE_LIMIT_TRAINING: 5
+  RATE_LIMIT_WINDOW_LIGHT: 600
+
+  # MLflow Configuration (local development)
+  MLFLOW_TRACKING_URI: "file:api/mlruns_local"
+  MLFLOW_REGISTRY_URI: "file:api/mlruns_local"
+  RETAIN_RUNS_PER_MODEL: 10
+  MLFLOW_GC_AFTER_TRAIN: 0
+
+  # Model Training Flags (enabled for development)
+  SKIP_BACKGROUND_TRAINING: 0
+  AUTO_TRAIN_MISSING: 1
+
+  # Debug Flags (enabled for development)
+  DEBUG_RATELIMIT: 1
+
+  # Rate Limiting (disabled in development for easier testing)
+  ENABLE_RATE_LIMIT: 0
+
+  # MLOps Configuration (relaxed for development)
+  ENVIRONMENT: "development"
+  REQUIRE_MODEL_APPROVAL: 0
+  AUTO_PROMOTE_TO_PRODUCTION: 0
+  ENABLE_MODEL_COMPARISON: 1
+  MODEL_AUDIT_ENFORCEMENT: "warn"
+  MAX_MODEL_VERSIONS_PER_MODEL: 15
+  QUALITY_GATE_ACCURACY_THRESHOLD: 0.85
+  QUALITY_GATE_F1_THRESHOLD: 0.85
+
+  # Enable caching in dev, with short TTL for testing
+  CACHE_ENABLED: 1
+  CACHE_TTL_MINUTES: 5
+
+staging:
+  # Database
+  DATABASE_URL: "sqlite+aiosqlite:///./app.db"
+  SECRET_KEY: "staging-secret-key-change-in-production"
+  VITE_API_URL: "http://127.0.0.1:8000"
+  # CORS
+  ALLOWED_ORIGINS: "https://staging-frontend.railway.app"
+
+  # Redis Configuration
+  REDIS_URL: "${REDIS_URL}"
+
+  # Rate Limiting (stricter than dev)
+  RATE_LIMIT_DEFAULT: 60
+  RATE_LIMIT_CANCER: 30
+  RATE_LIMIT_LOGIN: 3
+  RATE_LIMIT_TRAINING: 2
+
+  # MLflow Configuration (staging environment)
+  MLFLOW_TRACKING_URI: "file:/data/mlruns"
+  MLFLOW_REGISTRY_URI: "file:/data/mlruns"
+
+  # Model Training Flags (enabled for self-healing)
+  SKIP_BACKGROUND_TRAINING: 0   # allow background loader
+  AUTO_TRAIN_MISSING: 1         # stub/bayesian self-train if missing
+
+  # Debug Flags (disabled in staging)
+  DEBUG_RATELIMIT: 0
+
+  # Rate Limiting (disabled in staging unless Redis is available)
+  ENABLE_RATE_LIMIT: 0
+
+  # MLOps Configuration (strict for staging)
+  ENVIRONMENT: "staging"
+  REQUIRE_MODEL_APPROVAL: 1
+  AUTO_PROMOTE_TO_PRODUCTION: 0
+  ENABLE_MODEL_COMPARISON: 1
+  MODEL_AUDIT_ENFORCEMENT: "warn"
+  MAX_MODEL_VERSIONS_PER_MODEL: 8
+  QUALITY_GATE_ACCURACY_THRESHOLD: 0.90
+  QUALITY_GATE_F1_THRESHOLD: 0.90
+
+  # Keep same defaults in staging
+  CACHE_ENABLED: 0
+  CACHE_TTL_MINUTES: 60
+
+  # Optionally override STAGING_VITE_API_BASE here if you later have a staging FastAPI URL
+  # STAGING_VITE_API_BASE: "https://your-staging-fastapi.up.railway.app"
+
+prod:
+  # Database
+  DATABASE_URL: "sqlite+aiosqlite:///./app.db"
+  SECRET_KEY: "must-come-from-env"
+
+  # adjust this for prod
+  VITE_API_URL: "https://fastapi-production-1d13.up.railway.app"
+  # CORS
+  ALLOWED_ORIGINS: "https://react-frontend-production-2805.up.railway.app"
+
+  # Redis Configuration
+  REDIS_URL: "${REDIS_URL}"
+
+  # Rate Limiting (strictest settings)
+  RATE_LIMIT_DEFAULT: 60
+  RATE_LIMIT_CANCER: 30
+  RATE_LIMIT_LOGIN: 3
+  RATE_LIMIT_TRAINING: 2
+
+  # MLflow Configuration (production environment)
+  MLFLOW_TRACKING_URI: "file:/data/mlruns"
+  MLFLOW_REGISTRY_URI: "file:/data/mlruns"
+
+  # Model Training Flags 
+  SKIP_BACKGROUND_TRAINING: 0
+  AUTO_TRAIN_MISSING: 1
+
+  # Debug Flags 
+  DEBUG_RATELIMIT: 1
+
+  # Rate Limiting (enabled in production if Redis is available)
+  ENABLE_RATE_LIMIT: 1
+
+  # MLOps Configuration (strictest for production)
+  ENVIRONMENT: "production"
+  REQUIRE_MODEL_APPROVAL: 1
+  AUTO_PROMOTE_TO_PRODUCTION: 0
+  ENABLE_MODEL_COMPARISON: 1
+  MODEL_AUDIT_ENFORCEMENT: "fail"
+  MAX_MODEL_VERSIONS_PER_MODEL: 5
+  QUALITY_GATE_ACCURACY_THRESHOLD: 0.92
+  QUALITY_GATE_F1_THRESHOLD: 0.92
+
+
+  # Generally off in prod unless toggled via env
+  CACHE_ENABLED: 0
+  CACHE_TTL_MINUTES: 60

@@ -1,0 +1,31 @@
+version: 1
+disable_existing_loggers: False
+formatters:
+  default: 
+    format: "[%(levelname).1s] %(asctime)s %(name)s ▶ %(message)s"
+handlers:
+  console:
+    class: logging.StreamHandler
+    formatter: default
+  file:
+    class: logging.FileHandler
+    filename: logs/backend.log
+    formatter: default
+loggers:
+  uvicorn.error:  
+    level: INFO
+    handlers: [console, file]
+  uvicorn.access: 
+    level: INFO
+    handlers: [console, file]
+  app:            
+    level: DEBUG
+    handlers: [console, file]
+    propagate: False
+  app.services.ml.model_service:
+    level: DEBUG
+    handlers: [console, file]
+    propagate: False
+root:
+  level: INFO
+  handlers: [console, file] 

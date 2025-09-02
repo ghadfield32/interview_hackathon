@@ -1,0 +1,19 @@
+[phases.setup]
+nixPkgs = ["nodejs-18_x", "npm-9_x"]
+
+[phases.install]
+cmds = [
+  "npm ci --prefer-offline --no-audit --loglevel=error"
+]
+
+[phases.build]
+cmds = [
+  "npm run build"
+]
+
+[start]
+cmd = "npx serve -s dist -l $PORT --no-clipboard --no-port-switching"
+
+[variables]
+NODE_ENV = "production"
+NPM_CONFIG_PRODUCTION = "false" 

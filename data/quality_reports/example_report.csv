@@ -1,0 +1,46 @@
+section,subsection,field,value,extra
+accuracy,lookup:SEASON_TYPE,status,ok (0 violations),null
+accuracy,reference_join_coverage,sample_rows,,"[{""TEAM_ID"": NaN}]"
+accuracy,reference_join_coverage,status,missing=1,null
+completeness,PLAYER_ID,nonnull_ratio,1.0,null
+completeness,PLAYER_NAME,nonnull_ratio,0.8,null
+completeness,SEASON,nonnull_ratio,1.0,null
+completeness,SEASON_TYPE,nonnull_ratio,1.0,null
+completeness,_overall,failing_columns,,"[""PLAYER_NAME""]"
+completeness,_overall,required_columns,,"[""PLAYER_ID"", ""PLAYER_NAME"", ""SEASON"", ""SEASON_TYPE""]"
+consistency,season_format,sample_rows,,"[{""PLAYER_ID"": 4, ""PLAYER_NAME"": null, ""SEASON"": ""BAD"", ""SEASON_TYPE"": ""Regular Season"", ""E_OFF_RATING"": 105.0, ""TEAM_ID"": 13.0, ""TEAM_NAME"": ""W""}]"
+consistency,season_format,violations,1,null
+consistency,season_type_allowed,violations,0,null
+consistency,team_id_name_coupling,sample_rows,,"[{""PLAYER_ID"": 3, ""PLAYER_NAME"": ""C"", ""SEASON"": ""2023-24"", ""SEASON_TYPE"": ""Playoffs"", ""E_OFF_RATING"": 108.2, ""TEAM_ID"": NaN, ""TEAM_NAME"": ""Z""}]"
+consistency,team_id_name_coupling,violations,1,null
+duplicates,_overall,has_duplicates,True,"{""duplicate_row_count"": 2, ""sample_rows"": [{""PLAYER_ID"": 1, ""PLAYER_NAME"": ""A"", ""SEASON"": ""2023-24"", ""SEASON_TYPE"": ""Regular Season"", ""E_OFF_RATING"": 110.0, ""TEAM_ID"": 10.0, ""TEAM_NAME"": ""X""}, {""PLAYER_ID"": 1, ""PLAYER_NAME"": ""A"", ""SEASON"": ""2023-24"", ""SEASON_TYPE"": ""Regular Season"", ""E_OFF_RATING"": 110.0, ""TEAM_ID"": 10.0, ""TEAM_NAME"": ""X""}]}"
+minmax,E_OFF_RATING,count,5,null
+minmax,E_OFF_RATING,max,5000.0,null
+minmax,E_OFF_RATING,mean,1086.6399999999999,null
+minmax,E_OFF_RATING,min,105.0,null
+minmax,E_OFF_RATING,std,2187.635698191086,null
+minmax,PLAYER_ID,count,5,null
+minmax,PLAYER_ID,max,4.0,null
+minmax,PLAYER_ID,mean,2.2,null
+minmax,PLAYER_ID,min,1.0,null
+minmax,PLAYER_ID,std,1.3038404810405297,null
+minmax,TEAM_ID,count,4,null
+minmax,TEAM_ID,max,13.0,null
+minmax,TEAM_ID,mean,11.0,null
+minmax,TEAM_ID,min,10.0,null
+minmax,TEAM_ID,std,1.4142135623730951,null
+nulls,E_OFF_RATING,null_count,0,"{""total_rows"": 5, ""null_pct"": 0.0}"
+nulls,PLAYER_ID,null_count,0,"{""total_rows"": 5, ""null_pct"": 0.0}"
+nulls,PLAYER_NAME,null_count,1,"{""total_rows"": 5, ""null_pct"": 0.2}"
+nulls,SEASON,null_count,0,"{""total_rows"": 5, ""null_pct"": 0.0}"
+nulls,SEASON_TYPE,null_count,0,"{""total_rows"": 5, ""null_pct"": 0.0}"
+nulls,TEAM_ID,null_count,1,"{""total_rows"": 5, ""null_pct"": 0.2}"
+nulls,TEAM_NAME,null_count,0,"{""total_rows"": 5, ""null_pct"": 0.0}"
+outliers,E_OFF_RATING,outlier_count,2,"{""pct"": 0.4, ""lower_fence"": 105.5, ""upper_fence"": 112.69999999999999}"
+outliers,_samples,sample_rows,,"[{""PLAYER_ID"": 2, ""PLAYER_NAME"": ""B"", ""SEASON"": ""2023-24"", ""SEASON_TYPE"": ""Regular Season"", ""E_OFF_RATING"": 5000.0, ""TEAM_ID"": 11.0, ""TEAM_NAME"": ""Y""}, {""PLAYER_ID"": 4, ""PLAYER_NAME"": null, ""SEASON"": ""BAD"", ""SEASON_TYPE"": ""Regular Season"", ""E_OFF_RATING"": 105.0, ""TEAM_ID"": 13.0, ""TEAM_NAME"": ""W""}]"
+uniqueness,_overall,duplicate_key_row_count,2,null
+uniqueness,_overall,has_violations,True,null
+uniqueness,_overall,primary_key_columns,,"[""PLAYER_ID"", ""SEASON"", ""SEASON_TYPE""]"
+uniqueness,_samples,sample_duplicate_keys,,"[{""PLAYER_ID"": 1, ""SEASON"": ""2023-24"", ""SEASON_TYPE"": ""Regular Season""}]"
+validity,_overall,details,,"{""errors"": [{""column"": ""SEASON"", ""error"": ""regex_fail_count=1""}, {""column"": ""E_OFF_RATING"", ""error"": ""le_fail_count=1""}]}"
+validity,_overall,status,failed,null

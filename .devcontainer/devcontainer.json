@@ -1,0 +1,63 @@
+{
+  "name": "cancer_bayes_iris_env_uv",
+  "dockerComposeFile": ["docker-compose.yml"],
+  "service": "datascience",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-renderers",
+        "nvidia.nsight-vscode-edition"
+      ],
+      "settings": {
+        "telemetry.telemetryLevel": "off",
+        "python.telemetry.enabled": false,
+        "jupyter.telemetry.enabled": false,
+        "jupyter.experiments.enabled": false,
+        "update.mode": "manual",
+        "extensions.autoUpdate": false,
+        "extensions.autoCheckUpdates": false,
+        "remote.extensionKind": {
+          "ms-python.python": ["ui"],
+          "ms-python.vscode-pylance": ["ui"],
+          "ms-toolsai.jupyter": ["ui"],
+          "ms-toolsai.jupyter-renderers": ["ui"],
+          "nvidia.nsight-vscode-edition": ["ui"]
+        },
+        "python.defaultInterpreterPath": "/app/.venv/bin/python",
+        "jupyter.interactiveWindow.textEditor.executeSelection": true,
+        "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"]
+      }
+    }
+  },
+
+  "containerEnv": {
+    "UV_PROJECT_ENVIRONMENT": "/app/.venv",
+    "NVIDIA_VISIBLE_DEVICES": "all",
+    "NVIDIA_DRIVER_CAPABILITIES": "compute,utility",
+    "CUDA_STACK": "pip-cuda",
+    "LD_PRELOAD": "/usr/lib/x86_64-linux-gnu/libjemalloc.so.2",
+    "MALLOC_ARENA_MAX": "1",
+    "MALLOC_TCACHE_MAX": "0",
+    "PYTORCH_NO_CUDA_MEMORY_CACHING": "1",
+    "XLA_PYTHON_CLIENT_PREALLOCATE": "false",
+    "XLA_PYTHON_CLIENT_MEM_FRACTION": "0.25",
+    "XLA_PYTHON_CLIENT_ALLOCATOR": "platform",
+    "PYTORCH_CUDA_ALLOC_CONF": "max_split_size_mb:512,expandable_segments:True"
+  },
+
+  "remoteEnv": {
+    "JUPYTER_ENABLE_LAB": "true",
+    "PATH": "${containerEnv:PATH}:/usr/local/cuda/bin"
+  },
+
+  "postCreateCommand": "/bin/sh -lc 'set -e; find .devcontainer -maxdepth 1 -name \"*.sh\" -exec sed -i \"s/\\r$//\" {} \\;; chmod +x .devcontainer/*.sh; bash .devcontainer/opening.sh'",
+  "postStartCommand": "/bin/sh -lc 'set -e; find .devcontainer -maxdepth 1 -name \"*.sh\" -exec sed -i \"s/\\r$//\" {} \\;; chmod +x .devcontainer/*.sh; bash .devcontainer/opening.sh --verify-only || true'"
+}
+
+
