@@ -1,0 +1,55 @@
+{
+  "substitutions": 46,
+  "first_actions": 15,
+  "auto_outs": 16,
+  "always_five_fixes": 1,
+  "total_players": 21,
+  "offenders": 4,
+  "tolerance_seconds": 120,
+  "traditional": {
+    "lineup_states": 1016,
+    "unique_lineups_5": 7,
+    "unique_lineups_all": 26,
+    "flag_types": {
+      "lineup_size_deviation": 639,
+      "action_by_non_lineup_player": 195,
+      "sub_in_player_already_in_lineup": 21,
+      "sub_out_player_not_in_lineup": 18
+    },
+    "by_team_5": {
+      "DAL": 3,
+      "HOU": 4
+    },
+    "by_team_all": {
+      "DAL": 11,
+      "HOU": 15
+    },
+    "by_size_all": {
+      "3": 4,
+      "4": 13,
+      "5": 7,
+      "6": 2
+    }
+  },
+  "enhanced": {
+    "lineup_states": 122,
+    "unique_lineups_5": 47,
+    "flag_totals": {
+      "missing_sub_in": 15,
+      "inactivity_periods": 52,
+      "first_action_events": 15,
+      "auto_out_events": 16,
+      "lineup_violations": 16
+    },
+    "by_team_5": {
+      "DAL": 24,
+      "HOU": 23
+    }
+  },
+  "minutes_compare_rows": 21,
+  "minutes_compare_basic_within10": 3,
+  "minutes_compare_total_with_box": 21,
+  "traditional_vs_enhanced": {},
+  "enhanced_flags_summary": {},
+  "accuracy_metrics": {}
+}

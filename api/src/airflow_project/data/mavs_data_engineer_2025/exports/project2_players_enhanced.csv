@@ -1,0 +1,20 @@
+Player ID,Player Name,Team,Offensive possessions played,Defensive possessions played,Opponent rim field goal percentage when player is on the court,Opponent rim field goal percentage when player is off the court,Opponent rim field goal percentage on/off difference (on-off)
+203076,Anthony Davis,DAL,88,97,0.55,0.143,0.407
+1629655,Daniel Gafford,DAL,100,98,0.368,0.625,-0.257
+203957,Dante Exum,DAL,26,29,0.5,0.435,0.065
+202691,Klay Thompson,DAL,115,117,0.435,0.5,-0.065
+202681,Kyrie Irving,DAL,101,110,0.476,0.333,0.143
+1631108,Max Christie,DAL,71,76,0.286,0.615,-0.33
+1630230,Naji Marshall,DAL,63,71,0.333,0.583,-0.25
+1629023,P.J. Washington,DAL,55,54,0.636,0.312,0.324
+203915,Spencer Dinwiddie,DAL,46,53,0.5,0.421,0.079
+1628988,Aaron Holiday,HOU,18,19,1.0,0.667,0.333
+1630578,Alperen Sengun,HOU,108,99,0.714,0.6,0.114
+1641708,Amen Thompson,HOU,102,97,0.692,0.667,0.026
+1641715,Cam Whitmore,HOU,62,63,0.75,0.636,0.114
+1628415,Dillon Brooks,HOU,86,77,0.615,0.833,-0.218
+1630256,Jae'Sean Tate,HOU,23,23,0.6,0.714,-0.114
+1630224,Jalen Green,HOU,105,99,0.692,0.667,0.026
+1642263,Reed Sheppard,HOU,30,27,0.6,0.714,-0.114
+203500,Steven Adams,HOU,70,69,0.75,0.636,0.114
+1631106,Tari Eason,HOU,101,92,0.667,0.75,-0.083

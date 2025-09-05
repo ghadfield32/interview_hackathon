@@ -1,1 +1,21 @@
-# Astro Runtime includes the following pre-installed providers packages: https://www.astronomer.io/docs/astro/runtime-image-architecture#provider-packages
+# path: api/src/airflow_project/requirements.txt
+# Minimal requirements for Airflow worker containers
+# Core data processing
+pandas==2.2.2
+numpy==1.26.4
+
+# High-performance analytics
+duckdb==0.10.3
+
+# Data formats and I/O
+pyarrow==15.0.2
+
+# Configuration management  
+python-dotenv==1.0.1
+
+# Data quality and validation
+tabulate==0.9.0
+scipy==1.11.4
+
+# Development utilities
+tqdm==4.67.1

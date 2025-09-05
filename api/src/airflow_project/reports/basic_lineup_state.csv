@@ -1,0 +1,1013 @@
+period,pbp_order,abs_time,team_id,team_abbrev,lineup_size,lineup_player_ids_json,lineup_player_names_json,event_desc
+1,2,0.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Jump Ball Gafford vs. Eason: Tip to Washington
+1,2,0.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Jump Ball Gafford vs. Eason: Tip to Washington
+1,3,16.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Gafford 1' Alley Oop Dunk (2 PTS) (Davis 1 AST)
+1,3,16.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Gafford 1' Alley Oop Dunk (2 PTS) (Davis 1 AST)
+1,4,37.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Thompson 3PT Jump Shot (3 PTS) (Eason 1 AST)
+1,4,37.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Thompson 3PT Jump Shot (3 PTS) (Eason 1 AST)
+1,5,51.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Thompson 24' 3PT Jump Shot
+1,5,51.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Thompson 24' 3PT Jump Shot
+1,6,54.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Thompson REBOUND (Off:0 Def:1)
+1,6,54.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Thompson REBOUND (Off:0 Def:1)
+1,7,73.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Sengun 1' Driving Layup
+1,7,73.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Sengun 1' Driving Layup
+1,8,75.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Davis REBOUND (Off:0 Def:1)
+1,8,75.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Davis REBOUND (Off:0 Def:1)
+1,9,78.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Washington 1' Running Dunk (2 PTS) (Davis 2 AST)
+1,9,78.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Washington 1' Running Dunk (2 PTS) (Davis 2 AST)
+1,10,92.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Thompson 3PT Jump Shot
+1,10,92.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Thompson 3PT Jump Shot
+1,11,93.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Thompson REBOUND (Off:1 Def:1)
+1,11,93.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Thompson REBOUND (Off:1 Def:1)
+1,12,101.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Eason 7' Step Back Jump Shot
+1,12,101.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Eason 7' Step Back Jump Shot
+1,13,104.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Davis REBOUND (Off:0 Def:2)
+1,13,104.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Davis REBOUND (Off:0 Def:2)
+1,14,112.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Thompson 7' Driving Floating Bank Jump Shot (2 PTS) (Davis 3 AST)
+1,14,112.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Thompson 7' Driving Floating Bank Jump Shot (2 PTS) (Davis 3 AST)
+1,15,131.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Sengun 18' Jump Shot (2 PTS) (Ja. Green 1 AST)
+1,15,131.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Sengun 18' Jump Shot (2 PTS) (Ja. Green 1 AST)
+1,16,140.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Thompson 1' Driving Layup (4 PTS) (Washington 1 AST)
+1,16,140.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Thompson 1' Driving Layup (4 PTS) (Washington 1 AST)
+1,17,155.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Thompson 2' Cutting Layup Shot
+1,17,155.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Thompson 2' Cutting Layup Shot
+1,18,155.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Gafford REBOUND (Off:0 Def:1)
+1,18,155.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Gafford REBOUND (Off:0 Def:1)
+1,19,160.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Irving 26' 3PT Running Pull-Up Jump Shot
+1,19,160.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Irving 26' 3PT Running Pull-Up Jump Shot
+1,20,162.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Brooks REBOUND (Off:0 Def:1)
+1,20,162.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Brooks REBOUND (Off:0 Def:1)
+1,21,170.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Ja. Green 2' Driving Layup (2 PTS)
+1,21,170.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Ja. Green 2' Driving Layup (2 PTS)
+1,22,189.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Davis 6' Turnaround Jump Shot (2 PTS)
+1,22,189.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Davis 6' Turnaround Jump Shot (2 PTS)
+1,23,213.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Sengun 2' Cutting Layup Shot
+1,23,213.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Sengun 2' Cutting Layup Shot
+1,24,214.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Davis REBOUND (Off:0 Def:3)
+1,24,214.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Davis REBOUND (Off:0 Def:3)
+1,25,226.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Davis 5' Turnaround Hook Shot (4 PTS)
+1,25,226.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Davis 5' Turnaround Hook Shot (4 PTS)
+1,26,230.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",""
+1,26,230.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",""
+1,27,247.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",""
+1,27,247.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",""
+1,28,251.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Sengun 26' 3PT Jump Shot
+1,28,251.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Sengun 26' 3PT Jump Shot
+1,29,254.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Gafford REBOUND (Off:0 Def:2)
+1,29,254.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Gafford REBOUND (Off:0 Def:2)
+1,30,265.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Davis 1' Driving Layup
+1,30,265.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Davis 1' Driving Layup
+1,31,266.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Davis REBOUND (Off:1 Def:3)
+1,31,266.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Davis REBOUND (Off:1 Def:3)
+1,32,266.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Davis Tip Dunk Shot (6 PTS)
+1,32,266.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Davis Tip Dunk Shot (6 PTS)
+1,33,266.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Rockets Timeout: Regular (Reg.1 Short 0)
+1,33,266.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Rockets Timeout: Regular (Reg.1 Short 0)
+1,34,283.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Brooks 12' Pullup Jump Shot
+1,34,283.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Brooks 12' Pullup Jump Shot
+1,35,285.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Davis REBOUND (Off:1 Def:4)
+1,35,285.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Davis REBOUND (Off:1 Def:4)
+1,36,297.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Davis 25' 3PT Pullup Jump Shot (9 PTS)
+1,36,297.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Davis 25' 3PT Pullup Jump Shot (9 PTS)
+1,37,314.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Ja. Green 25' 3PT Pullup Jump Shot (5 PTS)
+1,37,314.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Ja. Green 25' 3PT Pullup Jump Shot (5 PTS)
+1,38,323.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Thompson 18' Pullup Jump Shot
+1,38,323.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Thompson 18' Pullup Jump Shot
+1,39,327.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Sengun REBOUND (Off:0 Def:1)
+1,39,327.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Sengun REBOUND (Off:0 Def:1)
+1,40,332.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Gafford S.FOUL (P1.T1) (P.Ransom)
+1,40,332.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Gafford S.FOUL (P1.T1) (P.Ransom)
+1,41,332.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Ja. Green Free Throw 1 of 2
+1,41,332.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Ja. Green Free Throw 1 of 2
+1,42,332.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Rockets Rebound
+1,42,332.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Rockets Rebound
+1,43,332.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",SUB: Exum FOR Gafford
+1,43,332.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",SUB: Exum FOR Gafford
+1,44,332.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",SUB: Christie FOR Thompson
+1,44,332.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",SUB: Christie FOR Thompson
+1,45,332.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",SUB: Whitmore FOR Brooks
+1,45,332.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",SUB: Whitmore FOR Brooks
+1,46,332.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Ja. Green Free Throw 2 of 2 (6 PTS)
+1,46,332.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Ja. Green Free Throw 2 of 2 (6 PTS)
+1,47,344.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Davis 20' Pullup Jump Shot (11 PTS)
+1,47,344.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Davis 20' Pullup Jump Shot (11 PTS)
+1,48,361.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Whitmore 1' Driving Dunk (2 PTS)
+1,48,361.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Whitmore 1' Driving Dunk (2 PTS)
+1,49,378.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Irving 18' Jump Shot
+1,49,378.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Irving 18' Jump Shot
+1,50,380.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Sengun REBOUND (Off:0 Def:2)
+1,50,380.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Sengun REBOUND (Off:0 Def:2)
+1,51,390.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Ja. Green Out of Bounds Lost Ball Turnover (P1.T1)
+1,51,390.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Ja. Green Out of Bounds Lost Ball Turnover (P1.T1)
+1,52,410.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Ja. Green S.FOUL (P1.T1) (P.Ransom)
+1,52,410.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Ja. Green S.FOUL (P1.T1) (P.Ransom)
+1,53,410.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Washington Free Throw 1 of 2 (3 PTS)
+1,53,410.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Washington Free Throw 1 of 2 (3 PTS)
+1,54,410.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",SUB: Dinwiddie FOR Irving
+1,54,410.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",SUB: Dinwiddie FOR Irving
+1,55,410.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Washington Free Throw 2 of 2 (4 PTS)
+1,55,410.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Washington Free Throw 2 of 2 (4 PTS)
+1,56,422.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Thompson 1' Cutting Dunk Shot (5 PTS) (Sengun 1 AST)
+1,56,422.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Thompson 1' Cutting Dunk Shot (5 PTS) (Sengun 1 AST)
+1,57,435.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Dinwiddie OFF.Foul (P1) (J.Schroeder)
+1,57,435.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Dinwiddie OFF.Foul (P1) (J.Schroeder)
+1,58,435.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Dinwiddie Offensive Foul Turnover (P1.T1)
+1,58,435.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Dinwiddie Offensive Foul Turnover (P1.T1)
+1,59,435.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",SUB: Marshall FOR Washington
+1,59,435.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",SUB: Marshall FOR Washington
+1,60,443.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Ja. Green 26' 3PT Jump Shot
+1,60,443.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Ja. Green 26' 3PT Jump Shot
+1,61,446.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Davis REBOUND (Off:1 Def:5)
+1,61,446.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Davis REBOUND (Off:1 Def:5)
+1,62,460.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Marshall 1' Driving Layup (2 PTS)
+1,62,460.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Marshall 1' Driving Layup (2 PTS)
+1,63,476.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Sengun 4' Driving Hook Shot
+1,63,476.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Sengun 4' Driving Hook Shot
+1,64,478.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Sengun REBOUND (Off:1 Def:2)
+1,64,478.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Sengun REBOUND (Off:1 Def:2)
+1,65,480.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Sengun 4' Putback Layup
+1,65,480.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Sengun 4' Putback Layup
+1,66,480.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Davis REBOUND (Off:1 Def:6)
+1,66,480.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Davis REBOUND (Off:1 Def:6)
+1,67,488.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Marshall 4' Running Layup (4 PTS) (Exum 1 AST)
+1,67,488.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Marshall 4' Running Layup (4 PTS) (Exum 1 AST)
+1,68,496.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Thompson OFF.Foul (P1) (J.Schroeder)
+1,68,496.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Thompson OFF.Foul (P1) (J.Schroeder)
+1,69,496.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Thompson Offensive Foul Turnover (P1.T2)
+1,69,496.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Thompson Offensive Foul Turnover (P1.T2)
+1,70,496.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",SUB: Brooks FOR Eason
+1,70,496.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",SUB: Brooks FOR Eason
+1,71,496.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",SUB: Adams FOR Sengun
+1,71,496.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",SUB: Adams FOR Sengun
+1,72,512.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Whitmore S.FOUL (P1.T2) (B.Forte)
+1,72,512.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Whitmore S.FOUL (P1.T2) (B.Forte)
+1,73,512.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Davis Free Throw 1 of 2
+1,73,512.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Davis Free Throw 1 of 2
+1,74,512.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MAVERICKS Rebound
+1,74,512.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MAVERICKS Rebound
+1,75,512.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Davis Free Throw 2 of 2 (12 PTS)
+1,75,512.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Davis Free Throw 2 of 2 (12 PTS)
+1,76,535.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Ja. Green 10' Fadeaway Jumper (8 PTS)
+1,76,535.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Ja. Green 10' Fadeaway Jumper (8 PTS)
+1,77,554.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Davis 7' Turnaround Hook Shot (14 PTS)
+1,77,554.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Davis 7' Turnaround Hook Shot (14 PTS)
+1,78,565.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Thompson Lost Ball Turnover (P2.T3)
+1,78,565.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Thompson Lost Ball Turnover (P2.T3)
+1,79,570.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Christie 3PT Running Jump Shot (3 PTS) (Exum 2 AST)
+1,79,570.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Christie 3PT Running Jump Shot (3 PTS) (Exum 2 AST)
+1,80,571.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Rockets Timeout: Regular (Reg.2 Short 0)
+1,80,571.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Rockets Timeout: Regular (Reg.2 Short 0)
+1,81,571.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",SUB: Tate FOR Thompson
+1,81,571.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",SUB: Tate FOR Thompson
+1,82,588.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Tate 3PT Jump Shot
+1,82,588.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Tate 3PT Jump Shot
+1,83,590.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MAVERICKS Rebound
+1,83,590.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MAVERICKS Rebound
+1,84,590.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",""
+1,84,590.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",""
+1,85,613.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Exum 6' Driving Finger Roll Layup
+1,85,613.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Exum 6' Driving Finger Roll Layup
+1,86,614.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Tate REBOUND (Off:0 Def:1)
+1,86,614.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Tate REBOUND (Off:0 Def:1)
+1,87,625.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Brooks 28' 3PT Jump Shot (3 PTS) (Tate 1 AST)
+1,87,625.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Brooks 28' 3PT Jump Shot (3 PTS) (Tate 1 AST)
+1,88,650.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Davis 20' Pullup Jump Shot
+1,88,650.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Davis 20' Pullup Jump Shot
+1,89,651.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Whitmore REBOUND (Off:0 Def:1)
+1,89,651.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Whitmore REBOUND (Off:0 Def:1)
+1,90,659.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Whitmore 3' Driving Floating Jump Shot
+1,90,659.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Whitmore 3' Driving Floating Jump Shot
+1,91,660.9,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Adams REBOUND (Off:1 Def:0)
+1,91,660.9,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Adams REBOUND (Off:1 Def:0)
+1,92,660.9,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Adams Tip Layup Shot
+1,92,660.9,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Adams Tip Layup Shot
+1,93,661.7,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Davis REBOUND (Off:1 Def:7)
+1,93,661.7,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Davis REBOUND (Off:1 Def:7)
+1,94,666.1,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Marshall 8' Running Pull-Up Jump Shot
+1,94,666.1,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Marshall 8' Running Pull-Up Jump Shot
+1,95,667.6,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Adams REBOUND (Off:1 Def:1)
+1,95,667.6,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Adams REBOUND (Off:1 Def:1)
+1,96,675.3,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Adams 11' Floating Jump Shot
+1,96,675.3,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Adams 11' Floating Jump Shot
+1,97,678.4,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Marshall REBOUND (Off:0 Def:1)
+1,97,678.4,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Marshall REBOUND (Off:0 Def:1)
+1,98,683.2,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Brooks S.FOUL (P1.T3) (P.Ransom)
+1,98,683.2,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Brooks S.FOUL (P1.T3) (P.Ransom)
+1,99,683.2,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Christie Free Throw 1 of 2 (4 PTS)
+1,99,683.2,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Christie Free Throw 1 of 2 (4 PTS)
+1,100,683.2,1610612742,DAL,4,"[202681, 202691, 203076, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",SUB: Gafford FOR Davis
+1,100,683.2,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",SUB: Gafford FOR Davis
+1,101,683.2,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",SUB: Irving FOR Dinwiddie
+1,101,683.2,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",SUB: Irving FOR Dinwiddie
+1,102,683.2,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Christie Free Throw 2 of 2 (5 PTS)
+1,102,683.2,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Christie Free Throw 2 of 2 (5 PTS)
+1,103,701.7,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Brooks 18' Step Back Jump Shot
+1,103,701.7,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Brooks 18' Step Back Jump Shot
+1,104,704.2,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Exum REBOUND (Off:0 Def:1)
+1,104,704.2,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Exum REBOUND (Off:0 Def:1)
+1,105,719.6,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Irving 13' Step Back Jump Shot
+1,105,719.6,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Irving 13' Step Back Jump Shot
+1,106,719.6,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MAVERICKS Rebound
+1,106,719.6,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MAVERICKS Rebound
+1,107,720.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",End of 1st Period (3:36 PM EST)
+1,107,720.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",End of 1st Period (3:36 PM EST)
+2,108,720.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Start of 2nd Period (3:39 PM EST)
+2,108,720.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Start of 2nd Period (3:39 PM EST)
+2,109,730.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Christie S.FOUL (P1.T1) (P.Ransom)
+2,109,730.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Christie S.FOUL (P1.T1) (P.Ransom)
+2,110,730.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Whitmore Free Throw 1 of 3 (3 PTS)
+2,110,730.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Whitmore Free Throw 1 of 3 (3 PTS)
+2,111,730.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Whitmore Free Throw 2 of 3 (4 PTS)
+2,111,730.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Whitmore Free Throw 2 of 3 (4 PTS)
+2,112,730.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Whitmore Free Throw 3 of 3 (5 PTS)
+2,112,730.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Whitmore Free Throw 3 of 3 (5 PTS)
+2,113,747.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Thompson 2' Driving Finger Roll Layup (6 PTS) (Christie 1 AST)
+2,113,747.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Thompson 2' Driving Finger Roll Layup (6 PTS) (Christie 1 AST)
+2,114,767.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Adams 6' Driving Hook Shot
+2,114,767.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Adams 6' Driving Hook Shot
+2,115,768.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Adams REBOUND (Off:2 Def:1)
+2,115,768.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Adams REBOUND (Off:2 Def:1)
+2,116,777.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Eason 5' Driving Floating Jump Shot
+2,116,777.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Eason 5' Driving Floating Jump Shot
+2,117,779.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Sheppard REBOUND (Off:1 Def:0)
+2,117,779.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Sheppard REBOUND (Off:1 Def:0)
+2,118,781.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Sheppard 7' Driving Floating Jump Shot
+2,118,781.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Sheppard 7' Driving Floating Jump Shot
+2,119,782.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Sheppard REBOUND (Off:2 Def:0)
+2,119,782.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Sheppard REBOUND (Off:2 Def:0)
+2,120,791.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Adams 5' Hook Shot
+2,120,791.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Adams 5' Hook Shot
+2,121,793.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Adams REBOUND (Off:3 Def:1)
+2,121,793.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Adams REBOUND (Off:3 Def:1)
+2,122,795.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Adams 4' Layup
+2,122,795.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Adams 4' Layup
+2,123,799.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Eason REBOUND (Off:1 Def:0)
+2,123,799.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Eason REBOUND (Off:1 Def:0)
+2,124,799.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Eason 5' Layup
+2,124,799.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Eason 5' Layup
+2,125,801.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Thompson REBOUND (Off:0 Def:1)
+2,125,801.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Thompson REBOUND (Off:0 Def:1)
+2,126,803.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Thompson 27' 3PT Running Pull-Up Jump Shot (9 PTS)
+2,126,803.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Thompson 27' 3PT Running Pull-Up Jump Shot (9 PTS)
+2,127,816.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Sheppard 8' Pullup Jump Shot
+2,127,816.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Sheppard 8' Pullup Jump Shot
+2,128,817.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Thompson REBOUND (Off:0 Def:2)
+2,128,817.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Thompson REBOUND (Off:0 Def:2)
+2,129,821.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Thompson 27' 3PT Running Pull-Up Jump Shot
+2,129,821.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Thompson 27' 3PT Running Pull-Up Jump Shot
+2,130,824.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Eason REBOUND (Off:1 Def:1)
+2,130,824.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Eason REBOUND (Off:1 Def:1)
+2,131,831.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Thompson P.FOUL (P1.T2) (P.Ransom)
+2,131,831.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Thompson P.FOUL (P1.T2) (P.Ransom)
+2,132,831.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Ime Udoka Foul:T.FOUL (P.Ransom)
+2,132,831.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Ime Udoka Foul:T.FOUL (P.Ransom)
+2,133,831.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Irving Free Throw Technical (1 PTS)
+2,133,831.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Irving Free Throw Technical (1 PTS)
+2,134,839.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Tate 4' Driving Dunk
+2,134,839.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Tate 4' Driving Dunk
+2,135,839.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Rockets Rebound
+2,135,839.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Rockets Rebound
+2,136,839.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",""
+2,136,839.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",""
+2,137,847.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Sheppard 30' 3PT Pullup Jump Shot
+2,137,847.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Sheppard 30' 3PT Pullup Jump Shot
+2,138,847.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Rockets Rebound
+2,138,847.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Rockets Rebound
+2,139,847.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]","Rockets Turnover: Shot Clock (T#4)"
+2,139,847.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]","Rockets Turnover: Shot Clock (T#4)"
+2,140,867.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Irving 11' Driving Floating Bank Jump Shot
+2,140,867.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Irving 11' Driving Floating Bank Jump Shot
+2,141,869.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Gafford REBOUND (Off:1 Def:2)
+2,141,869.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Gafford REBOUND (Off:1 Def:2)
+2,142,871.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Gafford Lost Ball Turnover (P1.T2)
+2,142,871.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Gafford Lost Ball Turnover (P1.T2)
+2,143,874.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Whitmore 25' 3PT Running Jump Shot
+2,143,874.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",MISS Whitmore 25' 3PT Running Jump Shot
+2,144,877.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Eason REBOUND (Off:2 Def:1)
+2,144,877.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Eason REBOUND (Off:2 Def:1)
+2,145,877.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Gafford S.FOUL (P2.T3) (J.Schroeder)
+2,145,877.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Gafford S.FOUL (P2.T3) (J.Schroeder)
+2,146,877.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",""
+2,146,877.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",""
+2,147,877.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Eason Free Throw 1 of 2 (1 PTS)
+2,147,877.0,1610612745,HOU,4,"[1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Jalen Green"", ""Tari Eason""]",Eason Free Throw 1 of 2 (1 PTS)
+2,148,877.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",SUB: Sengun FOR Tate
+2,148,877.0,1610612745,HOU,4,"[1630224, 1630256, 1631106, 1641708]","[""Amen Thompson"", ""Jae'Sean Tate"", ""Jalen Green"", ""Tari Eason""]",SUB: Sengun FOR Tate
+2,149,877.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",SUB: Thompson FOR Adams
+2,149,877.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",SUB: Thompson FOR Adams
+2,150,877.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Eason Free Throw 2 of 2 (2 PTS)
+2,150,877.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",Eason Free Throw 2 of 2 (2 PTS)
+2,151,890.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Thompson 6' Driving Finger Roll Layup
+2,151,890.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",MISS Thompson 6' Driving Finger Roll Layup
+2,152,890.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Rockets Rebound
+2,152,890.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",Rockets Rebound
+2,153,890.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Gafford L.B.FOUL (P3.T4) (B.Forte)
+2,153,890.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",Gafford L.B.FOUL (P3.T4) (B.Forte)
+2,154,890.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MAVERICKS Violation: Delay of game Violation
+2,154,890.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",MAVERICKS Violation: Delay of game Violation
+2,155,890.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Gafford T.FOUL (P3.T4) (B.Forte)
+2,155,890.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",Gafford T.FOUL (P3.T4) (B.Forte)
+2,156,890.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",""
+2,156,890.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",""
+2,157,890.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Sheppard Free Throw Technical (1 PTS)
+2,157,890.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",Sheppard Free Throw Technical (1 PTS)
+2,158,890.0,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",SUB: Davis FOR Gafford
+2,158,890.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",SUB: Davis FOR Gafford
+2,159,903.0,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Whitmore 19' Pullup Jump Shot
+2,159,903.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",MISS Whitmore 19' Pullup Jump Shot
+2,160,903.0,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MAVERICKS Rebound
+2,160,903.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",MAVERICKS Rebound
+2,161,903.0,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",""
+2,161,903.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",""
+2,162,918.0,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Sengun P.FOUL (P1.T1) (P.Ransom)
+2,162,918.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",Sengun P.FOUL (P1.T1) (P.Ransom)
+2,163,920.0,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Thompson 25' 3PT Jump Shot
+2,163,920.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",MISS Thompson 25' 3PT Jump Shot
+2,164,923.0,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Whitmore REBOUND (Off:0 Def:2)
+2,164,923.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",Whitmore REBOUND (Off:0 Def:2)
+2,165,932.0,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Thompson 21' Jump Shot (7 PTS) (Whitmore 1 AST)
+2,165,932.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",Thompson 21' Jump Shot (7 PTS) (Whitmore 1 AST)
+2,166,944.0,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Sheppard S.FOUL (P1.T2) (J.Schroeder)
+2,166,944.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",Sheppard S.FOUL (P1.T2) (J.Schroeder)
+2,167,944.0,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Irving Free Throw 1 of 2
+2,167,944.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",MISS Irving Free Throw 1 of 2
+2,168,944.0,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MAVERICKS Rebound
+2,168,944.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",MAVERICKS Rebound
+2,169,944.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",SUB: Dinwiddie FOR Christie
+2,169,944.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",SUB: Dinwiddie FOR Christie
+2,170,944.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Irving Free Throw 2 of 2 (2 PTS)
+2,170,944.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",Irving Free Throw 2 of 2 (2 PTS)
+2,171,962.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Washington S.FOUL (P1.PN) (J.Schroeder)
+2,171,962.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",Washington S.FOUL (P1.PN) (J.Schroeder)
+2,172,962.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",MISS Sengun Free Throw 1 of 2
+2,172,962.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",MISS Sengun Free Throw 1 of 2
+2,173,962.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Rockets Rebound
+2,173,962.0,1610612745,HOU,4,"[203500, 1630224, 1630256, 1631106]","[""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",Rockets Rebound
+2,174,962.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",SUB: Brooks FOR Whitmore
+2,174,962.0,1610612745,HOU,5,"[203500, 1630224, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Jalen Green"", ""Steven Adams"", ""Tari Eason""]",SUB: Brooks FOR Whitmore
+2,175,962.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",SUB: Ja. Green FOR Eason
+2,175,962.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",SUB: Ja. Green FOR Eason
+2,176,962.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Sengun Free Throw 2 of 2 (3 PTS)
+2,176,962.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",Sengun Free Throw 2 of 2 (3 PTS)
+2,177,978.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",MISS Davis 9' Turnaround Jump Shot
+2,177,978.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",MISS Davis 9' Turnaround Jump Shot
+2,178,980.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Sheppard REBOUND (Off:2 Def:1)
+2,178,980.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",Sheppard REBOUND (Off:2 Def:1)
+2,179,985.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Sheppard 14' Running Pull-Up Jump Shot (3 PTS)
+2,179,985.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",Sheppard 14' Running Pull-Up Jump Shot (3 PTS)
+2,180,1006.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Thompson 2' Driving Layup (11 PTS)
+2,180,1006.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",Thompson 2' Driving Layup (11 PTS)
+2,181,1018.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",MISS Ja. Green 3' Driving Layup
+2,181,1018.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",MISS Ja. Green 3' Driving Layup
+2,182,1018.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Thompson REBOUND (Off:0 Def:3)
+2,182,1018.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",Thompson REBOUND (Off:0 Def:3)
+2,183,1025.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Dinwiddie 3PT Jump Shot (3 PTS) (Thompson 1 AST)
+2,183,1025.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",Dinwiddie 3PT Jump Shot (3 PTS) (Thompson 1 AST)
+2,184,1045.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Thompson P.FOUL (P2.PN) (B.Forte)
+2,184,1045.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",Thompson P.FOUL (P2.PN) (B.Forte)
+2,185,1045.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",MAVERICKS Timeout: Regular (Full 1 Short 0)
+2,185,1045.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",MAVERICKS Timeout: Regular (Full 1 Short 0)
+2,186,1045.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",MISS Brooks Free Throw 1 of 2
+2,186,1045.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",MISS Brooks Free Throw 1 of 2
+2,187,1045.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Rockets Rebound
+2,187,1045.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",Rockets Rebound
+2,188,1045.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Brooks Free Throw 2 of 2 (4 PTS)
+2,188,1045.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",Brooks Free Throw 2 of 2 (4 PTS)
+2,189,1065.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",MISS Washington 9' Driving Hook Shot
+2,189,1065.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",MISS Washington 9' Driving Hook Shot
+2,190,1067.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Washington REBOUND (Off:1 Def:0)
+2,190,1067.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",Washington REBOUND (Off:1 Def:0)
+2,191,1068.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",MISS Washington 3' Putback Layup
+2,191,1068.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",MISS Washington 3' Putback Layup
+2,192,1070.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Irving REBOUND (Off:1 Def:0)
+2,192,1070.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",Irving REBOUND (Off:1 Def:0)
+2,193,1075.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",MISS Washington 24' 3PT Jump Shot
+2,193,1075.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",MISS Washington 24' 3PT Jump Shot
+2,194,1076.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Davis REBOUND (Off:2 Def:7)
+2,194,1076.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",Davis REBOUND (Off:2 Def:7)
+2,195,1077.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Davis 1' Putback Dunk (16 PTS)
+2,195,1077.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",Davis 1' Putback Dunk (16 PTS)
+2,196,1103.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",MISS Sheppard 30' 3PT Jump Shot
+2,196,1103.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",MISS Sheppard 30' 3PT Jump Shot
+2,197,1106.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Davis REBOUND (Off:2 Def:8)
+2,197,1106.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",Davis REBOUND (Off:2 Def:8)
+2,198,1122.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Dinwiddie 3PT Jump Shot (6 PTS) (Davis 4 AST)
+2,198,1122.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",Dinwiddie 3PT Jump Shot (6 PTS) (Davis 4 AST)
+2,199,1142.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",MISS Sheppard 13' Pullup Jump Shot
+2,199,1142.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",MISS Sheppard 13' Pullup Jump Shot
+2,200,1144.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Davis REBOUND (Off:2 Def:9)
+2,200,1144.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",Davis REBOUND (Off:2 Def:9)
+2,201,1151.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Davis Alley Oop Dunk (18 PTS) (Irving 1 AST)
+2,201,1151.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",Davis Alley Oop Dunk (18 PTS) (Irving 1 AST)
+2,202,1153.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Rockets Timeout: Regular (Reg.3 Short 0)
+2,202,1153.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",Rockets Timeout: Regular (Reg.3 Short 0)
+2,203,1153.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",SUB: Marshall FOR Washington
+2,203,1153.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",SUB: Marshall FOR Washington
+2,204,1153.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",SUB: Exum FOR Thompson
+2,204,1153.0,1610612745,HOU,4,"[203500, 1630256, 1631106, 1641715]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Steven Adams"", ""Tari Eason""]",SUB: Exum FOR Thompson
+2,205,1153.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",SUB: Eason FOR Sheppard
+2,205,1153.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",SUB: Eason FOR Sheppard
+2,206,1169.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",MISS Brooks 27' 3PT Jump Shot
+2,206,1169.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",MISS Brooks 27' 3PT Jump Shot
+2,207,1171.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Davis REBOUND (Off:2 Def:10)
+2,207,1171.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Davis REBOUND (Off:2 Def:10)
+2,208,1181.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Brooks S.FOUL (P2.T3) (J.Schroeder)
+2,208,1181.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Brooks S.FOUL (P2.T3) (J.Schroeder)
+2,209,1181.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",MISS Davis Free Throw 1 of 2
+2,209,1181.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",MISS Davis Free Throw 1 of 2
+2,210,1181.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",MAVERICKS Rebound
+2,210,1181.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",MAVERICKS Rebound
+2,211,1181.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Davis Free Throw 2 of 2 (19 PTS)
+2,211,1181.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Davis Free Throw 2 of 2 (19 PTS)
+2,212,1197.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Eason 21' Pullup Jump Shot (4 PTS) (Sengun 2 AST)
+2,212,1197.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Eason 21' Pullup Jump Shot (4 PTS) (Sengun 2 AST)
+2,213,1219.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",MISS Davis 1' Alley Oop Layup
+2,213,1219.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",MISS Davis 1' Alley Oop Layup
+2,214,1221.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Sengun REBOUND (Off:1 Def:3)
+2,214,1221.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Sengun REBOUND (Off:1 Def:3)
+2,215,1225.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Ja. Green 2' Running Layup (10 PTS)
+2,215,1225.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Ja. Green 2' Running Layup (10 PTS)
+2,216,1238.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",MISS Exum 3PT Jump Shot
+2,216,1238.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",MISS Exum 3PT Jump Shot
+2,217,1241.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Ja. Green REBOUND (Off:0 Def:1)
+2,217,1241.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Ja. Green REBOUND (Off:0 Def:1)
+2,218,1251.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Ja. Green 26' 3PT Pullup Jump Shot (13 PTS)
+2,218,1251.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Ja. Green 26' 3PT Pullup Jump Shot (13 PTS)
+2,219,1265.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",MISS Irving 5' Driving Layup
+2,219,1265.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",MISS Irving 5' Driving Layup
+2,220,1266.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Davis REBOUND (Off:3 Def:10)
+2,220,1266.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Davis REBOUND (Off:3 Def:10)
+2,221,1266.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Sengun S.FOUL (P2.T4) (P.Ransom)
+2,221,1266.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Sengun S.FOUL (P2.T4) (P.Ransom)
+2,222,1266.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",""
+2,222,1266.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",""
+2,223,1266.0,1610612742,DAL,4,"[202691, 1629023, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""P.J. Washington""]",Davis Free Throw 1 of 2 (20 PTS)
+2,223,1266.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Davis Free Throw 1 of 2 (20 PTS)
+2,224,1266.0,1610612742,DAL,4,"[202691, 203915, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""Spencer Dinwiddie""]",SUB: Washington FOR Dinwiddie
+2,224,1266.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",SUB: Washington FOR Dinwiddie
+2,225,1266.0,1610612742,DAL,4,"[202691, 203915, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""Spencer Dinwiddie""]",Davis Free Throw 2 of 2 (21 PTS)
+2,225,1266.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Davis Free Throw 2 of 2 (21 PTS)
+2,226,1290.0,1610612742,DAL,4,"[202691, 203915, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""Spencer Dinwiddie""]",MISS Ja. Green 22' Pullup Jump Shot
+2,226,1290.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",MISS Ja. Green 22' Pullup Jump Shot
+2,227,1293.0,1610612742,DAL,4,"[202691, 203915, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""Spencer Dinwiddie""]",Washington REBOUND (Off:1 Def:1)
+2,227,1293.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Washington REBOUND (Off:1 Def:1)
+2,228,1294.0,1610612742,DAL,4,"[202691, 203915, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""Spencer Dinwiddie""]",Thompson P.FOUL (P2.PN) (P.Ransom)
+2,228,1294.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Thompson P.FOUL (P2.PN) (P.Ransom)
+2,229,1294.0,1610612742,DAL,4,"[202691, 203915, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""Spencer Dinwiddie""]",Washington Free Throw 1 of 2 (5 PTS)
+2,229,1294.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Washington Free Throw 1 of 2 (5 PTS)
+2,230,1294.0,1610612742,DAL,4,"[202691, 203915, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""Spencer Dinwiddie""]",Washington Free Throw 2 of 2 (6 PTS)
+2,230,1294.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Washington Free Throw 2 of 2 (6 PTS)
+2,231,1306.0,1610612742,DAL,4,"[202691, 203915, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""Spencer Dinwiddie""]",Ja. Green 25' 3PT Jump Shot (16 PTS) (Thompson 1 AST)
+2,231,1306.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Ja. Green 25' 3PT Jump Shot (16 PTS) (Thompson 1 AST)
+2,232,1320.0,1610612742,DAL,4,"[202691, 203915, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""Spencer Dinwiddie""]",Davis 25' 3PT Jump Shot (24 PTS) (Irving 2 AST)
+2,232,1320.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Davis 25' 3PT Jump Shot (24 PTS) (Irving 2 AST)
+2,233,1336.0,1610612742,DAL,4,"[202691, 203915, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""Spencer Dinwiddie""]",MISS Ja. Green 25' 3PT Step Back Jump Shot
+2,233,1336.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",MISS Ja. Green 25' 3PT Step Back Jump Shot
+2,234,1341.0,1610612742,DAL,4,"[202691, 203915, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""Spencer Dinwiddie""]",Washington REBOUND (Off:1 Def:2)
+2,234,1341.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Washington REBOUND (Off:1 Def:2)
+2,235,1349.0,1610612742,DAL,4,"[202691, 203915, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""Spencer Dinwiddie""]",Exum 2' Driving Dunk (2 PTS) (Irving 3 AST)
+2,235,1349.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Exum 2' Driving Dunk (2 PTS) (Irving 3 AST)
+2,236,1369.0,1610612742,DAL,4,"[202691, 203915, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""Spencer Dinwiddie""]",MISS Sengun 6' Driving Layup
+2,236,1369.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",MISS Sengun 6' Driving Layup
+2,237,1370.0,1610612742,DAL,4,"[202691, 203915, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""Spencer Dinwiddie""]",Rockets Rebound
+2,237,1370.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Rockets Rebound
+2,238,1370.0,1610612742,DAL,4,"[202691, 203915, 1629655, 1631108]","[""Daniel Gafford"", ""Klay Thompson"", ""Max Christie"", ""Spencer Dinwiddie""]",""
+2,238,1370.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",""
+2,239,1370.0,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",SUB: Christie FOR Washington
+2,239,1370.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",SUB: Christie FOR Washington
+2,240,1374.0,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Sengun 16' Jump Shot (5 PTS) (Thompson 2 AST)
+2,240,1374.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Sengun 16' Jump Shot (5 PTS) (Thompson 2 AST)
+2,241,1390.3,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Davis Out of Bounds Lost Ball Turnover (P1.T3)
+2,241,1390.3,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Davis Out of Bounds Lost Ball Turnover (P1.T3)
+2,242,1403.9,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Thompson Alley Oop Dunk (9 PTS) (Ja. Green 2 AST)
+2,242,1403.9,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Thompson Alley Oop Dunk (9 PTS) (Ja. Green 2 AST)
+2,243,1411.2,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Christie 24' 3PT Jump Shot (8 PTS) (Davis 5 AST)
+2,243,1411.2,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Christie 24' 3PT Jump Shot (8 PTS) (Davis 5 AST)
+2,244,1431.7,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Thompson 1' Alley Oop Dunk (11 PTS) (Sengun 3 AST)
+2,244,1431.7,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Thompson 1' Alley Oop Dunk (11 PTS) (Sengun 3 AST)
+2,245,1437.4,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Christie 1' Driving Dunk
+2,245,1437.4,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",MISS Christie 1' Driving Dunk
+2,246,1438.6,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Rockets Rebound
+2,246,1438.6,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Rockets Rebound
+2,247,1438.6,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",""
+2,247,1438.6,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",""
+2,248,1439.8,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Eason 41' 3PT Jump Shot
+2,248,1439.8,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",MISS Eason 41' 3PT Jump Shot
+2,249,1439.9,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Rockets Rebound
+2,249,1439.9,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",Rockets Rebound
+2,250,1440.0,1610612742,DAL,4,"[202691, 203915, 1629023, 1629655]","[""Daniel Gafford"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",End of 2nd Period (4:12 PM EST)
+2,250,1440.0,1610612745,HOU,4,"[203500, 1630256, 1641715, 1642263]","[""Cam Whitmore"", ""Jae'Sean Tate"", ""Reed Sheppard"", ""Steven Adams""]",End of 2nd Period (4:12 PM EST)
+3,251,1440.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Start of 3rd Period (4:27 PM EST)
+3,251,1440.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Start of 3rd Period (4:27 PM EST)
+3,252,1452.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Sengun 9' Hook Shot (7 PTS) (Adams 1 AST)
+3,252,1452.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Sengun 9' Hook Shot (7 PTS) (Adams 1 AST)
+3,253,1472.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Thompson 21' Pullup Jump Shot
+3,253,1472.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Thompson 21' Pullup Jump Shot
+3,254,1473.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Gafford REBOUND (Off:2 Def:2)
+3,254,1473.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Gafford REBOUND (Off:2 Def:2)
+3,255,1477.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Gafford 1' Putback Dunk
+3,255,1477.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Gafford 1' Putback Dunk
+3,256,1479.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Adams REBOUND (Off:3 Def:2)
+3,256,1479.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Adams REBOUND (Off:3 Def:2)
+3,257,1483.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Thompson Out of Bounds Lost Ball Turnover (P3.T5)
+3,257,1483.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Thompson Out of Bounds Lost Ball Turnover (P3.T5)
+3,258,1495.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Thompson 17' Pullup Jump Shot (13 PTS) (Irving 4 AST)
+3,258,1495.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Thompson 17' Pullup Jump Shot (13 PTS) (Irving 4 AST)
+3,259,1520.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Thompson 3PT Jump Shot (14 PTS) (Brooks 1 AST)
+3,259,1520.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Thompson 3PT Jump Shot (14 PTS) (Brooks 1 AST)
+3,260,1538.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Christie 16' Step Back Jump Shot (10 PTS) (Davis 6 AST)
+3,260,1538.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Christie 16' Step Back Jump Shot (10 PTS) (Davis 6 AST)
+3,261,1551.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Thompson 2' Driving Reverse Layup
+3,261,1551.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Thompson 2' Driving Reverse Layup
+3,262,1551.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Rockets Rebound
+3,262,1551.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Rockets Rebound
+3,263,1551.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",""
+3,263,1551.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",""
+3,264,1559.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Sengun 15' Jump Shot (9 PTS) (Ja. Green 3 AST)
+3,264,1559.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Sengun 15' Jump Shot (9 PTS) (Ja. Green 3 AST)
+3,265,1577.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Sengun P.FOUL (P3.T1) (J.Schroeder)
+3,265,1577.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Sengun P.FOUL (P3.T1) (J.Schroeder)
+3,266,1584.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Thompson 16' Step Back Jump Shot
+3,266,1584.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Thompson 16' Step Back Jump Shot
+3,267,1586.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Thompson REBOUND (Off:1 Def:2)
+3,267,1586.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Thompson REBOUND (Off:1 Def:2)
+3,268,1586.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Thompson P.FOUL (P3.T1) (P.Ransom)
+3,268,1586.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Thompson P.FOUL (P3.T1) (P.Ransom)
+3,269,1599.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Ja. Green 24' 3PT Jump Shot
+3,269,1599.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Ja. Green 24' 3PT Jump Shot
+3,270,1602.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Adams REBOUND (Off:4 Def:2)
+3,270,1602.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Adams REBOUND (Off:4 Def:2)
+3,271,1606.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Brooks 9' Driving Floating Jump Shot
+3,271,1606.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Brooks 9' Driving Floating Jump Shot
+3,272,1608.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Christie REBOUND (Off:0 Def:1)
+3,272,1608.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Christie REBOUND (Off:0 Def:1)
+3,273,1620.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Davis 9' Turnaround Hook Shot
+3,273,1620.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Davis 9' Turnaround Hook Shot
+3,274,1622.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Sengun REBOUND (Off:1 Def:4)
+3,274,1622.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Sengun REBOUND (Off:1 Def:4)
+3,275,1632.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Ja. Green 9' Fadeaway Jumper
+3,275,1632.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Ja. Green 9' Fadeaway Jumper
+3,276,1635.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Adams REBOUND (Off:5 Def:2)
+3,276,1635.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Adams REBOUND (Off:5 Def:2)
+3,277,1640.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Brooks 3PT Jump Shot (7 PTS) (Ja. Green 4 AST)
+3,277,1640.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Brooks 3PT Jump Shot (7 PTS) (Ja. Green 4 AST)
+3,278,1651.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Christie 8' Driving Floating Bank Jump Shot
+3,278,1651.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Christie 8' Driving Floating Bank Jump Shot
+3,279,1654.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Sengun REBOUND (Off:1 Def:5)
+3,279,1654.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Sengun REBOUND (Off:1 Def:5)
+3,280,1670.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Sengun 5' Driving Hook Shot (11 PTS)
+3,280,1670.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Sengun 5' Driving Hook Shot (11 PTS)
+3,281,1670.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MAVERICKS Timeout: Regular (Full 2 Short 0)
+3,281,1670.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MAVERICKS Timeout: Regular (Full 2 Short 0)
+3,282,1670.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",SUB: Marshall FOR Gafford
+3,282,1670.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",SUB: Marshall FOR Gafford
+3,283,1689.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Davis 7' Floating Jump Shot
+3,283,1689.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Davis 7' Floating Jump Shot
+3,284,1691.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Ja. Green REBOUND (Off:0 Def:2)
+3,284,1691.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Ja. Green REBOUND (Off:0 Def:2)
+3,285,1701.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Thompson S.FOUL (P4.T2) (P.Ransom)
+3,285,1701.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Thompson S.FOUL (P4.T2) (P.Ransom)
+3,286,1701.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Sengun Free Throw 1 of 2 (12 PTS)
+3,286,1701.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Sengun Free Throw 1 of 2 (12 PTS)
+3,287,1701.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",SUB: Exum FOR Thompson
+3,287,1701.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",SUB: Exum FOR Thompson
+3,288,1701.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Sengun Free Throw 2 of 2 (13 PTS)
+3,288,1701.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Sengun Free Throw 2 of 2 (13 PTS)
+3,289,1721.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Marshall 7' Driving Floating Jump Shot
+3,289,1721.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Marshall 7' Driving Floating Jump Shot
+3,290,1723.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Adams REBOUND (Off:5 Def:3)
+3,290,1723.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Adams REBOUND (Off:5 Def:3)
+3,291,1735.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Sengun 26' 3PT Jump Shot (16 PTS) (Brooks 2 AST)
+3,291,1735.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Sengun 26' 3PT Jump Shot (16 PTS) (Brooks 2 AST)
+3,292,1761.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Irving 3' Driving Finger Roll Layup
+3,292,1761.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Irving 3' Driving Finger Roll Layup
+3,293,1763.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Brooks REBOUND (Off:0 Def:2)
+3,293,1763.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Brooks REBOUND (Off:0 Def:2)
+3,294,1766.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Ja. Green 1' Running Reverse Layup (18 PTS) (Brooks 3 AST)
+3,294,1766.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Ja. Green 1' Running Reverse Layup (18 PTS) (Brooks 3 AST)
+3,295,1767.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MAVERICKS Timeout: Regular (Full 3 Short 0)
+3,295,1767.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MAVERICKS Timeout: Regular (Full 3 Short 0)
+3,296,1791.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Marshall 5' Driving Floating Jump Shot (6 PTS)
+3,296,1791.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Marshall 5' Driving Floating Jump Shot (6 PTS)
+3,297,1806.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Adams 7' Floating Jump Shot
+3,297,1806.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Adams 7' Floating Jump Shot
+3,298,1811.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Brooks REBOUND (Off:1 Def:2)
+3,298,1811.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Brooks REBOUND (Off:1 Def:2)
+3,299,1815.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Thompson 3PT Jump Shot
+3,299,1815.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Thompson 3PT Jump Shot
+3,300,1818.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Adams REBOUND (Off:6 Def:3)
+3,300,1818.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Adams REBOUND (Off:6 Def:3)
+3,301,1818.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Adams 1' Putback Layup
+3,301,1818.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Adams 1' Putback Layup
+3,302,1819.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Rockets Rebound
+3,302,1819.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Rockets Rebound
+3,303,1819.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",""
+3,303,1819.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",""
+3,304,1819.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",SUB: Dinwiddie FOR Christie
+3,304,1819.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",SUB: Dinwiddie FOR Christie
+3,305,1829.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",Sengun 5' Turnaround Hook Shot (18 PTS)
+3,305,1829.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Sengun 5' Turnaround Hook Shot (18 PTS)
+3,306,1842.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",Davis 15' Jump Shot (26 PTS) (Exum 3 AST)
+3,306,1842.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Davis 15' Jump Shot (26 PTS) (Exum 3 AST)
+3,307,1867.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",Brooks 19' Step Back Jump Shot (9 PTS)
+3,307,1867.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Brooks 19' Step Back Jump Shot (9 PTS)
+3,308,1880.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",MISS Davis 19' Pullup Jump Shot
+3,308,1880.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Davis 19' Pullup Jump Shot
+3,309,1883.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",Thompson REBOUND (Off:1 Def:3)
+3,309,1883.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Thompson REBOUND (Off:1 Def:3)
+3,310,1889.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",MISS Brooks 25' 3PT Running Jump Shot
+3,310,1889.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Brooks 25' 3PT Running Jump Shot
+3,311,1892.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",Marshall REBOUND (Off:0 Def:2)
+3,311,1892.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Marshall REBOUND (Off:0 Def:2)
+3,312,1901.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",Marshall 25' 3PT Jump Shot (9 PTS) (Dinwiddie 1 AST)
+3,312,1901.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Marshall 25' 3PT Jump Shot (9 PTS) (Dinwiddie 1 AST)
+3,313,1914.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",MISS Adams 8' Driving Layup
+3,313,1914.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",MISS Adams 8' Driving Layup
+3,314,1915.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",Rockets Rebound
+3,314,1915.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",Rockets Rebound
+3,315,1915.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",""
+3,315,1915.0,1610612745,HOU,5,"[1628415, 1630224, 1630578, 1631106, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Tari Eason""]",""
+3,316,1915.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",SUB: Eason FOR Adams
+3,316,1915.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",SUB: Eason FOR Adams
+3,317,1919.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",MISS Sengun 3PT Pullup Jump Shot
+3,317,1919.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",MISS Sengun 3PT Pullup Jump Shot
+3,318,1923.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",Davis REBOUND (Off:3 Def:11)
+3,318,1923.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Davis REBOUND (Off:3 Def:11)
+3,319,1932.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",Marshall 3PT Jump Shot (12 PTS) (Davis 7 AST)
+3,319,1932.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Marshall 3PT Jump Shot (12 PTS) (Davis 7 AST)
+3,320,1947.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",Thompson 6' Turnaround Jump Shot (16 PTS)
+3,320,1947.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Thompson 6' Turnaround Jump Shot (16 PTS)
+3,321,1959.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",Irving 3' Driving Floating Jump Shot (4 PTS)
+3,321,1959.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Irving 3' Driving Floating Jump Shot (4 PTS)
+3,322,1959.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",Thompson S.FOUL (P3.T2) (J.Schroeder)
+3,322,1959.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Thompson S.FOUL (P3.T2) (J.Schroeder)
+3,323,1959.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",SUB: Whitmore FOR Thompson
+3,323,1959.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",SUB: Whitmore FOR Thompson
+3,324,1959.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",Irving Free Throw 1 of 1 (5 PTS)
+3,324,1959.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Irving Free Throw 1 of 1 (5 PTS)
+3,325,1975.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",MISS Whitmore 26' 3PT Step Back Jump Shot
+3,325,1975.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",MISS Whitmore 26' 3PT Step Back Jump Shot
+3,326,1977.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",Davis REBOUND (Off:3 Def:12)
+3,326,1977.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Davis REBOUND (Off:3 Def:12)
+3,327,1983.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",MISS Irving 26' 3PT Running Pull-Up Jump Shot
+3,327,1983.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",MISS Irving 26' 3PT Running Pull-Up Jump Shot
+3,328,1986.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",Davis REBOUND (Off:4 Def:12)
+3,328,1986.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Davis REBOUND (Off:4 Def:12)
+3,329,1990.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",MISS Davis 5' Turnaround Jump Shot
+3,329,1990.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",MISS Davis 5' Turnaround Jump Shot
+3,330,1990.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",Rockets Rebound
+3,330,1990.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Rockets Rebound
+3,331,1990.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",""
+3,331,1990.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",""
+3,332,1990.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",Rockets Timeout: Coach Challenge (Reg.3 Short 0)
+3,332,1990.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Rockets Timeout: Coach Challenge (Reg.3 Short 0)
+3,333,1990.0,1610612742,DAL,6,"[202681, 202691, 203076, 1629023, 1629655, 1631108]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""Max Christie"", ""P.J. Washington""]",Instant Replay3rd Period (4:47 PM EST)
+3,333,1990.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Instant Replay3rd Period (4:47 PM EST)
+3,334,1990.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",SUB: Christie FOR Irving
+3,334,1990.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",SUB: Christie FOR Irving
+3,335,2005.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Ja. Green 1' Driving Dunk (20 PTS)
+3,335,2005.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Ja. Green 1' Driving Dunk (20 PTS)
+3,336,2012.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Whitmore S.FOUL (P2.T3) (P.Ransom)
+3,336,2012.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Whitmore S.FOUL (P2.T3) (P.Ransom)
+3,337,2012.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MISS Dinwiddie Free Throw 1 of 2
+3,337,2012.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",MISS Dinwiddie Free Throw 1 of 2
+3,338,2012.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",MAVERICKS Rebound
+3,338,2012.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",MAVERICKS Rebound
+3,339,2012.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Dinwiddie Free Throw 2 of 2 (7 PTS)
+3,339,2012.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Dinwiddie Free Throw 2 of 2 (7 PTS)
+3,340,2024.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Sengun 1' Cutting Dunk Shot (20 PTS) (Ja. Green 5 AST)
+3,340,2024.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Sengun 1' Cutting Dunk Shot (20 PTS) (Ja. Green 5 AST)
+3,341,2051.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Dinwiddie 26' 3PT Pullup Jump Shot (10 PTS)
+3,341,2051.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Dinwiddie 26' 3PT Pullup Jump Shot (10 PTS)
+3,342,2063.0,1610612742,DAL,5,"[202681, 202691, 203076, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",Christie P.FOUL (P2.T3) (J.Schroeder)
+3,342,2063.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Christie P.FOUL (P2.T3) (J.Schroeder)
+3,343,2063.0,1610612742,DAL,5,"[202681, 202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington""]",SUB: Gafford FOR Exum
+3,343,2063.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",SUB: Gafford FOR Exum
+3,344,2063.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",SUB: Irving FOR Davis
+3,344,2063.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",SUB: Irving FOR Davis
+3,345,2070.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Eason 25' 3PT Jump Shot
+3,345,2070.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",MISS Eason 25' 3PT Jump Shot
+3,346,2072.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Eason REBOUND (Off:3 Def:1)
+3,346,2072.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Eason REBOUND (Off:3 Def:1)
+3,347,2074.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Eason 14' Jump Shot (6 PTS)
+3,347,2074.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Eason 14' Jump Shot (6 PTS)
+3,348,2095.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Christie 27' 3PT Jump Shot (13 PTS) (Irving 5 AST)
+3,348,2095.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Christie 27' 3PT Jump Shot (13 PTS) (Irving 5 AST)
+3,349,2121.8,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Whitmore 26' 3PT Step Back Jump Shot
+3,349,2121.8,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",MISS Whitmore 26' 3PT Step Back Jump Shot
+3,350,2123.7,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Marshall REBOUND (Off:0 Def:3)
+3,350,2123.7,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Marshall REBOUND (Off:0 Def:3)
+3,351,2123.7,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Eason P.FOUL (P1.T4) (B.Forte)
+3,351,2123.7,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Eason P.FOUL (P1.T4) (B.Forte)
+3,352,2123.7,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",SUB: Holiday FOR Brooks
+3,352,2123.7,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",SUB: Holiday FOR Brooks
+3,353,2134.6,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Irving 26' 3PT Pullup Jump Shot
+3,353,2134.6,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",MISS Irving 26' 3PT Pullup Jump Shot
+3,354,2137.1,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Whitmore REBOUND (Off:0 Def:3)
+3,354,2137.1,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Whitmore REBOUND (Off:0 Def:3)
+3,355,2155.6,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Eason 1' Alley Oop Layup (8 PTS) (Ja. Green 6 AST)
+3,355,2155.6,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Eason 1' Alley Oop Layup (8 PTS) (Ja. Green 6 AST)
+3,356,2160.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",End of 3rd Period (4:53 PM EST)
+3,356,2160.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",End of 3rd Period (4:53 PM EST)
+4,357,2160.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Start of 4th Period (4:55 PM EST)
+4,357,2160.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Start of 4th Period (4:55 PM EST)
+4,358,2181.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Irving 1' Driving Layup (7 PTS)
+4,358,2181.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Irving 1' Driving Layup (7 PTS)
+4,359,2202.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Eason 4' Driving Layup
+4,359,2202.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",MISS Eason 4' Driving Layup
+4,360,2206.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Adams REBOUND (Off:7 Def:3)
+4,360,2206.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Adams REBOUND (Off:7 Def:3)
+4,361,2208.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Holiday 26' 3PT Jump Shot
+4,361,2208.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",MISS Holiday 26' 3PT Jump Shot
+4,362,2208.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Adams REBOUND (Off:8 Def:3)
+4,362,2208.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Adams REBOUND (Off:8 Def:3)
+4,363,2208.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Gafford P.FOUL (P4.T1) (P.Ransom)
+4,363,2208.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Gafford P.FOUL (P4.T1) (P.Ransom)
+4,364,2213.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Holiday 4' Driving Finger Roll Layup (2 PTS) (Thompson 3 AST)
+4,364,2213.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Holiday 4' Driving Finger Roll Layup (2 PTS) (Thompson 3 AST)
+4,365,2226.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Irving 17' Pullup Jump Shot
+4,365,2226.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",MISS Irving 17' Pullup Jump Shot
+4,366,2228.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Holiday REBOUND (Off:0 Def:1)
+4,366,2228.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Holiday REBOUND (Off:0 Def:1)
+4,367,2232.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Holiday 5' Running Jump Shot
+4,367,2232.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",MISS Holiday 5' Running Jump Shot
+4,368,2234.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Thompson REBOUND (Off:0 Def:4)
+4,368,2234.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Thompson REBOUND (Off:0 Def:4)
+4,369,2254.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Irving 8' Driving Floating Jump Shot (9 PTS)
+4,369,2254.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Irving 8' Driving Floating Jump Shot (9 PTS)
+4,370,2269.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Thompson 3' Driving Finger Roll Layup
+4,370,2269.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",MISS Thompson 3' Driving Finger Roll Layup
+4,371,2272.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Gafford REBOUND (Off:2 Def:3)
+4,371,2272.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Gafford REBOUND (Off:2 Def:3)
+4,372,2284.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Irving 6' Driving Floating Jump Shot
+4,372,2284.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",MISS Irving 6' Driving Floating Jump Shot
+4,373,2287.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Irving REBOUND (Off:2 Def:0)
+4,373,2287.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Irving REBOUND (Off:2 Def:0)
+4,374,2301.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Dinwiddie 7' Driving Finger Roll Layup
+4,374,2301.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",MISS Dinwiddie 7' Driving Finger Roll Layup
+4,375,2303.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Gafford REBOUND (Off:3 Def:3)
+4,375,2303.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Gafford REBOUND (Off:3 Def:3)
+4,376,2304.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Gafford 1' Putback Dunk (4 PTS)
+4,376,2304.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Gafford 1' Putback Dunk (4 PTS)
+4,377,2318.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Thompson Violation:Kicked Ball (P.Ransom)
+4,377,2318.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Thompson Violation:Kicked Ball (P.Ransom)
+4,378,2327.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Whitmore 3' Driving Layup
+4,378,2327.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",MISS Whitmore 3' Driving Layup
+4,379,2327.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Rockets Rebound
+4,379,2327.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Rockets Rebound
+4,380,2327.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MAVERICKS Timeout: Regular (Full 4 Short 0)
+4,380,2327.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",MAVERICKS Timeout: Regular (Full 4 Short 0)
+4,381,2327.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Instant Replay4th Period (4:59 PM EST)
+4,381,2327.0,1610612745,HOU,5,"[203500, 1628415, 1630224, 1630578, 1641708]","[""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Jalen Green"", ""Steven Adams""]",Instant Replay4th Period (4:59 PM EST)
+4,382,2327.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",SUB: Ja. Green FOR Holiday
+4,382,2327.0,1610612745,HOU,5,"[203500, 1628415, 1628988, 1630578, 1641708]","[""Aaron Holiday"", ""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Steven Adams""]",SUB: Ja. Green FOR Holiday
+4,383,2327.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Jump Ball (CC) Gafford vs. Adams: Tip to Thompson
+4,383,2327.0,1610612745,HOU,5,"[203500, 1628415, 1628988, 1630578, 1641708]","[""Aaron Holiday"", ""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Steven Adams""]",Jump Ball (CC) Gafford vs. Adams: Tip to Thompson
+4,384,2342.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Thompson 11' Pullup Jump Shot (18 PTS)
+4,384,2342.0,1610612745,HOU,5,"[203500, 1628415, 1628988, 1630578, 1641708]","[""Aaron Holiday"", ""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Steven Adams""]",Thompson 11' Pullup Jump Shot (18 PTS)
+4,385,2358.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Irving 13' Pullup Jump Shot (11 PTS)
+4,385,2358.0,1610612745,HOU,5,"[203500, 1628415, 1628988, 1630578, 1641708]","[""Aaron Holiday"", ""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Steven Adams""]",Irving 13' Pullup Jump Shot (11 PTS)
+4,386,2370.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Irving S.FOUL (P1.T2) (J.Schroeder)
+4,386,2370.0,1610612745,HOU,5,"[203500, 1628415, 1628988, 1630578, 1641708]","[""Aaron Holiday"", ""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Steven Adams""]",Irving S.FOUL (P1.T2) (J.Schroeder)
+4,387,2370.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Whitmore Free Throw 1 of 2 (6 PTS)
+4,387,2370.0,1610612745,HOU,5,"[203500, 1628415, 1628988, 1630578, 1641708]","[""Aaron Holiday"", ""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Steven Adams""]",Whitmore Free Throw 1 of 2 (6 PTS)
+4,388,2370.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",SUB: Exum FOR Dinwiddie
+4,388,2370.0,1610612745,HOU,5,"[203500, 1628415, 1628988, 1630578, 1641708]","[""Aaron Holiday"", ""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Steven Adams""]",SUB: Exum FOR Dinwiddie
+4,389,2370.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Whitmore Free Throw 2 of 2 (7 PTS)
+4,389,2370.0,1610612745,HOU,5,"[203500, 1628415, 1628988, 1630578, 1641708]","[""Aaron Holiday"", ""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Steven Adams""]",Whitmore Free Throw 2 of 2 (7 PTS)
+4,390,2380.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Irving Bad Pass Turnover (P1.T4)
+4,390,2380.0,1610612745,HOU,5,"[203500, 1628415, 1628988, 1630578, 1641708]","[""Aaron Holiday"", ""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Steven Adams""]",Irving Bad Pass Turnover (P1.T4)
+4,391,2387.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Thompson Lost Ball Turnover (P4.T6)
+4,391,2387.0,1610612745,HOU,5,"[203500, 1628415, 1628988, 1630578, 1641708]","[""Aaron Holiday"", ""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Steven Adams""]",Thompson Lost Ball Turnover (P4.T6)
+4,392,2394.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MAVERICKS Timeout: Regular (Full 5 Short 0)
+4,392,2394.0,1610612745,HOU,5,"[203500, 1628415, 1628988, 1630578, 1641708]","[""Aaron Holiday"", ""Alperen Sengun"", ""Amen Thompson"", ""Dillon Brooks"", ""Steven Adams""]",MAVERICKS Timeout: Regular (Full 5 Short 0)
+4,393,2394.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",SUB: Sengun FOR Adams
+4,393,2394.0,1610612745,HOU,4,"[203500, 1628415, 1628988, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Dillon Brooks"", ""Steven Adams""]",SUB: Sengun FOR Adams
+4,394,2394.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",SUB: Brooks FOR Eason
+4,394,2394.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",SUB: Brooks FOR Eason
+4,395,2401.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",""
+4,395,2401.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",""
+4,396,2404.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Thompson 20' Jump Shot
+4,396,2404.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",MISS Thompson 20' Jump Shot
+4,397,2406.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Thompson REBOUND (Off:1 Def:4)
+4,397,2406.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",Thompson REBOUND (Off:1 Def:4)
+4,398,2411.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Sengun Lost Ball Turnover (P1.T7)
+4,398,2411.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",Sengun Lost Ball Turnover (P1.T7)
+4,399,2427.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Christie 3PT Jump Shot
+4,399,2427.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",MISS Christie 3PT Jump Shot
+4,400,2429.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Gafford REBOUND (Off:4 Def:3)
+4,400,2429.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",Gafford REBOUND (Off:4 Def:3)
+4,401,2430.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Sengun S.FOUL (P4.T1) (J.Schroeder)
+4,401,2430.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",Sengun S.FOUL (P4.T1) (J.Schroeder)
+4,402,2430.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Gafford Free Throw 1 of 2
+4,402,2430.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",MISS Gafford Free Throw 1 of 2
+4,403,2430.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MAVERICKS Rebound
+4,403,2430.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",MAVERICKS Rebound
+4,404,2430.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Gafford Free Throw 2 of 2
+4,404,2430.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",MISS Gafford Free Throw 2 of 2
+4,405,2432.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Sengun REBOUND (Off:1 Def:6)
+4,405,2432.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",Sengun REBOUND (Off:1 Def:6)
+4,406,2442.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Ja. Green 1' Driving Layup
+4,406,2442.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",MISS Ja. Green 1' Driving Layup
+4,407,2442.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Rockets Rebound
+4,407,2442.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",Rockets Rebound
+4,408,2442.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Christie L.B.FOUL (P3.T3) (J.Schroeder)
+4,408,2442.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",Christie L.B.FOUL (P3.T3) (J.Schroeder)
+4,409,2442.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",SUB: Marshall FOR Thompson
+4,409,2442.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",SUB: Marshall FOR Thompson
+4,410,2450.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Ja. Green 6' Driving Floating Bank Jump Shot (22 PTS)
+4,410,2450.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",Ja. Green 6' Driving Floating Bank Jump Shot (22 PTS)
+4,411,2466.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Ja. Green P.FOUL (P2.T2) (P.Ransom)
+4,411,2466.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",Ja. Green P.FOUL (P2.T2) (P.Ransom)
+4,412,2466.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",SUB: Dinwiddie FOR Exum
+4,412,2466.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",SUB: Dinwiddie FOR Exum
+4,413,2477.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Gafford 8' Driving Hook Shot
+4,413,2477.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",MISS Gafford 8' Driving Hook Shot
+4,414,2479.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Whitmore REBOUND (Off:0 Def:4)
+4,414,2479.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",Whitmore REBOUND (Off:0 Def:4)
+4,415,2491.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Whitmore 5' Driving Floating Jump Shot
+4,415,2491.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",MISS Whitmore 5' Driving Floating Jump Shot
+4,416,2494.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Thompson REBOUND (Off:2 Def:4)
+4,416,2494.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",Thompson REBOUND (Off:2 Def:4)
+4,417,2496.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Thompson Tip Layup Shot (20 PTS)
+4,417,2496.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",Thompson Tip Layup Shot (20 PTS)
+4,418,2515.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Thompson S.FOUL (P4.T3) (B.Forte)
+4,418,2515.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",Thompson S.FOUL (P4.T3) (B.Forte)
+4,419,2515.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Rockets Timeout: Regular (Reg.4 Short 0)
+4,419,2515.0,1610612745,HOU,4,"[203500, 1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Steven Adams"", ""Tari Eason""]",Rockets Timeout: Regular (Reg.4 Short 0)
+4,420,2515.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",SUB: Adams FOR Thompson
+4,420,2515.0,1610612745,HOU,3,"[1628988, 1631106, 1641708]","[""Aaron Holiday"", ""Amen Thompson"", ""Tari Eason""]",SUB: Adams FOR Thompson
+4,421,2515.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",SUB: Eason FOR Whitmore
+4,421,2515.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",SUB: Eason FOR Whitmore
+4,422,2515.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Christie Free Throw 1 of 2
+4,422,2515.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",MISS Christie Free Throw 1 of 2
+4,423,2515.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MAVERICKS Rebound
+4,423,2515.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",MAVERICKS Rebound
+4,424,2515.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Christie Free Throw 2 of 2 (14 PTS)
+4,424,2515.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",Christie Free Throw 2 of 2 (14 PTS)
+4,425,2533.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Sengun 3 Second Violation Turnover (P2.T8)
+4,425,2533.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",Sengun 3 Second Violation Turnover (P2.T8)
+4,426,2555.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Marshall 21' Jump Shot (14 PTS) (Christie 2 AST)
+4,426,2555.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",Marshall 21' Jump Shot (14 PTS) (Christie 2 AST)
+4,427,2576.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Sengun 5' Turnaround Hook Shot (22 PTS)
+4,427,2576.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",Sengun 5' Turnaround Hook Shot (22 PTS)
+4,428,2606.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Marshall 24' 3PT Pullup Jump Shot
+4,428,2606.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",MISS Marshall 24' 3PT Pullup Jump Shot
+4,429,2608.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Eason REBOUND (Off:3 Def:2)
+4,429,2608.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",Eason REBOUND (Off:3 Def:2)
+4,430,2618.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Dinwiddie P.FOUL (P2.T4) (B.Forte)
+4,430,2618.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",Dinwiddie P.FOUL (P2.T4) (B.Forte)
+4,431,2623.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Marshall P.FOUL (P1.PN) (P.Ransom)
+4,431,2623.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",Marshall P.FOUL (P1.PN) (P.Ransom)
+4,432,2623.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Sengun Free Throw 1 of 2 (23 PTS)
+4,432,2623.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",Sengun Free Throw 1 of 2 (23 PTS)
+4,433,2623.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Sengun Free Throw 2 of 2 (24 PTS)
+4,433,2623.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",Sengun Free Throw 2 of 2 (24 PTS)
+4,434,2639.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Brooks S.FOUL (P3.T4) (P.Ransom)
+4,434,2639.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",Brooks S.FOUL (P3.T4) (P.Ransom)
+4,435,2639.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Christie Free Throw 1 of 2 (15 PTS)
+4,435,2639.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",Christie Free Throw 1 of 2 (15 PTS)
+4,436,2639.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Christie Free Throw 2 of 2 (16 PTS)
+4,436,2639.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",Christie Free Throw 2 of 2 (16 PTS)
+4,437,2651.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Ja. Green 2' Driving Layup
+4,437,2651.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",MISS Ja. Green 2' Driving Layup
+4,438,2654.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Adams REBOUND (Off:9 Def:3)
+4,438,2654.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",Adams REBOUND (Off:9 Def:3)
+4,439,2657.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Adams Tip Dunk Shot (2 PTS)
+4,439,2657.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",Adams Tip Dunk Shot (2 PTS)
+4,440,2668.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Christie 5' Driving Layup
+4,440,2668.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",MISS Christie 5' Driving Layup
+4,441,2671.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Gafford REBOUND (Off:5 Def:3)
+4,441,2671.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",Gafford REBOUND (Off:5 Def:3)
+4,442,2673.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Marshall 1' Driving Layup (16 PTS) (Gafford 1 AST)
+4,442,2673.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",Marshall 1' Driving Layup (16 PTS) (Gafford 1 AST)
+4,443,2673.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Rockets Timeout: Regular (Reg.5 Short 0)
+4,443,2673.0,1610612745,HOU,3,"[1628988, 1641708, 1641715]","[""Aaron Holiday"", ""Amen Thompson"", ""Cam Whitmore""]",Rockets Timeout: Regular (Reg.5 Short 0)
+4,444,2673.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",SUB: Thompson FOR Eason
+4,444,2673.0,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",SUB: Thompson FOR Eason
+4,445,2690.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Marshall P.FOUL (P2.PN) (P.Ransom)
+4,445,2690.0,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",Marshall P.FOUL (P2.PN) (P.Ransom)
+4,446,2690.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",""
+4,446,2690.0,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",""
+4,447,2690.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Sengun Free Throw 1 of 2 (25 PTS)
+4,447,2690.0,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",Sengun Free Throw 1 of 2 (25 PTS)
+4,448,2690.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",SUB: Eason FOR Adams
+4,448,2690.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",SUB: Eason FOR Adams
+4,449,2690.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Sengun Free Throw 2 of 2
+4,449,2690.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",MISS Sengun Free Throw 2 of 2
+4,450,2692.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Gafford REBOUND (Off:5 Def:4)
+4,450,2692.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Gafford REBOUND (Off:5 Def:4)
+4,451,2706.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Dinwiddie 6' Driving Floating Bank Jump Shot
+4,451,2706.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",MISS Dinwiddie 6' Driving Floating Bank Jump Shot
+4,452,2707.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Eason REBOUND (Off:3 Def:3)
+4,452,2707.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Eason REBOUND (Off:3 Def:3)
+4,453,2717.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Ja. Green 14' Step Back Jump Shot (24 PTS)
+4,453,2717.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Ja. Green 14' Step Back Jump Shot (24 PTS)
+4,454,2740.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Irving 26' 3PT Jump Shot
+4,454,2740.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",MISS Irving 26' 3PT Jump Shot
+4,455,2742.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Thompson REBOUND (Off:2 Def:5)
+4,455,2742.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Thompson REBOUND (Off:2 Def:5)
+4,456,2747.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Ja. Green 4' Driving Floating Jump Shot
+4,456,2747.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",MISS Ja. Green 4' Driving Floating Jump Shot
+4,457,2750.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",Christie REBOUND (Off:0 Def:2)
+4,457,2750.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Christie REBOUND (Off:0 Def:2)
+4,458,2752.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MISS Christie 4' Driving Floating Jump Shot
+4,458,2752.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",MISS Christie 4' Driving Floating Jump Shot
+4,459,2752.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",MAVERICKS Rebound
+4,459,2752.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",MAVERICKS Rebound
+4,460,2752.0,1610612742,DAL,4,"[202691, 203076, 203957, 1629023]","[""Anthony Davis"", ""Dante Exum"", ""Klay Thompson"", ""P.J. Washington""]",""
+4,460,2752.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",""
+4,461,2752.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",SUB: Exum FOR Dinwiddie
+4,461,2752.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",SUB: Exum FOR Dinwiddie
+4,462,2756.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Brooks S.FOUL (P4.PN) (P.Ransom)
+4,462,2756.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Brooks S.FOUL (P4.PN) (P.Ransom)
+4,463,2756.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Irving Free Throw 1 of 2 (12 PTS)
+4,463,2756.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Irving Free Throw 1 of 2 (12 PTS)
+4,464,2756.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",SUB: Adams FOR Eason
+4,464,2756.0,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",SUB: Adams FOR Eason
+4,465,2756.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Irving Free Throw 2 of 2 (13 PTS)
+4,465,2756.0,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",Irving Free Throw 2 of 2 (13 PTS)
+4,466,2767.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Ja. Green 3PT Jump Shot
+4,466,2767.0,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",MISS Ja. Green 3PT Jump Shot
+4,467,2770.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Ja. Green REBOUND (Off:1 Def:2)
+4,467,2770.0,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",Ja. Green REBOUND (Off:1 Def:2)
+4,468,2772.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Ja. Green Bad Pass Turnover (P2.T9)
+4,468,2772.0,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",Ja. Green Bad Pass Turnover (P2.T9)
+4,469,2782.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Christie 26' 3PT Jump Shot (19 PTS) (Irving 6 AST)
+4,469,2782.0,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",Christie 26' 3PT Jump Shot (19 PTS) (Irving 6 AST)
+4,470,2792.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Sengun 7' Turnaround Bank Shot
+4,470,2792.0,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",MISS Sengun 7' Turnaround Bank Shot
+4,471,2792.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MAVERICKS Rebound
+4,471,2792.0,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",MAVERICKS Rebound
+4,472,2792.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",""
+4,472,2792.0,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",""
+4,473,2792.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MAVERICKS Timeout: Regular (Full 6 Short 0)
+4,473,2792.0,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",MAVERICKS Timeout: Regular (Full 6 Short 0)
+4,474,2792.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Instant Replay4th Period (5:26 PM EST)
+4,474,2792.0,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",Instant Replay4th Period (5:26 PM EST)
+4,475,2792.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",SUB: Eason FOR Adams
+4,475,2792.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",SUB: Eason FOR Adams
+4,476,2801.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Thompson S.FOUL (P5.PN) (B.Forte)
+4,476,2801.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Thompson S.FOUL (P5.PN) (B.Forte)
+4,477,2801.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",""
+4,477,2801.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",""
+4,478,2801.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Gafford Free Throw 1 of 2 (5 PTS)
+4,478,2801.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Gafford Free Throw 1 of 2 (5 PTS)
+4,479,2801.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Gafford Free Throw 2 of 2
+4,479,2801.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",MISS Gafford Free Throw 2 of 2
+4,480,2803.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Sengun REBOUND (Off:1 Def:7)
+4,480,2803.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Sengun REBOUND (Off:1 Def:7)
+4,481,2813.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Exum S.FOUL (P1.PN) (B.Forte)
+4,481,2813.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Exum S.FOUL (P1.PN) (B.Forte)
+4,482,2813.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Sengun Free Throw 1 of 2 (26 PTS)
+4,482,2813.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Sengun Free Throw 1 of 2 (26 PTS)
+4,483,2813.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Sengun Free Throw 2 of 2
+4,483,2813.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",MISS Sengun Free Throw 2 of 2
+4,484,2815.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Marshall REBOUND (Off:0 Def:4)
+4,484,2815.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Marshall REBOUND (Off:0 Def:4)
+4,485,2817.0,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",""
+4,485,2817.0,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",""
+4,486,2821.2,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Christie Out of Bounds - Bad Pass Turnover Turnover (P1.T5)
+4,486,2821.2,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Christie Out of Bounds - Bad Pass Turnover Turnover (P1.T5)
+4,487,2825.5,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Sengun 1' Driving Floating Jump Shot (28 PTS) (Thompson 4 AST)
+4,487,2825.5,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Sengun 1' Driving Floating Jump Shot (28 PTS) (Thompson 4 AST)
+4,488,2828.4,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Eason P.FOUL (P2.PN) (B.Forte)
+4,488,2828.4,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Eason P.FOUL (P2.PN) (B.Forte)
+4,489,2828.4,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Christie Free Throw 1 of 2 (20 PTS)
+4,489,2828.4,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Christie Free Throw 1 of 2 (20 PTS)
+4,490,2828.4,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Christie Free Throw 2 of 2 (21 PTS)
+4,490,2828.4,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Christie Free Throw 2 of 2 (21 PTS)
+4,491,2834.8,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Ja. Green 2' Driving Dunk
+4,491,2834.8,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",MISS Ja. Green 2' Driving Dunk
+4,492,2837.4,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Exum REBOUND (Off:0 Def:2)
+4,492,2837.4,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Exum REBOUND (Off:0 Def:2)
+4,493,2842.8,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Eason P.FOUL (P3.PN) (P.Ransom)
+4,493,2842.8,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Eason P.FOUL (P3.PN) (P.Ransom)
+4,494,2842.8,1610612742,DAL,4,"[202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Exum Free Throw 1 of 2 (3 PTS)
+4,494,2842.8,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Exum Free Throw 1 of 2 (3 PTS)
+4,495,2842.8,1610612742,DAL,5,"[202681, 202691, 203076, 203915, 1629023]","[""Anthony Davis"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington"", ""Spencer Dinwiddie""]",SUB: Prosper FOR Irving
+4,495,2842.8,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",SUB: Prosper FOR Irving
+4,496,2842.8,1610612742,DAL,6,"[202681, 202691, 203076, 203915, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington"", ""Spencer Dinwiddie""]",SUB: Edwards FOR Gafford
+4,496,2842.8,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",SUB: Edwards FOR Gafford
+4,497,2842.8,1610612742,DAL,6,"[202681, 202691, 203076, 203915, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Exum Free Throw 2 of 2 (4 PTS)
+4,497,2842.8,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Exum Free Throw 2 of 2 (4 PTS)
+4,498,2842.8,1610612742,DAL,6,"[202681, 202691, 203076, 203915, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Rockets Timeout: Regular (Reg.6 Short 0)
+4,498,2842.8,1610612745,HOU,3,"[203500, 1628988, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Steven Adams""]",Rockets Timeout: Regular (Reg.6 Short 0)
+4,499,2842.8,1610612742,DAL,6,"[202681, 202691, 203076, 203915, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington"", ""Spencer Dinwiddie""]",SUB: Adams FOR Eason
+4,499,2842.8,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",SUB: Adams FOR Eason
+4,500,2847.3,1610612742,DAL,6,"[202681, 202691, 203076, 203915, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Sengun 1' Cutting Dunk Shot (30 PTS) (Thompson 5 AST)
+4,500,2847.3,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",Sengun 1' Cutting Dunk Shot (30 PTS) (Thompson 5 AST)
+4,501,2847.6,1610612742,DAL,6,"[202681, 202691, 203076, 203915, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Brooks Personal Take Foul (P5.PN) (P.Ransom)
+4,501,2847.6,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",Brooks Personal Take Foul (P5.PN) (P.Ransom)
+4,502,2847.6,1610612742,DAL,6,"[202681, 202691, 203076, 203915, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Christie Free Throw 1 of 2 (22 PTS)
+4,502,2847.6,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",Christie Free Throw 1 of 2 (22 PTS)
+4,503,2847.6,1610612742,DAL,6,"[202681, 202691, 203076, 203915, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Christie Free Throw 2 of 2 (23 PTS)
+4,503,2847.6,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",Christie Free Throw 2 of 2 (23 PTS)
+4,504,2854.0,1610612742,DAL,6,"[202681, 202691, 203076, 203915, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington"", ""Spencer Dinwiddie""]",MISS Brooks 24' 3PT Jump Shot
+4,504,2854.0,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",MISS Brooks 24' 3PT Jump Shot
+4,505,2856.1,1610612742,DAL,6,"[202681, 202691, 203076, 203915, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington"", ""Spencer Dinwiddie""]",Prosper REBOUND (Off:0 Def:1)
+4,505,2856.1,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",Prosper REBOUND (Off:0 Def:1)
+4,506,2879.0,1610612742,DAL,6,"[202681, 202691, 203076, 203915, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington"", ""Spencer Dinwiddie""]","MAVERICKS Turnover: Shot Clock (T#6)"
+4,506,2879.0,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]","MAVERICKS Turnover: Shot Clock (T#6)"
+4,507,2880.0,1610612742,DAL,6,"[202681, 202691, 203076, 203915, 1629023, 1629655]","[""Anthony Davis"", ""Daniel Gafford"", ""Klay Thompson"", ""Kyrie Irving"", ""P.J. Washington"", ""Spencer Dinwiddie""]",End of 4th Period (5:38 PM EST)
+4,507,2880.0,1610612745,HOU,3,"[1628988, 1631106, 1641715]","[""Aaron Holiday"", ""Cam Whitmore"", ""Tari Eason""]",End of 4th Period (5:38 PM EST)

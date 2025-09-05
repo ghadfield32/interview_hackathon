@@ -1,0 +1,3 @@
+team,box_score_points,raw_pbp_points,step4_processed_points,traditional_lineup_points,enhanced_lineup_points,raw_to_step4_diff,step4_to_traditional_diff,step4_to_enhanced_diff,box_to_traditional_diff,box_to_enhanced_diff
+DAL,116,115,115,115,115,0,0,0,-1,-1
+HOU,105,106,106,106,106,0,0,0,1,1

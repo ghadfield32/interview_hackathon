@@ -1,0 +1,6 @@
+metric,traditional_value,enhanced_value,difference,better_method
+5-Man Lineups,6.0,42.0,36.0,Enhanced
+5-Man Percentage,30.0,100.0,70.0,Enhanced
+Avg Possessions per Lineup,27.4,13.0,-14.4,Traditional
+Total Lineups,20.0,42.0,22.0,Traditional
+Violation Flags,873.0,67.0,-806.0,Enhanced

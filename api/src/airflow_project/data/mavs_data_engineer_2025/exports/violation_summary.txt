@@ -1,0 +1,12 @@
+TRADITIONAL LINEUP VIOLATION SUMMARY
+==================================================
+
+Total Violations: 873
+
+Violation Types:
+  lineup_size_deviation: 639 (73.2%)
+  action_by_non_lineup_player: 195 (22.3%)
+  sub_in_player_already_in_lineup: 21 (2.4%)
+  sub_out_player_not_in_lineup: 18 (2.1%)
+
+Generated: 2025-09-05 18:45:30

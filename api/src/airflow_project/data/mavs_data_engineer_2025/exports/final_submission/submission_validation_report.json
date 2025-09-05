@@ -1,0 +1,14 @@
+{
+  "project1_lineups": {
+    "total_lineups": 42,
+    "teams_covered": 2,
+    "five_man_compliance": "100%",
+    "file_size_kb": 4.0
+  },
+  "project2_players": {
+    "total_players": 19,
+    "teams_covered": 2,
+    "rim_data_coverage": "19/19 players",
+    "file_size_kb": 1.2
+  }
+}

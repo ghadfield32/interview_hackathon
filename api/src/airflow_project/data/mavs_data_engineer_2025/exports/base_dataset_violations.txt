@@ -1,0 +1,21 @@
+BASE DATASET VIOLATIONS AND RECOMMENDATIONS
+============================================================
+
+DATA QUALITY ISSUES:
+  - Missing team data in 0.0% of events
+  - No player data in 13.2% of events
+  - Incomplete substitutions in 0.0% of substitution events
+
+LINEUP TRACKING CHALLENGES:
+  - Only 30.0% of traditional lineups have exactly 5 players
+  - Substitution data requires intelligent inference for accurate lineup tracking
+  - Enhanced method achieves 100% 5-player lineup accuracy through automation
+
+RECOMMENDATIONS:
+  - Use enhanced method for production lineup tracking
+  - Traditional method useful for data quality validation
+  - Violation reports highlight areas needing manual review
+  - Consider implementing enhanced automation for real-time applications
+
+Report generated: 2025-09-05 18:45:30
+For detailed violation data, see traditional_lineup_violations.csv

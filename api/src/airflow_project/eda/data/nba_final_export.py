@@ -1,0 +1,1747 @@
+# Step 6: Dual-Method Final Validation & Export Results
+"""
+NBA Pipeline - UPDATED Step 6: Dual-Method Final Validation & Export
+====================================================================
+
+UPDATED to integrate Step 2 findings and dual-method approach:
+- Validates and exports BOTH traditional and enhanced method results
+- Includes comprehensive violation reports for traditional lineups
+- Generates method comparison and effectiveness analysis
+- Uses config-driven automation for paths and settings
+- Creates base dataset reports for final project submission
+- Comprehensive validation against box score data
+
+Key Integration Points from Step 2/5:
+1. Exports traditional results (variable lineup sizes, violations included)
+2. Exports enhanced results (5-man lineups, intelligent inference)
+3. Creates violation analysis and comparison reports
+4. Uses CONFIG for automation settings and paths
+5. Generates final project deliverables in specified format
+"""
+import os
+import sys
+# Ensure we're in the right directory
+cwd = os.getcwd()
+if not cwd.endswith("airflow_project"):
+    os.chdir('api/src/airflow_project')
+sys.path.insert(0, os.getcwd())
+
+
+import duckdb
+import pandas as pd
+import numpy as np
+from pathlib import Path
+import logging
+import time
+from typing import Dict, List, Tuple, Optional, Any
+from dataclasses import dataclass, field
+import csv
+import json
+
+from eda.utils.nba_pipeline_analysis import NBADataValidator, ValidationResult
+from eda.data.nba_entities_extractor import GameEntities
+
+# Load configuration
+try:
+    from utils.config import (
+        NBA_SUBSTITUTION_CONFIG,
+        DUCKDB_PATH,
+        EXPORTS_DIR,
+        PROCESSED_DIR,
+        LOGS_DIR,
+        LINEUPS_OUTPUT_COLUMNS,
+        PLAYERS_OUTPUT_COLUMNS,
+        get_column_usage_report
+    )
+    CONFIG = NBA_SUBSTITUTION_CONFIG
+    DB_PATH = str(DUCKDB_PATH)
+    EXPORT_DIR = EXPORTS_DIR
+    PROCESSED_DIR = PROCESSED_DIR
+    LOGS_DIR = LOGS_DIR
+    LINEUP_COLUMNS = LINEUPS_OUTPUT_COLUMNS
+    PLAYER_COLUMNS = PLAYERS_OUTPUT_COLUMNS
+except ImportError:
+    logger.warning("Config not available, using defaults")
+    CONFIG = {"debug": {"log_all_substitutions": True}}
+    DB_PATH = "mavs_enhanced.duckdb"
+    EXPORT_DIR = Path("exports")
+    PROCESSED_DIR = Path("processed")
+    LOGS_DIR = Path("logs")
+    LINEUP_COLUMNS = ["Team", "Player 1", "Player 2", "Player 3", "Player 4", "Player 5", 
+                     "Offensive possessions played", "Defensive possessions played",
+                     "Offensive rating", "Defensive rating", "Net rating"]
+    PLAYER_COLUMNS = ["Player ID", "Player Name", "Team", "Offensive possessions played", 
+                     "Defensive possessions played", 
+                     "Opponent rim field goal percentage when player is on the court",
+                     "Opponent rim field goal percentage when player is off the court",
+                     "Opponent rim field goal percentage on/off difference (on-off)"]
+
+logger = logging.getLogger(__name__)
+
+@dataclass
+class DualMethodValidationTolerance:
+    """Enhanced tolerance levels for dual-method validation"""
+    points_tolerance: int = 2
+    possession_tolerance_pct: float = 0.05
+    minutes_tolerance_sec: int = 30
+    rating_sanity_min: float = 50.0
+    rating_sanity_max: float = 200.0
+
+    # Method comparison tolerances
+    lineup_count_difference_max: int = 10  # Max acceptable difference in lineup counts
+    possession_difference_max_pct: float = 0.10  # Max 10% difference in possessions
+    rating_difference_max: float = 20.0  # Max 20 point rating difference
+
+@dataclass
+class ExportSummary:
+    """Summary of exported files and metrics"""
+    files_exported: List[str] = field(default_factory=list)
+    traditional_lineups: int = 0
+    enhanced_lineups: int = 0
+    traditional_players: int = 0
+    enhanced_players: int = 0
+    violation_reports: int = 0
+    comparison_reports: int = 0
+    total_file_size_mb: float = 0.0
+
+class DualMethodFinalValidator:
+    """UPDATED: Comprehensive dual-method validation and export"""
+
+    def __init__(self, db_path: str = None, entities: GameEntities = None, 
+                 ascii_only: bool = True):
+        self.db_path = db_path or DB_PATH
+        self.conn = None
+        self.entities = entities
+        self.validator = NBADataValidator()
+        self.tolerance = DualMethodValidationTolerance()
+        self.ascii_only = ascii_only
+
+        # Export configuration using config system
+        self.export_dir = EXPORT_DIR
+        self.export_dir.mkdir(parents=True, exist_ok=True)
+
+        # Processing directories
+        self.processed_dir = PROCESSED_DIR
+        self.processed_dir.mkdir(parents=True, exist_ok=True)
+
+        self.logs_dir = LOGS_DIR
+        self.logs_dir.mkdir(parents=True, exist_ok=True)
+
+        # Export summary
+        self.export_summary = ExportSummary()
+
+    # --- helper: map status icons to ASCII ---
+    @staticmethod
+    def _status_label(passed: bool) -> str:
+        return "[PASS]" if passed else "[FAIL]"
+
+    @staticmethod
+    def _warn_label() -> str:
+        return "WARN"
+
+    def _sanitize_for_file(self, text: str) -> str:
+        """
+        Keep report readable everywhere. If ascii_only is True, strip/replace
+        non-ASCII chars. We intentionally replace just decoration; content remains.
+        """
+        if not self.ascii_only:
+            return text
+        # Encode-decode via 'ascii' with 'replace' to surface any stray glyphs as '?'
+        # But first do targeted replacements for known emojis so we don't lose meaning.
+        text = (text
+                .replace("✅", "[PASS]")
+                .replace("❌", "[FAIL]")
+                .replace("⚠️", "WARN")
+                .replace("⚠", "WARN")
+                .replace("📁", "FILES")
+                .replace("📄", "-")
+                .replace("🏟️", "ARENA")
+                .replace("🏠", "HOME")
+                .replace("✈️", "AWAY")
+                .replace("→", "->"))
+        try:
+            return text.encode("ascii", "replace").decode("ascii")
+        except Exception:
+            # As a last resort, drop non-ascii
+            return "".join(ch if ord(ch) < 128 else "?" for ch in text)
+
+
+    def __enter__(self):
+        self.conn = duckdb.connect(self.db_path)
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        if self.conn:
+            self.conn.close()
+
+    def validate_dual_method_tables_exist(self) -> ValidationResult:
+        """Validate that both traditional and enhanced method tables exist"""
+        start_time = time.time()
+
+        try:
+            logger.info("Validating dual-method tables exist...")
+
+            # Check for required dual-method tables
+            required_tables = [
+                'final_dual_lineups',
+                'final_dual_players', 
+                'method_comparison_summary',
+                'traditional_violation_report',
+                'enhanced_violation_report'
+            ]
+
+            existing_tables = [
+                row[0] for row in self.conn.execute(
+                    "SELECT table_name FROM information_schema.tables"
+                ).fetchall()
+            ]
+
+            missing_tables = [t for t in required_tables if t not in existing_tables]
+            warnings = []
+
+            if missing_tables:
+                warnings.append(f"Missing dual-method tables: {missing_tables}")
+
+            # Check table contents
+            table_counts = {}
+            for table in [t for t in required_tables if t not in missing_tables]:
+                try:
+                    count = self.conn.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]
+                    table_counts[table] = count
+                    if count == 0:
+                        warnings.append(f"Table {table} exists but is empty")
+                except Exception as e:
+                    warnings.append(f"Error checking table {table}: {e}")
+
+            # Validate dual-method structure
+            if 'final_dual_lineups' in table_counts:
+                method_counts = self.conn.execute("""
+                    SELECT method, COUNT(*) as count
+                    FROM final_dual_lineups
+                    GROUP BY method
+                """).df()
+
+                if not method_counts.empty:
+                    methods = set(method_counts['method'].tolist())
+                    expected_methods = {'traditional', 'enhanced'}
+                    if methods != expected_methods:
+                        warnings.append(f"Expected methods {expected_methods}, found {methods}")
+
+                    for _, row in method_counts.iterrows():
+                        if row['method'] == 'traditional':
+                            self.export_summary.traditional_lineups = int(row['count'])
+                        elif row['method'] == 'enhanced':
+                            self.export_summary.enhanced_lineups = int(row['count'])
+
+            passed = len(missing_tables) == 0 and len([w for w in warnings if 'empty' in w]) == 0
+            details = f"Dual-method tables validated: {table_counts}"
+
+            return ValidationResult(
+                step_name="Dual Method Tables Check",
+                passed=passed,
+                details=details,
+                processing_time=time.time() - start_time,
+                warnings=warnings
+            )
+
+        except Exception as e:
+            return ValidationResult(
+                step_name="Dual Method Tables Check",
+                passed=False,
+                details=f"Error validating dual-method tables: {str(e)}",
+                processing_time=time.time() - start_time
+            )
+
+
+    def validate_against_box_score_dual(self) -> ValidationResult:
+        """Enhanced version with detailed debugging of the points mismatch"""
+        start_time = time.time()
+        try:
+            logger.info("Validating dual-method results against box score (DEBUG MODE)...")
+
+            # 1) Box score totals with more detail
+            box_totals = self.conn.execute("""
+                SELECT 
+                    team_abbrev,
+                    SUM(points) AS total_points,
+                    SUM(seconds_played) AS total_seconds,
+                    COUNT(*) AS active_players,
+                    STRING_AGG(player_name || ':' || CAST(points AS VARCHAR), ', ') AS player_breakdown
+                FROM box_score
+                WHERE status = 'ACTIVE'
+                GROUP BY team_abbrev
+                ORDER BY team_abbrev
+            """).df()
+
+            # 2) Calculated lineup totals with debugging info
+            method_totals = self.conn.execute("""
+                SELECT 
+                    method,
+                    team_abbrev,
+                    SUM(points_for) AS calc_points_for,
+                    SUM(points_against) AS calc_points_against,
+                    SUM(off_possessions) AS total_off_poss,
+                    SUM(def_possessions) AS total_def_poss,
+                    COUNT(*) AS unique_lineups,
+                    AVG(off_rating) AS avg_off_rating,
+                    AVG(def_rating) AS avg_def_rating
+                FROM final_dual_lineups
+                GROUP BY method, team_abbrev
+                ORDER BY method, team_abbrev
+            """).df()
+
+            # 3) Raw event totals for comparison
+            raw_event_totals = self.conn.execute("""
+                SELECT 
+                    CASE 
+                        WHEN off_team_id = 1610612742 THEN 'DAL'
+                        WHEN off_team_id = 1610612745 THEN 'HOU'
+                        ELSE CAST(off_team_id AS VARCHAR)
+                    END as team_abbrev,
+                    SUM(COALESCE(points, 0)) AS raw_event_points,
+                    COUNT(CASE WHEN points > 0 THEN 1 END) AS scoring_events
+                FROM step4_processed_events
+                WHERE off_team_id IS NOT NULL
+                GROUP BY off_team_id
+                ORDER BY team_abbrev
+            """).df()
+
+            warnings = []
+            debug_lines = []
+
+            # 4) Enhanced per-team comparison
+            for _, box_row in box_totals.iterrows():
+                team = box_row['team_abbrev']
+                box_pts = int(box_row['total_points'])
+
+                # Get raw event points
+                raw_row = raw_event_totals[raw_event_totals['team_abbrev'] == team]
+                raw_pts = int(raw_row.iloc[0]['raw_event_points']) if not raw_row.empty else 0
+                raw_events = int(raw_row.iloc[0]['scoring_events']) if not raw_row.empty else 0
+
+                debug_lines.append(f"=== {team} DEBUG ===")
+                debug_lines.append(f"Box Score: {box_pts} points ({box_row['active_players']} players)")
+                debug_lines.append(f"Raw Events: {raw_pts} points ({raw_events} scoring events)")
+                debug_lines.append(f"Player Breakdown: {box_row['player_breakdown']}")
+
+                # Check each method
+                for method in ['traditional', 'enhanced']:
+                    method_row = method_totals[
+                        (method_totals['method'] == method) & 
+                        (method_totals['team_abbrev'] == team)
+                    ]
+
+                    if method_row.empty:
+                        warnings.append(f"{method.title()} method missing data for team {team}")
+                        debug_lines.append(f"{method.title()}: MISSING DATA")
+                        continue
+
+                    calc_pts = int(method_row.iloc[0]['calc_points_for'])
+                    lineups = int(method_row.iloc[0]['unique_lineups'])
+                    possessions = int(method_row.iloc[0]['total_off_poss'])
+                    avg_off_rating = float(method_row.iloc[0]['avg_off_rating'])
+
+                    diff = calc_pts - box_pts
+                    raw_diff = calc_pts - raw_pts
+
+                    tag = "OK" if diff == 0 else ("SHORT" if diff < 0 else "OVER")
+
+                    debug_lines.append(f"{method.title()}: {calc_pts} points ({lineups} lineups, {possessions} poss)")
+                    debug_lines.append(f"  vs Box: {diff:+} | vs Raw Events: {raw_diff:+} | Rating: {avg_off_rating:.1f}")
+
+                    if abs(diff) > self.tolerance.points_tolerance:
+                        warnings.append(f"{method.title()} {team} points mismatch: box={box_pts}, calc={calc_pts} (diff={diff})")
+
+                        # Additional debugging for mismatched teams
+                        if team == "HOU" and diff > 0:  # Focus on HOU overage
+                            debug_lines.append(f"  *** HOU OVERAGE DETECTED: +{diff} points ***")
+                            debug_lines.append(f"  This suggests either:")
+                            debug_lines.append(f"    1. Double-counting of scoring events")
+                            debug_lines.append(f"    2. Attribution of points to wrong possessions")
+                            debug_lines.append(f"    3. Events not properly filtered")
+
+                debug_lines.append("")  # Spacing between teams
+
+            # 5) Log all debug information
+            for line in debug_lines:
+                logger.info(line)
+
+            # 6) Summary comparison
+            summary_lines = []
+            for _, row in box_totals.iterrows():
+                team = row['team_abbrev']
+                box_pts = int(row['total_points'])
+
+                for method in ['traditional', 'enhanced']:
+                    method_data = method_totals[
+                        (method_totals['method'] == method) & 
+                        (method_totals['team_abbrev'] == team)
+                    ]
+                    if not method_data.empty:
+                        calc_pts = int(method_data.iloc[0]['calc_points_for'])
+                        diff = calc_pts - box_pts
+                        tag = "OK" if diff == 0 else ("SHORT" if diff < 0 else "OVER")
+                        summary_lines.append(f"{method.title()} {team}: calc={calc_pts}, box={box_pts}, diff={diff} ({tag})")
+
+            detail_str = " | ".join(summary_lines)
+
+            return ValidationResult(
+                step_name="Dual Method Box Score Validation",
+                passed=all(("mismatch" not in w and "missing" not in w) for w in warnings),
+                details=f"Per-team results: {detail_str}",
+                processing_time=time.time() - start_time,
+                warnings=warnings
+            )
+
+        except Exception as e:
+            return ValidationResult(
+                step_name="Dual Method Box Score Validation",
+                passed=False,
+                details=f"Error validating dual methods against box score: {str(e)}",
+                processing_time=time.time() - start_time
+            )
+
+
+
+    def validate_data_completeness(self) -> ValidationResult:
+        """Validate completeness and quality of final results (robust, no UNION alias traps)."""
+        start_time = time.time()
+        try:
+            logger.info("Validating data completeness...")
+
+            warnings = []
+
+            # ---- Lineup totals & averages ----
+            lineup_row = self.conn.execute("""
+                SELECT 
+                    COUNT(*) AS total_lineups,
+                    COUNT(CASE WHEN off_possessions > 0 THEN 1 END) AS lineups_with_off_poss,
+                    COUNT(CASE WHEN def_possessions > 0 THEN 1 END) AS lineups_with_def_poss,
+                    COUNT(CASE WHEN off_possessions > 0 AND def_possessions > 0 THEN 1 END) AS complete_lineups,
+                    AVG(off_possessions) AS avg_off_poss,
+                    AVG(def_possessions) AS avg_def_poss
+                FROM final_lineups
+            """).fetchone()
+
+            total_lineups      = lineup_row[0] or 0
+            with_off_lineups   = lineup_row[1] or 0
+            with_def_lineups   = lineup_row[2] or 0
+            complete_lineups   = lineup_row[3] or 0
+            avg_off_lineups    = float(lineup_row[4]) if lineup_row[4] is not None else 0.0
+            avg_def_lineups    = float(lineup_row[5]) if lineup_row[5] is not None else 0.0
+
+            if total_lineups == 0:
+                warnings.append("No lineups in final table")
+            if complete_lineups < total_lineups * 0.8:
+                warnings.append(f"Only {complete_lineups}/{total_lineups} lineups have both offensive and defensive data")
+            if avg_off_lineups < 5:
+                warnings.append(f"Low average offensive possessions per lineup: {avg_off_lineups:.1f}")
+
+            # ---- Player totals ----
+            player_row = self.conn.execute("""
+                SELECT 
+                    COUNT(*) AS total_players,
+                    COUNT(CASE WHEN off_possessions > 0 THEN 1 END) AS players_with_off_poss,
+                    COUNT(CASE WHEN def_possessions > 0 THEN 1 END) AS players_with_def_poss,
+                    COUNT(CASE WHEN opp_rim_attempts_on  > 0 THEN 1 END) AS players_with_rim_on,
+                    COUNT(CASE WHEN opp_rim_attempts_off > 0 THEN 1 END) AS players_with_rim_off,
+                    COUNT(CASE WHEN rim_defense_on_off IS NOT NULL THEN 1 END) AS players_with_rim_diff
+                FROM final_players
+            """).fetchone()
+
+            total_players      = player_row[0] or 0
+            with_off_players   = player_row[1] or 0
+            with_def_players   = player_row[2] or 0
+            with_rim_on        = player_row[3] or 0
+            with_rim_off       = player_row[4] or 0
+            with_rim_diff      = player_row[5] or 0
+
+            if total_players == 0:
+                warnings.append("No players in final table")
+            if with_rim_on == 0:
+                warnings.append("No players have rim defense data (on court)")
+            if with_rim_diff < max(1, total_players * 0.5):
+                warnings.append(f"Only {with_rim_diff}/{total_players} players have complete rim on/off data")
+
+            # ---- Null checks (run as separate queries to avoid UNION alias mismatch) ----
+            lineup_nulls = self.conn.execute("""
+                SELECT 
+                    SUM(CASE WHEN team_abbrev IS NULL THEN 1 ELSE 0 END) AS null_team,
+                    SUM(CASE WHEN off_possessions > 0 AND off_rating IS NULL THEN 1 ELSE 0 END) AS null_off_rating,
+                    SUM(CASE WHEN def_possessions > 0 AND def_rating IS NULL THEN 1 ELSE 0 END) AS null_def_rating
+                FROM final_lineups
+            """).fetchone()
+
+            players_nulls = self.conn.execute("""
+                SELECT
+                    SUM(CASE WHEN team_abbrev IS NULL THEN 1 ELSE 0 END) AS null_team,
+                    -- treat blank/whitespace names as null for quality
+                    SUM(CASE WHEN player_name IS NULL OR LENGTH(TRIM(player_name)) = 0 THEN 1 ELSE 0 END) AS null_name
+                FROM final_players
+            """).fetchone()
+
+            # Lineups nulls
+            ln_null_team       = int(lineup_nulls[0] or 0)
+            ln_null_off_rating = int(lineup_nulls[1] or 0)
+            ln_null_def_rating = int(lineup_nulls[2] or 0)
+
+            if ln_null_team > 0:
+                warnings.append(f"lineups table has {ln_null_team} records with null team")
+            if ln_null_off_rating > 0:
+                warnings.append(f"lineups table has {ln_null_off_rating} records with null offensive rating")
+            if ln_null_def_rating > 0:
+                warnings.append(f"lineups table has {ln_null_def_rating} records with null defensive rating")
+
+            # Players nulls
+            pl_null_team = int(players_nulls[0] or 0)
+            pl_null_name = int(players_nulls[1] or 0)
+
+            if pl_null_team > 0:
+                warnings.append(f"players table has {pl_null_team} records with null team")
+            if pl_null_name > 0:
+                warnings.append(f"players table has {pl_null_name} records with null or blank names")
+
+            details = (
+                f"Completeness check: {total_lineups} lineups, {total_players} players, "
+                f"{complete_lineups} complete lineups, {with_rim_diff} players with rim on/off"
+            )
+
+            return ValidationResult(
+                step_name="Data Completeness",
+                passed=(len(warnings) == 0),
+                details=details,
+                data_count=(total_lineups + total_players),
+                processing_time=time.time() - start_time,
+                warnings=warnings
+            )
+
+        except Exception as e:
+            return ValidationResult(
+                step_name="Data Completeness",
+                passed=False,
+                details=f"Error validating completeness: {str(e)}",
+                processing_time=time.time() - start_time
+            )
+
+
+    def export_project_deliverables(self) -> ValidationResult:
+        """Export final project deliverables in required format"""
+        start_time = time.time()
+
+        try:
+            logger.info("Exporting project deliverables for both methods...")
+
+            exported_files = []
+
+            # PROJECT 1: Lineup Tables (Both Methods)
+
+            # Traditional Method - Project 1
+            traditional_lineups = self.conn.execute(f"""
+                SELECT 
+                    team_abbrev as "{LINEUP_COLUMNS[0]}",
+                    player_1_name as "{LINEUP_COLUMNS[1]}",
+                    player_2_name as "{LINEUP_COLUMNS[2]}",
+                    player_3_name as "{LINEUP_COLUMNS[3]}",
+                    player_4_name as "{LINEUP_COLUMNS[4]}",
+                    player_5_name as "{LINEUP_COLUMNS[5]}",
+                    off_possessions as "{LINEUP_COLUMNS[6]}",
+                    def_possessions as "{LINEUP_COLUMNS[7]}",
+                    off_rating as "{LINEUP_COLUMNS[8]}",
+                    def_rating as "{LINEUP_COLUMNS[9]}",
+                    net_rating as "{LINEUP_COLUMNS[10]}"
+                FROM final_dual_lineups
+                WHERE method = 'traditional' 
+                AND (off_possessions > 0 OR def_possessions > 0)
+                ORDER BY team_abbrev, off_possessions DESC
+            """).df()
+
+            traditional_file = self.export_dir / "project1_lineups_traditional.csv"
+            traditional_lineups.to_csv(traditional_file, index=False)
+            exported_files.append(f"project1_lineups_traditional.csv ({len(traditional_lineups)} lineups)")
+
+            # Enhanced Method - Project 1
+            enhanced_lineups = self.conn.execute(f"""
+                SELECT 
+                    team_abbrev as "{LINEUP_COLUMNS[0]}",
+                    player_1_name as "{LINEUP_COLUMNS[1]}",
+                    player_2_name as "{LINEUP_COLUMNS[2]}",
+                    player_3_name as "{LINEUP_COLUMNS[3]}",
+                    player_4_name as "{LINEUP_COLUMNS[4]}",
+                    player_5_name as "{LINEUP_COLUMNS[5]}",
+                    off_possessions as "{LINEUP_COLUMNS[6]}",
+                    def_possessions as "{LINEUP_COLUMNS[7]}",
+                    off_rating as "{LINEUP_COLUMNS[8]}",
+                    def_rating as "{LINEUP_COLUMNS[9]}",
+                    net_rating as "{LINEUP_COLUMNS[10]}"
+                FROM final_dual_lineups
+                WHERE method = 'enhanced'
+                AND (off_possessions > 0 OR def_possessions > 0)
+                ORDER BY team_abbrev, off_possessions DESC
+            """).df()
+
+            enhanced_file = self.export_dir / "project1_lineups_enhanced.csv"
+            enhanced_lineups.to_csv(enhanced_file, index=False)
+            exported_files.append(f"project1_lineups_enhanced.csv ({len(enhanced_lineups)} lineups)")
+
+            # PROJECT 2: Player Tables (Both Methods)
+
+            # Traditional Method - Project 2
+            traditional_players = self.conn.execute(f"""
+                SELECT 
+                    player_id as "{PLAYER_COLUMNS[0]}",
+                    player_name as "{PLAYER_COLUMNS[1]}",
+                    team_abbrev as "{PLAYER_COLUMNS[2]}",
+                    off_possessions as "{PLAYER_COLUMNS[3]}",
+                    def_possessions as "{PLAYER_COLUMNS[4]}",
+                    COALESCE(opp_rim_fg_pct_on, 0) as "{PLAYER_COLUMNS[5]}",
+                    COALESCE(opp_rim_fg_pct_off, 0) as "{PLAYER_COLUMNS[6]}",
+                    COALESCE(rim_defense_on_off, 0) as "{PLAYER_COLUMNS[7]}"
+                FROM final_dual_players
+                WHERE method = 'traditional'
+                AND (off_possessions > 0 OR def_possessions > 0)
+                ORDER BY team_abbrev, player_name
+            """).df()
+
+            trad_players_file = self.export_dir / "project2_players_traditional.csv"
+            traditional_players.to_csv(trad_players_file, index=False)
+            exported_files.append(f"project2_players_traditional.csv ({len(traditional_players)} players)")
+
+            # Enhanced Method - Project 2
+            enhanced_players = self.conn.execute(f"""
+                SELECT 
+                    player_id as "{PLAYER_COLUMNS[0]}",
+                    player_name as "{PLAYER_COLUMNS[1]}",
+                    team_abbrev as "{PLAYER_COLUMNS[2]}",
+                    off_possessions as "{PLAYER_COLUMNS[3]}",
+                    def_possessions as "{PLAYER_COLUMNS[4]}",
+                    COALESCE(opp_rim_fg_pct_on, 0) as "{PLAYER_COLUMNS[5]}",
+                    COALESCE(opp_rim_fg_pct_off, 0) as "{PLAYER_COLUMNS[6]}",
+                    COALESCE(rim_defense_on_off, 0) as "{PLAYER_COLUMNS[7]}"
+                FROM final_dual_players
+                WHERE method = 'enhanced'
+                AND (off_possessions > 0 OR def_possessions > 0)
+                ORDER BY team_abbrev, player_name
+            """).df()
+
+            enh_players_file = self.export_dir / "project2_players_enhanced.csv"
+            enhanced_players.to_csv(enh_players_file, index=False)
+            exported_files.append(f"project2_players_enhanced.csv ({len(enhanced_players)} players)")
+
+            # Update export summary
+            self.export_summary.traditional_lineups = len(traditional_lineups)
+            self.export_summary.enhanced_lineups = len(enhanced_lineups)
+            self.export_summary.traditional_players = len(traditional_players)
+            self.export_summary.enhanced_players = len(enhanced_players)
+
+            details = f"Exported project deliverables: {len(exported_files)} files"
+
+            return ValidationResult(
+                step_name="Export Project Deliverables",
+                passed=True,
+                details=details,
+                data_count=len(exported_files),
+                processing_time=time.time() - start_time
+            )
+
+        except Exception as e:
+            return ValidationResult(
+                step_name="Export Project Deliverables",
+                passed=False,
+                details=f"Error exporting project deliverables: {str(e)}",
+                processing_time=time.time() - start_time
+            )
+
+
+    def export_violation_reports(self) -> ValidationResult:
+        """Export violation reports (traditional/enhanced) without assuming any specific time column.
+
+        Strategy:
+        - Introspect available columns per table.
+        - Build a SELECT list that only references existing columns.
+        - Choose an ORDER BY among ['order_ts','abs_time','wall_clock_int','pbp_order'] if present.
+        - Prefer readable fields (team_abbrev/player_name); fall back to ids if names not present.
+        """
+        start_time = time.time()
+        try:
+            logger.info("Exporting violation reports for traditional lineups...")
+
+            exported_files = []
+
+            def _cols(table: str) -> List[str]:
+                try:
+                    return [r[1] for r in self.conn.execute(f"PRAGMA table_info('{table}')").fetchall()]
+                except Exception:
+                    return []
+
+            def _build_sql(table: str) -> Optional[str]:
+                cols = _cols(table)
+                if not cols:
+                    return None
+
+                # pick time/order column
+                time_col = next((c for c in ["order_ts", "abs_time", "wall_clock_int", "pbp_order"] if c in cols), None)
+
+                # assemble select columns, only if they exist
+                select_cols = []
+                for c in ["period"]:
+                    if c in cols: select_cols.append(c)
+
+                if time_col:
+                    select_cols.append(f"{time_col} AS time_order")
+
+                # prefer readable names; fallback to ids
+                if "team_abbrev" in cols:
+                    select_cols.append("team_abbrev")
+                elif "team_id" in cols:
+                    select_cols.append("team_id")
+
+                select_cols += [c for c in ["flag_type"] if c in cols]
+
+                if "player_name" in cols:
+                    select_cols.append("player_name")
+                elif "player_id" in cols:
+                    select_cols.append("player_id")
+
+                select_cols += [c for c in ["description", "flag_details"] if c in cols]
+
+                if not select_cols:
+                    # Nothing exportable
+                    return None
+
+                select_list = ", ".join(select_cols)
+                sql = f"SELECT {select_list} FROM {table}"
+                if time_col:
+                    sql += " ORDER BY time_order"
+                return sql
+
+            # Traditional
+            trad_sql = _build_sql("traditional_violation_report")
+            if trad_sql:
+                trad_df = self.conn.execute(trad_sql).df()
+                if not trad_df.empty:
+                    fpath = self.export_dir / "traditional_lineup_violations.csv"
+                    trad_df.to_csv(fpath, index=False)
+                    exported_files.append(f"traditional_lineup_violations.csv ({len(trad_df)} violations)")
+                    # Summarize by flag_type if present
+                    if "flag_type" in trad_df.columns:
+                        counts = trad_df["flag_type"].value_counts().to_dict()
+                        with open(self.export_dir / "violation_summary.txt", "w", encoding="utf-8") as f:
+                            f.write("TRADITIONAL LINEUP VIOLATION SUMMARY\n")
+                            f.write("="*50 + "\n\n")
+                            f.write(f"Total Violations: {len(trad_df):,}\n\n")
+                            f.write("Violation Types:\n")
+                            for k, v in counts.items():
+                                f.write(f"  {k}: {v:,} ({100.0 * v / max(1, len(trad_df)):.1f}%)\n")
+                            f.write(f"\nGenerated: {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
+                        exported_files.append("violation_summary.txt")
+                        self.export_summary.violation_reports += 1
+            else:
+                logger.info("No traditional_violation_report table or no exportable columns.")
+
+            # Enhanced
+            enh_sql = _build_sql("enhanced_violation_report")
+            if enh_sql:
+                enh_df = self.conn.execute(enh_sql).df()
+                if not enh_df.empty:
+                    fpath = self.export_dir / "enhanced_method_flags.csv"
+                    enh_df.to_csv(fpath, index=False)
+                    exported_files.append(f"enhanced_method_flags.csv ({len(enh_df)} flags)")
+                    self.export_summary.violation_reports += 1
+            else:
+                logger.info("No enhanced_violation_report table or no exportable columns.")
+
+            # Base-dataset quality memo (unchanged)
+            self._create_base_dataset_violation_report()
+            exported_files.append("base_dataset_violations.txt")
+
+            details = f"Exported violation reports: {len(exported_files)} files"
+            return ValidationResult(
+                step_name="Export Violation Reports",
+                passed=True,
+                details=details,
+                data_count=len(exported_files),
+                processing_time=time.time() - start_time
+            )
+        except Exception as e:
+            return ValidationResult(
+                step_name="Export Violation Reports",
+                passed=False,
+                details=f"Error exporting violation reports: {str(e)}",
+                processing_time=time.time() - start_time
+            )
+
+
+    def _create_base_dataset_violation_report(self):
+        """Create base dataset violation report for final analysis"""
+        try:
+            # Analyze base dataset quality issues
+            base_dataset_analysis = {
+                'data_quality_issues': [],
+                'lineup_tracking_challenges': [],
+                'recommendations': []
+            }
+
+            # Check for common data issues in the base dataset
+            pbp_issues = self.conn.execute("""
+                SELECT 
+                    COUNT(*) as total_events,
+                    SUM(CASE WHEN team_id_off IS NULL OR team_id_def IS NULL THEN 1 ELSE 0 END) as missing_team_events,
+                    SUM(CASE WHEN player_id_1 IS NULL AND player_id_2 IS NULL AND player_id_3 IS NULL THEN 1 ELSE 0 END) as no_player_events,
+                    SUM(CASE WHEN msg_type = 8 AND player_id_1 IS NULL AND player_id_2 IS NULL THEN 1 ELSE 0 END) as incomplete_substitutions
+                FROM pbp
+            """).fetchone()
+
+            if pbp_issues:
+                total_events = pbp_issues[0]
+                missing_team_pct = (pbp_issues[1] / total_events * 100) if total_events > 0 else 0
+                no_player_pct = (pbp_issues[2] / total_events * 100) if total_events > 0 else 0
+                incomplete_sub_pct = (pbp_issues[3] / total_events * 100) if total_events > 0 else 0
+
+                base_dataset_analysis['data_quality_issues'] = [
+                    f"Missing team data in {missing_team_pct:.1f}% of events",
+                    f"No player data in {no_player_pct:.1f}% of events", 
+                    f"Incomplete substitutions in {incomplete_sub_pct:.1f}% of substitution events"
+                ]
+
+            # Lineup tracking challenges from traditional method
+            if hasattr(self, 'export_summary'):
+                if self.export_summary.traditional_lineups > 0:
+                    lineup_5man_pct = self.conn.execute("""
+                        SELECT AVG(CASE WHEN lineup_size = 5 THEN 1.0 ELSE 0.0 END) * 100 as pct
+                        FROM final_dual_lineups WHERE method = 'traditional'
+                    """).fetchone()[0]
+
+                    base_dataset_analysis['lineup_tracking_challenges'] = [
+                        f"Only {lineup_5man_pct:.1f}% of traditional lineups have exactly 5 players",
+                        f"Substitution data requires intelligent inference for accurate lineup tracking",
+                        f"Enhanced method achieves 100% 5-player lineup accuracy through automation"
+                    ]
+
+            base_dataset_analysis['recommendations'] = [
+                "Use enhanced method for production lineup tracking",
+                "Traditional method useful for data quality validation", 
+                "Violation reports highlight areas needing manual review",
+                "Consider implementing enhanced automation for real-time applications"
+            ]
+
+            # Write report
+            report_file = self.export_dir / "base_dataset_violations.txt"
+            with open(report_file, 'w', encoding='utf-8') as f:
+                f.write("BASE DATASET VIOLATIONS AND RECOMMENDATIONS\n")
+                f.write("="*60 + "\n\n")
+
+                f.write("DATA QUALITY ISSUES:\n")
+                for issue in base_dataset_analysis['data_quality_issues']:
+                    f.write(f"  - {issue}\n")
+                f.write("\n")
+
+                f.write("LINEUP TRACKING CHALLENGES:\n")
+                for challenge in base_dataset_analysis['lineup_tracking_challenges']:
+                    f.write(f"  - {challenge}\n")
+                f.write("\n")
+
+                f.write("RECOMMENDATIONS:\n")
+                for rec in base_dataset_analysis['recommendations']:
+                    f.write(f"  - {rec}\n")
+                f.write("\n")
+
+                f.write(f"Report generated: {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
+                f.write("For detailed violation data, see traditional_lineup_violations.csv\n")
+
+        except Exception as e:
+            logger.warning(f"Could not create base dataset violation report: {e}")
+
+    def export_method_comparison_reports(self) -> ValidationResult:
+        """Export comprehensive method comparison and effectiveness analysis"""
+        start_time = time.time()
+
+        try:
+            logger.info("Exporting method comparison reports...")
+
+            exported_files = []
+
+            # Method Comparison Summary
+            try:
+                comparison_summary = self.conn.execute("""
+                    SELECT * FROM method_comparison_summary
+                    ORDER BY metric
+                """).df()
+
+                if not comparison_summary.empty:
+                    comparison_file = self.export_dir / "method_comparison_summary.csv"
+                    comparison_summary.to_csv(comparison_file, index=False)
+                    exported_files.append(f"method_comparison_summary.csv ({len(comparison_summary)} metrics)")
+                    self.export_summary.comparison_reports += 1
+
+            except Exception as e:
+                logger.warning(f"Could not export method comparison: {e}")
+
+            # Create method effectiveness report
+            self._create_method_effectiveness_report()
+            exported_files.append("method_effectiveness_report.txt")
+
+            details = f"Exported method comparison reports: {len(exported_files)} files"
+
+            return ValidationResult(
+                step_name="Export Method Comparison Reports",
+                passed=True,
+                details=details,
+                data_count=len(exported_files),
+                processing_time=time.time() - start_time
+            )
+
+        except Exception as e:
+            return ValidationResult(
+                step_name="Export Method Comparison Reports",
+                passed=False,
+                details=f"Error exporting method comparison reports: {str(e)}",
+                processing_time=time.time() - start_time
+            )
+
+    def _create_method_effectiveness_report(self):
+        """Create comprehensive method effectiveness analysis report"""
+        try:
+            # Calculate effectiveness metrics
+            effectiveness_metrics = {}
+
+            # Lineup accuracy metrics
+            traditional_accuracy = self.conn.execute("""
+                SELECT 
+                    COUNT(*) as total_lineups,
+                    SUM(CASE WHEN lineup_size = 5 THEN 1 ELSE 0 END) as five_man_lineups,
+                    AVG(lineup_size) as avg_size,
+                    MIN(lineup_size) as min_size,
+                    MAX(lineup_size) as max_size
+                FROM final_dual_lineups WHERE method = 'traditional'
+            """).fetchone()
+
+            enhanced_accuracy = self.conn.execute("""
+                SELECT 
+                    COUNT(*) as total_lineups,
+                    SUM(CASE WHEN lineup_size = 5 THEN 1 ELSE 0 END) as five_man_lineups,
+                    AVG(lineup_size) as avg_size
+                FROM final_dual_lineups WHERE method = 'enhanced'
+            """).fetchone()
+
+            if traditional_accuracy and enhanced_accuracy:
+                effectiveness_metrics['lineup_accuracy'] = {
+                    'traditional': {
+                        'total_lineups': traditional_accuracy[0],
+                        'five_man_accuracy': (traditional_accuracy[1] / traditional_accuracy[0] * 100) if traditional_accuracy[0] > 0 else 0,
+                        'avg_size': traditional_accuracy[2],
+                        'min_size': traditional_accuracy[3],
+                        'max_size': traditional_accuracy[4]
+                    },
+                    'enhanced': {
+                        'total_lineups': enhanced_accuracy[0],
+                        'five_man_accuracy': (enhanced_accuracy[1] / enhanced_accuracy[0] * 100) if enhanced_accuracy[0] > 0 else 0,
+                        'avg_size': enhanced_accuracy[2]
+                    }
+                }
+
+            # Create effectiveness report
+            report_file = self.export_dir / "method_effectiveness_report.txt"
+            with open(report_file, 'w', encoding='utf-8') as f:
+                f.write("METHOD EFFECTIVENESS ANALYSIS\n")
+                f.write("="*50 + "\n\n")
+
+                f.write("EXECUTIVE SUMMARY:\n")
+                if 'lineup_accuracy' in effectiveness_metrics:
+                    trad_acc = effectiveness_metrics['lineup_accuracy']['traditional']['five_man_accuracy']
+                    enh_acc = effectiveness_metrics['lineup_accuracy']['enhanced']['five_man_accuracy']
+                    improvement = enh_acc - trad_acc
+
+                    f.write(f"  Enhanced method achieves {improvement:+.1f} percentage point improvement\n")
+                    f.write(f"  in 5-man lineup accuracy over traditional method.\n\n")
+
+                f.write("DETAILED METRICS:\n\n")
+
+                f.write("Traditional Data-Driven Method:\n")
+                if 'lineup_accuracy' in effectiveness_metrics:
+                    trad = effectiveness_metrics['lineup_accuracy']['traditional']
+                    f.write(f"  Total Lineups: {trad['total_lineups']:,}\n")
+                    f.write(f"  5-Man Accuracy: {trad['five_man_accuracy']:.1f}%\n")
+                    f.write(f"  Average Size: {trad['avg_size']:.1f} players\n")
+                    f.write(f"  Size Range: {trad['min_size']}-{trad['max_size']} players\n")
+                    f.write(f"  Strength: Faithful to raw data, highlights data quality issues\n")
+                    f.write(f"  Use Case: Data validation and quality assessment\n\n")
+
+                f.write("Enhanced Automation Method:\n")
+                if 'lineup_accuracy' in effectiveness_metrics:
+                    enh = effectiveness_metrics['lineup_accuracy']['enhanced']
+                    f.write(f"  Total Lineups: {enh['total_lineups']:,}\n")
+                    f.write(f"  5-Man Accuracy: {enh['five_man_accuracy']:.1f}%\n")
+                    f.write(f"  Average Size: {enh['avg_size']:.1f} players\n")
+                    f.write(f"  Strength: Consistent 5-man lineups, intelligent inference\n")
+                    f.write(f"  Use Case: Production analytics and reporting\n\n")
+
+                f.write("RECOMMENDATIONS:\n")
+                f.write("  1. Use Enhanced method for production lineup analytics\n")
+                f.write("  2. Use Traditional method for data quality validation\n")
+                f.write("  3. Review violation reports to identify systematic data issues\n")
+                f.write("  4. Consider automated data quality monitoring based on violation patterns\n\n")
+
+                f.write(f"Analysis completed: {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
+
+        except Exception as e:
+            logger.warning(f"Could not create method effectiveness report: {e}")
+
+    def generate_quality_report(self) -> ValidationResult:
+        """Generate comprehensive quality and validation report (ASCII-safe, explicit encoding)."""
+        start_time = time.time()
+        try:
+            logger.info("Generating quality report...")
+
+            # Copy current validations logged so far
+            all_validations = self.validator.validation_results.copy()
+
+            # -------- Lineup metrics --------
+            lm = self.conn.execute("""
+                SELECT
+                    COUNT(*) AS total_records,
+                    AVG(off_possessions) AS avg_off_poss,
+                    AVG(def_possessions) AS avg_def_poss,
+                    AVG(off_rating)      AS avg_off_rating,
+                    AVG(def_rating)      AS avg_def_rating
+                FROM final_lineups
+                WHERE off_possessions > 0
+            """).fetchone()
+
+            lineup_metrics = {
+                "total_records": int(lm[0] or 0),
+                "avg_off_poss": float(lm[1]) if lm[1] is not None else 0.0,
+                "avg_def_poss": float(lm[2]) if lm[2] is not None else 0.0,
+                "avg_off_rating": float(lm[3]) if lm[3] is not None else 0.0,
+                "avg_def_rating": float(lm[4]) if lm[4] is not None else 0.0,
+            }
+
+            # -------- Player rim-defense metrics (FIXED) --------
+            pm = self.conn.execute("""
+                SELECT
+                    COUNT(*) AS total_records,
+                    -- Raw event counts per player
+                    AVG(opp_rim_attempts_on)  AS avg_attempts_on_raw,
+                    AVG(opp_rim_attempts_off) AS avg_attempts_off_raw,
+                    AVG(opp_rim_makes_on)     AS avg_makes_on_raw,
+                    AVG(opp_rim_makes_off)    AS avg_makes_off_raw,
+                    AVG(opp_rim_fg_pct_on)    AS avg_fg_pct_on,
+                    AVG(opp_rim_fg_pct_off)   AS avg_fg_pct_off,
+                    AVG(rim_defense_on_off)   AS avg_rim_defense_diff,
+                    -- Calculated normalized metrics using existing columns
+                    AVG(CASE WHEN def_possessions > 0 THEN opp_rim_attempts_on::FLOAT / def_possessions ELSE 0 END) AS avg_attempts_per_def_poss_on,
+                    AVG(CASE WHEN def_possessions > 0 THEN opp_rim_attempts_off::FLOAT / def_possessions ELSE 0 END) AS avg_attempts_per_def_poss_off,
+                    AVG(CASE WHEN def_possessions > 0 THEN 100.0 * opp_rim_attempts_on::FLOAT / def_possessions ELSE 0 END) AS attempts_on_per100_def_poss,
+                    AVG(CASE WHEN def_possessions > 0 THEN 100.0 * opp_rim_attempts_off::FLOAT / def_possessions ELSE 0 END) AS attempts_off_per100_def_poss
+                FROM final_players
+                WHERE opp_rim_attempts_on > 0 OR opp_rim_attempts_off > 0
+            """).fetchone()
+
+            player_metrics = {
+                "total_records": int(pm[0] or 0),
+                "avg_attempts_on_raw": float(pm[1]) if pm[1] is not None else 0.0,
+                "avg_attempts_off_raw": float(pm[2]) if pm[2] is not None else 0.0,
+                "avg_makes_on_raw": float(pm[3]) if pm[3] is not None else 0.0,
+                "avg_makes_off_raw": float(pm[4]) if pm[4] is not None else 0.0,
+                "avg_fg_pct_on": float(pm[5]) if pm[5] is not None else 0.0,
+                "avg_fg_pct_off": float(pm[6]) if pm[6] is not None else 0.0,
+                "avg_rim_defense_diff": float(pm[7]) if pm[7] is not None else 0.0,
+                "avg_attempts_per_def_poss_on": float(pm[8]) if pm[8] is not None else 0.0,
+                "avg_attempts_per_def_poss_off": float(pm[9]) if pm[9] is not None else 0.0,
+                "attempts_on_per100_def_poss": float(pm[10]) if pm[10] is not None else 0.0,
+                "attempts_off_per100_def_poss": float(pm[11]) if pm[11] is not None else 0.0,
+            }
+
+            # -------- Assemble report text (ASCII labels, no emojis) --------
+            report_lines = [
+                "NBA PLAY-BY-PLAY PIPELINE - QUALITY REPORT",
+                "=" * 80,
+                f"Generated: {time.strftime('%Y-%m-%d %H:%M:%S')}",
+                "",
+                "PIPELINE EXECUTION SUMMARY:",
+                f"  Total Validation Steps: {len(all_validations)}",
+                f"  Passed: {sum(1 for v in all_validations if v.passed)}",
+                f"  Failed: {sum(1 for v in all_validations if not v.passed)}",
+                f"  Total Warnings: {sum(len(v.warnings) for v in all_validations)}",
+                ""
+            ]
+
+            # Validation step details
+            report_lines.append("VALIDATION STEP DETAILS:")
+            for validation in all_validations:
+                status = self._status_label(validation.passed)
+                report_lines.append(f"  {status} {validation.step_name}")
+                report_lines.append(f"    Details: {validation.details}")
+                report_lines.append(f"    Time: {validation.processing_time:.3f}s")
+                if validation.warnings:
+                    for warning in validation.warnings:
+                        report_lines.append(f"    {self._warn_label()} {warning}")
+                report_lines.append("")
+
+            # Data quality sections (UPDATED)
+            report_lines.extend([
+                "DATA QUALITY METRICS:",
+                "",
+                "  LINEUP STATISTICS:",
+                f"    Total Records: {lineup_metrics['total_records']:,}",
+                f"    Avg Offensive Possessions: {lineup_metrics['avg_off_poss']:.1f}",
+                f"    Avg Defensive Possessions: {lineup_metrics['avg_def_poss']:.1f}",
+                f"    Avg Offensive Rating: {lineup_metrics['avg_off_rating']:.1f}",
+                f"    Avg Defensive Rating: {lineup_metrics['avg_def_rating']:.1f}",
+                "",
+                "  PLAYER RIM DEFENSE:",
+                f"    Player Records: {player_metrics['total_records']:,}",
+                f"    Avg Rim Attempts (On): {player_metrics['avg_attempts_on_raw']:.2f}",
+                f"    Avg Rim Attempts (Off): {player_metrics['avg_attempts_off_raw']:.2f}",
+                f"    Avg Rim Makes (On): {player_metrics['avg_makes_on_raw']:.2f}",
+                f"    Avg Rim Makes (Off): {player_metrics['avg_makes_off_raw']:.2f}",
+                f"    Avg Rim FG% (On): {player_metrics['avg_fg_pct_on']:.1%}",
+                f"    Avg Rim FG% (Off): {player_metrics['avg_fg_pct_off']:.1%}",
+                f"    Avg On/Off Difference: {player_metrics['avg_rim_defense_diff']:.3f}",
+                f"    Rim Attempts per Def Possession (On): {player_metrics['avg_attempts_per_def_poss_on']:.4f}",
+                f"    Rim Attempts per Def Possession (Off): {player_metrics['avg_attempts_per_def_poss_off']:.4f}",
+                f"    Rim Attempts per 100 Def Poss (On): {player_metrics['attempts_on_per100_def_poss']:.2f}",
+                f"    Rim Attempts per 100 Def Poss (Off): {player_metrics['attempts_off_per100_def_poss']:.2f}",
+                ""
+            ])
+
+            # Save to disk (sanitize + explicit encoding)
+            report_text = "\n".join(report_lines)
+            report_text = self._sanitize_for_file(report_text)
+            report_file = self.export_dir / "quality_report.txt"
+            report_file.write_text(report_text, encoding="utf-8")
+
+            details = "Generated quality report with corrected player rim defense metrics"
+            return ValidationResult(
+                step_name="Quality Report",
+                passed=True,
+                details=details,
+                data_count=len(all_validations),
+                processing_time=time.time() - start_time
+            )
+
+        except Exception as e:
+            return ValidationResult(
+                step_name="Quality Report",
+                passed=False,
+                details=f"Error generating quality report: {str(e)}",
+                processing_time=time.time() - start_time
+            )
+
+
+    def print_final_summary(self):
+        """Print final pipeline summary (ASCII-only to avoid console encoding issues)."""
+        print("\n" + "="*80)
+        print("NBA PIPELINE - FINAL EXPORT & VALIDATION SUMMARY")
+        print("="*80)
+
+        # Show export directory contents
+        if self.export_dir.exists():
+            export_files = list(self.export_dir.glob("*.csv")) + list(self.export_dir.glob("*.txt"))
+            print(f"EXPORTED FILES ({len(export_files)}):")
+            for file in sorted(export_files):
+                size_kb = file.stat().st_size / 1024
+                print(f"   - {file.name} ({size_kb:.1f} KB)")
+            print()
+
+        # Show key metrics
+        try:
+            lineup_count = self.conn.execute("SELECT COUNT(*) FROM final_lineups").fetchone()[0]
+            player_count = self.conn.execute("SELECT COUNT(*) FROM final_players").fetchone()[0]
+
+            print("FINAL RESULTS:")
+            print(f"   Unique Lineups: {lineup_count:,}")
+            print(f"   Active Players: {player_count:,}")
+
+            if hasattr(self.engine, 'possessions') and self.engine.possessions:
+                print(f"   Total Possessions: {len(self.engine.possessions):,}")
+
+            if hasattr(self.processor, 'processed_events') and self.processor.processed_events:
+                rim_attempts = sum(1 for e in self.processor.processed_events if getattr(e, 'is_rim_attempt', False))
+                print(f"   Rim Attempts: {rim_attempts:,}")
+
+        except Exception:
+            print("   Unable to retrieve final metrics")
+
+        print("="*80)
+
+    # Add this to your FinalValidator class in nba_final_export.py
+
+    def validate_final_tables_exist(self) -> ValidationResult:
+        """Validate final tables exist with expected structure before generating reports."""
+        start_time = time.time()
+        try:
+            warnings = []
+
+            # Check tables exist
+            tables = [row[0] for row in self.conn.execute("""
+                SELECT table_name FROM information_schema.tables 
+                WHERE table_name IN ('final_lineups', 'final_players')
+            """).fetchall()]
+
+            missing_tables = set(['final_lineups', 'final_players']) - set(tables)
+            if missing_tables:
+                return ValidationResult(
+                    step_name="Final Tables Check",
+                    passed=False,
+                    details=f"Missing tables: {missing_tables}",
+                    processing_time=time.time() - start_time
+                )
+
+            # Check final_players has required columns for quality report
+            player_cols = [row[0] for row in self.conn.execute("""
+                SELECT column_name FROM information_schema.columns 
+                WHERE table_name = 'final_players'
+            """).fetchall()]
+
+            required_cols = [
+                'player_id', 'player_name', 'team_abbrev', 
+                'off_possessions', 'def_possessions',
+                'opp_rim_attempts_on', 'opp_rim_attempts_off',
+                'opp_rim_fg_pct_on', 'opp_rim_fg_pct_off'
+            ]
+
+            missing_cols = set(required_cols) - set(player_cols)
+            if missing_cols:
+                warnings.append(f"Missing columns in final_players: {missing_cols}")
+
+            # Check data exists
+            lineup_count = self.conn.execute("SELECT COUNT(*) FROM final_lineups").fetchone()[0]
+            player_count = self.conn.execute("SELECT COUNT(*) FROM final_players").fetchone()[0]
+
+            if lineup_count == 0:
+                warnings.append("final_lineups table is empty")
+            if player_count == 0:
+                warnings.append("final_players table is empty")
+
+            details = f"Tables validated: final_lineups({lineup_count}), final_players({player_count})"
+
+            return ValidationResult(
+                step_name="Final Tables Check",
+                passed=len(missing_cols) == 0 and lineup_count > 0 and player_count > 0,
+                details=details,
+                processing_time=time.time() - start_time,
+                warnings=warnings
+            )
+
+        except Exception as e:
+            return ValidationResult(
+                step_name="Final Tables Check", 
+                passed=False,
+                details=f"Error checking final tables: {str(e)}",
+                processing_time=time.time() - start_time
+            )
+
+    def export_points_attribution_audit(self) -> ValidationResult:
+        """
+        ENHANCED: Comprehensive audit of where points are lost/gained between stages.
+        Produces detailed CSVs under exports/debug_points_audit/ with granular analysis.
+        """
+        start_time = time.time()
+        try:
+            logger.info("=== ENHANCED POINTS ATTRIBUTION AUDIT ===")
+
+            out_dir = self.export_dir / "debug_points_audit"
+            out_dir.mkdir(parents=True, exist_ok=True)
+
+            existing_tables = {r[0] for r in self.conn.execute(
+                "SELECT table_name FROM information_schema.tables").fetchall()}
+
+            audit_results = {
+                "box_score_totals": {},
+                "raw_pbp_totals": {},
+                "step4_processed_totals": {},
+                "lineup_totals": {},
+                "discrepancies": {}
+            }
+
+            # 1) Box score totals (ground truth)
+            box_df = pd.DataFrame()
+            if "box_score" in existing_tables:
+                box_df = self.conn.execute("""
+                    SELECT 
+                        team_abbrev,
+                        SUM(points) AS box_points,
+                        COUNT(*) AS active_players,
+                        SUM(seconds_played) AS total_seconds
+                    FROM box_score
+                    WHERE status = 'ACTIVE'
+                    GROUP BY team_abbrev
+                    ORDER BY team_abbrev
+                """).df()
+
+                for _, row in box_df.iterrows():
+                    audit_results["box_score_totals"][row["team_abbrev"]] = {
+                        "points": int(row["box_points"]),
+                        "players": int(row["active_players"]),
+                        "seconds": int(row["total_seconds"])
+                    }
+
+            # 2) Raw PBP totals
+            raw_pbp_df = pd.DataFrame()
+            if "pbp" in existing_tables:
+                raw_pbp_df = self.conn.execute("""
+                    SELECT 
+                        CASE 
+                            WHEN team_id_off = 1610612742 THEN 'DAL'
+                            WHEN team_id_off = 1610612745 THEN 'HOU'
+                            ELSE CAST(team_id_off AS VARCHAR)
+                        END as team_abbrev,
+                        SUM(COALESCE(points, 0)) AS raw_pbp_points,
+                        COUNT(*) AS scoring_events,
+                        COUNT(DISTINCT pbp_id) AS unique_events
+                    FROM pbp 
+                    WHERE points > 0 AND team_id_off IS NOT NULL
+                    GROUP BY team_id_off
+                    ORDER BY team_abbrev
+                """).df()
+
+                for _, row in raw_pbp_df.iterrows():
+                    audit_results["raw_pbp_totals"][row["team_abbrev"]] = {
+                        "points": int(row["raw_pbp_points"]),
+                        "events": int(row["scoring_events"]),
+                        "unique_events": int(row["unique_events"])
+                    }
+
+            # 3) Step4 processed totals
+            step4_df = pd.DataFrame()
+            if "step4_processed_events" in existing_tables:
+                step4_df = self.conn.execute("""
+                    SELECT 
+                        CASE 
+                            WHEN off_team_id = 1610612742 THEN 'DAL'
+                            WHEN off_team_id = 1610612745 THEN 'HOU'
+                            ELSE CAST(off_team_id AS VARCHAR)
+                        END as team_abbrev,
+                        SUM(COALESCE(points, 0)) AS step4_points,
+                        COUNT(*) AS processing_events,
+                        COUNT(CASE WHEN points > 0 THEN 1 END) AS scoring_events,
+                        COUNT(DISTINCT pbp_id) AS unique_pbp_ids
+                    FROM step4_processed_events
+                    WHERE off_team_id IS NOT NULL
+                    GROUP BY off_team_id
+                    ORDER BY team_abbrev
+                """).df()
+
+                for _, row in step4_df.iterrows():
+                    audit_results["step4_processed_totals"][row["team_abbrev"]] = {
+                        "points": int(row["step4_points"]),
+                        "events": int(row["processing_events"]),
+                        "scoring_events": int(row["scoring_events"]),
+                        "unique_pbp_ids": int(row["unique_pbp_ids"])
+                    }
+
+            # 4) Lineup totals by method
+            lineup_df = pd.DataFrame()
+            if "final_dual_lineups" in existing_tables:
+                lineup_df = self.conn.execute("""
+                    SELECT 
+                        method,
+                        team_abbrev,
+                        SUM(points_for) AS lineup_points_for,
+                        SUM(off_possessions) AS total_off_poss,
+                        COUNT(*) AS unique_lineups
+                    FROM final_dual_lineups
+                    GROUP BY method, team_abbrev
+                    ORDER BY method, team_abbrev
+                """).df()
+
+                audit_results["lineup_totals"] = {}
+                for _, row in lineup_df.iterrows():
+                    method = row["method"]
+                    team = row["team_abbrev"]
+                    if method not in audit_results["lineup_totals"]:
+                        audit_results["lineup_totals"][method] = {}
+                    audit_results["lineup_totals"][method][team] = {
+                        "points": int(row["lineup_points_for"]),
+                        "possessions": int(row["total_off_poss"]),
+                        "lineups": int(row["unique_lineups"])
+                    }
+
+            # 5) Calculate discrepancies at each stage
+            teams = ["DAL", "HOU"]
+            for team in teams:
+                box_pts = audit_results["box_score_totals"].get(team, {}).get("points", 0)
+                raw_pts = audit_results["raw_pbp_totals"].get(team, {}).get("points", 0)
+                step4_pts = audit_results["step4_processed_totals"].get(team, {}).get("points", 0)
+
+                trad_pts = audit_results["lineup_totals"].get("traditional", {}).get(team, {}).get("points", 0)
+                enh_pts = audit_results["lineup_totals"].get("enhanced", {}).get(team, {}).get("points", 0)
+
+                audit_results["discrepancies"][team] = {
+                    "box_score": box_pts,
+                    "raw_pbp": raw_pts,
+                    "step4_processed": step4_pts,
+                    "traditional_lineups": trad_pts,
+                    "enhanced_lineups": enh_pts,
+                    "raw_to_step4_diff": step4_pts - raw_pts,
+                    "step4_to_traditional_diff": trad_pts - step4_pts,
+                    "step4_to_enhanced_diff": enh_pts - step4_pts,
+                    "box_to_traditional_diff": trad_pts - box_pts,
+                    "box_to_enhanced_diff": enh_pts - box_pts
+                }
+
+            # 6) Export comprehensive summary
+            summary_rows = []
+            for team in teams:
+                disc = audit_results["discrepancies"][team]
+                summary_rows.append({
+                    "team": team,
+                    "box_score_points": disc["box_score"],
+                    "raw_pbp_points": disc["raw_pbp"],
+                    "step4_processed_points": disc["step4_processed"],
+                    "traditional_lineup_points": disc["traditional_lineups"],
+                    "enhanced_lineup_points": disc["enhanced_lineups"],
+                    "raw_to_step4_diff": disc["raw_to_step4_diff"],
+                    "step4_to_traditional_diff": disc["step4_to_traditional_diff"],
+                    "step4_to_enhanced_diff": disc["step4_to_enhanced_diff"],
+                    "box_to_traditional_diff": disc["box_to_traditional_diff"],
+                    "box_to_enhanced_diff": disc["box_to_enhanced_diff"]
+                })
+
+            pd.DataFrame(summary_rows).to_csv(out_dir / "001_comprehensive_points_flow.csv", index=False)
+
+            # 7) Detailed HOU analysis (the problematic team)
+            if "step4_processed_events" in existing_tables:
+                hou_events = self.conn.execute("""
+                    SELECT 
+                        pbp_id, period, pbp_order, wall_clock_int,
+                        description, points, msg_type, action_type,
+                        player_id_1, player_id_2, player_id_3,
+                        traditional_off_lineup, enhanced_off_lineup,
+                        CASE 
+                            WHEN traditional_off_lineup IS NULL 
+                            OR TRIM(CAST(traditional_off_lineup AS VARCHAR)) IN ('', '[]')
+                            THEN 'NO_LINEUP'
+                            ELSE 'HAS_LINEUP'
+                        END as trad_lineup_status,
+                        CASE 
+                            WHEN enhanced_off_lineup IS NULL 
+                            OR TRIM(CAST(enhanced_off_lineup AS VARCHAR)) IN ('', '[]')
+                            THEN 'NO_LINEUP'
+                            ELSE 'HAS_LINEUP'
+                        END as enh_lineup_status
+                    FROM step4_processed_events 
+                    WHERE off_team_id = 1610612745 AND points > 0
+                    ORDER BY period, pbp_order, wall_clock_int
+                """).df()
+
+                hou_events.to_csv(out_dir / "002_hou_scoring_events_detailed.csv", index=False)
+
+                # HOU lineup attribution analysis
+                hou_attribution = hou_events.groupby(['trad_lineup_status', 'enh_lineup_status']).agg({
+                    'points': ['count', 'sum'],
+                    'pbp_id': 'count'
+                }).round(2)
+                hou_attribution.to_csv(out_dir / "003_hou_lineup_attribution_breakdown.csv")
+
+            # 8) Cross-reference with original PBP
+            if "pbp" in existing_tables and "step4_processed_events" in existing_tables:
+                cross_ref = self.conn.execute("""
+                    SELECT 
+                        pbp.pbp_id,
+                        pbp.points as original_points,
+                        pbp.description as original_description,
+                        se.points as processed_points,
+                        se.description as processed_description,
+                        CASE 
+                            WHEN pbp.team_id_off = 1610612742 THEN 'DAL'
+                            WHEN pbp.team_id_off = 1610612745 THEN 'HOU'
+                            ELSE CAST(pbp.team_id_off AS VARCHAR)
+                        END as team,
+                        (se.points - COALESCE(pbp.points, 0)) as points_diff
+                    FROM pbp 
+                    LEFT JOIN step4_processed_events se ON pbp.pbp_id = se.pbp_id
+                    WHERE pbp.points > 0 OR se.points > 0
+                    ORDER BY team, pbp.pbp_id
+                """).df()
+
+                cross_ref.to_csv(out_dir / "004_pbp_to_step4_cross_reference.csv", index=False)
+
+                # Points difference summary
+                diff_summary = cross_ref.groupby('team')['points_diff'].agg(['sum', 'count', 'mean']).round(3)
+                diff_summary.to_csv(out_dir / "005_points_transformation_summary.csv")
+
+            # 9) Log findings
+            logger.info("=== ENHANCED AUDIT FINDINGS ===")
+            for team in teams:
+                disc = audit_results["discrepancies"][team]
+                logger.info(f"{team} POINTS FLOW:")
+                logger.info(f"  Box Score (Ground Truth): {disc['box_score']}")
+                logger.info(f"  Raw PBP: {disc['raw_pbp']} (diff: {disc['raw_pbp'] - disc['box_score']:+})")
+                logger.info(f"  Step4 Processed: {disc['step4_processed']} (diff: {disc['raw_to_step4_diff']:+})")
+                logger.info(f"  Traditional Lineups: {disc['traditional_lineups']} (diff: {disc['step4_to_traditional_diff']:+})")
+                logger.info(f"  Enhanced Lineups: {disc['enhanced_lineups']} (diff: {disc['step4_to_enhanced_diff']:+})")
+                logger.info(f"  FINAL DISCREPANCY vs Box: Traditional={disc['box_to_traditional_diff']:+}, Enhanced={disc['box_to_enhanced_diff']:+}")
+
+            return ValidationResult(
+                step_name="Enhanced Points Attribution Audit",
+                passed=True,
+                details=f"Comprehensive audit completed. Key finding: HOU has {audit_results['discrepancies']['HOU']['box_to_enhanced_diff']:+} point discrepancy. Check {out_dir} for detailed analysis.",
+                processing_time=time.time() - start_time
+            )
+
+        except Exception as e:
+            return ValidationResult(
+                step_name="Enhanced Points Attribution Audit",
+                passed=False,
+                details=f"Error creating enhanced audit: {e}",
+                processing_time=time.time() - start_time
+            )
+            # Build a temp teams map if needed
+            teams_df = pd.DataFrame()
+            if "teams" in existing_tables:
+                teams_df = self.conn.execute("SELECT DISTINCT team_id, team_abbrev FROM teams").df()
+            elif "box_score" in existing_tables:
+                teams_df = self.conn.execute("SELECT DISTINCT team_id, team_abbrev FROM box_score").df()
+
+            # Register map if we had to synthesize
+            if not teams_df.empty:
+                self.conn.register("teams_temp_map", teams_df)
+                try:
+                    step4_df = self.conn.execute("""
+                        SELECT m.team_abbrev, SUM(se.points) AS step4_points
+                        FROM step4_processed_events se
+                        JOIN teams_temp_map m ON m.team_id = se.off_team_id
+                        WHERE se.points > 0
+                        GROUP BY m.team_abbrev
+                        ORDER BY m.team_abbrev
+                    """).df()
+                finally:
+                    self.conn.unregister("teams_temp_map")
+            else:
+                # fallback: just sum by team id if we cannot resolve abbrev
+                step4_df = self.conn.execute("""
+                    SELECT CAST(off_team_id AS VARCHAR) AS team_abbrev, SUM(points) AS step4_points
+                        FROM step4_processed_events
+                        WHERE points > 0
+                        GROUP BY off_team_id
+                    """).df()
+
+            # 4) Merge the three sources into one side-by-side table
+            merged = None
+            try:
+                merged = box_df.copy()
+                if not step4_df.empty:
+                    merged = merged.merge(step4_df, on="team_abbrev", how="outer")
+                if not lineup_df.empty:
+                    for method in lineup_df['method'].unique():
+                        sub = lineup_df[lineup_df['method'] == method][["team_abbrev", "lineup_points_for"]].rename(
+                            columns={"lineup_points_for": f"lineup_points_for_{method}"}
+                        )
+                        merged = merged.merge(sub, on="team_abbrev", how="outer")
+                # diffs
+                if "box_points" in merged.columns and "lineup_points_for_traditional" in merged.columns:
+                    merged["diff_traditional_vs_box"] = merged["lineup_points_for_traditional"] - merged["box_points"]
+                if "box_points" in merged.columns and "lineup_points_for_enhanced" in merged.columns:
+                    merged["diff_enhanced_vs_box"] = merged["lineup_points_for_enhanced"] - merged["box_points"]
+            except Exception:
+                pass
+
+            if merged is not None:
+                merged.to_csv(out_dir / "001_dual_vs_box_points.csv", index=False)
+
+            # 5) Identify unattributed scoring events per method (needs step4)
+            if "step4_processed_events" in existing_tables:
+                # detect a time column to help downstream inspection
+                cols = [r[1] for r in self.conn.execute("PRAGMA table_info('step4_processed_events')").fetchall()]
+                time_col = next((c for c in ["order_ts","abs_time","wall_clock_int","pbp_order","eventnum"] if c in cols), None)
+
+                def dump_unattr(method: str, lineup_col: str):
+                    sql = f"""
+                        SELECT se.*
+                        FROM step4_processed_events se
+                        WHERE se.points > 0
+                        AND (
+                            {lineup_col} IS NULL
+                            OR TRIM(CAST({lineup_col} AS VARCHAR)) = ''
+                            OR TRIM(CAST({lineup_col} AS VARCHAR)) = '[]'
+                        )
+                    """
+                    df = self.conn.execute(sql).df()
+                    if time_col and time_col in df.columns:
+                        df = df.sort_values(time_col)
+                    df.to_csv(out_dir / f"020_unattributed_scoring_events_{method}.csv", index=False)
+                    return df
+
+                trad_df = dump_unattr("traditional", "traditional_off_lineup") if "traditional_off_lineup" in cols else pd.DataFrame()
+                enh_df  = dump_unattr("enhanced", "enhanced_off_lineup")       if "enhanced_off_lineup" in cols       else pd.DataFrame()
+
+                # 6) Coverage table: how many scoring events had a valid lineup?
+                coverage_rows = []
+                for method, lineup_col in [("traditional","traditional_off_lineup"), ("enhanced","enhanced_off_lineup")]:
+                    if lineup_col not in cols:
+                        continue
+                    tot = int(self.conn.execute("SELECT COUNT(*) FROM step4_processed_events WHERE points > 0").fetchone()[0])
+                    ok = int(self.conn.execute(f"""
+                        SELECT COUNT(*)
+                        FROM step4_processed_events
+                        WHERE points > 0
+                        AND {lineup_col} IS NOT NULL
+                        AND TRIM(CAST({lineup_col} AS VARCHAR)) NOT IN ('','[]')
+                    """).fetchone()[0])
+                    coverage_rows.append({
+                        "method": method,
+                        "scoring_event_count": tot,
+                        "with_valid_off_lineup": ok,
+                        "coverage_pct": (ok / tot * 100.0) if tot > 0 else 0.0
+                    })
+                pd.DataFrame(coverage_rows).to_csv(out_dir / "030_scoring_event_lineup_coverage.csv", index=False)
+
+                # 7) Team-level unattributed points (quick lens on HOU -4)
+                team_unattr_rows = []
+                for method, lineup_col in [("traditional","traditional_off_lineup"), ("enhanced","enhanced_off_lineup")]:
+                    if lineup_col not in cols:
+                        continue
+                    team_map_df = pd.DataFrame()
+                    if "teams" in existing_tables:
+                        team_map_df = self.conn.execute("SELECT DISTINCT team_id, team_abbrev FROM teams").df()
+                    elif "box_score" in existing_tables:
+                        team_map_df = self.conn.execute("SELECT DISTINCT team_id, team_abbrev FROM box_score").df()
+                    if not team_map_df.empty:
+                        self.conn.register("teams_temp_map2", team_map_df)
+                        try:
+                            unattributed = self.conn.execute(f"""
+                                SELECT m.team_abbrev, SUM(se.points) AS unattributed_points
+                                FROM step4_processed_events se
+                                JOIN teams_temp_map2 m ON m.team_id = se.off_team_id
+                                WHERE se.points > 0
+                                AND ({lineup_col} IS NULL
+                                    OR TRIM(CAST({lineup_col} AS VARCHAR)) IN ('','[]'))
+                                GROUP BY m.team_abbrev
+                                ORDER BY m.team_abbrev
+                            """).df()
+                        finally:
+                            self.conn.unregister("teams_temp_map2")
+                        unattributed.to_csv(out_dir / f"040_unattributed_points_by_team_{method}.csv", index=False)
+                        team_unattr_rows.append((method, unattributed))
+
+            return ValidationResult(
+                step_name="Points Attribution Audit",
+                passed=True,
+                details=f"Wrote audit CSVs to {out_dir}",
+                processing_time=time.time() - start_time
+            )
+        except Exception as e:
+            return ValidationResult(
+                step_name="Points Attribution Audit",
+                passed=False,
+                details=f"Error creating audit: {e}",
+                processing_time=time.time() - start_time
+            )
+
+
+
+
+def run_dual_method_final_export(db_path: str = "mavs_enhanced.duckdb") -> Tuple[bool, DualMethodFinalValidator]:
+    """Run dual-method final validation and export for both traditional and enhanced approaches"""
+    print("NBA Pipeline - Step 6: Dual-Method Final Validation & Export")
+    print("="*70)
+
+    with DualMethodFinalValidator(db_path) as validator:
+        results = []
+
+        # Step 6a
+        logger.info("Step 6a: Validating dual-method tables...")
+        table_result = validator.validate_dual_method_tables_exist()
+        results.append(table_result)
+        if not table_result.passed:
+            logger.error("Dual-method tables validation failed - stopping")
+            return False, validator
+
+        # Step 6b
+        logger.info("Step 6b: Validating against box score (dual-method)...")
+        box_score_result = validator.validate_against_box_score_dual()
+        results.append(box_score_result)
+        if not box_score_result.passed:
+            logger.warning("Box score validation issues detected.")
+            logger.warning(box_score_result.details)   # richer per-team info
+            for w in box_score_result.warnings:
+                logger.warning(w)
+
+        # >>> NEW: DEBUG AUDIT right after the mismatch appears <<<
+        logger.info("Step 6b.1: Running points attribution audit (debug-only)...")
+        audit_result = validator.export_points_attribution_audit()
+        results.append(audit_result)
+        if not audit_result.passed:
+            logger.warning(f"Audit issues: {audit_result.details}")
+        # <<< END NEW >>>
+
+        # Step 6c
+        logger.info("Step 6c: Validating data completeness (dual-method)...")
+        completeness_result = validator.validate_data_completeness()
+        results.append(completeness_result)
+        if not completeness_result.passed:
+            logger.warning(f"Data completeness issues: {completeness_result.details}")
+
+        # Step 6d
+        logger.info("Step 6d: Exporting project deliverables (dual-method)...")
+        export_result = validator.export_project_deliverables()
+        results.append(export_result)
+        if not export_result.passed:
+            logger.error(f"Export failed: {export_result.details}")
+            return False, validator
+
+        # Step 6e
+        logger.info("Step 6e: Exporting violation reports...")
+        violation_result = validator.export_violation_reports()
+        results.append(violation_result)
+        if not violation_result.passed:
+            logger.warning(f"Violation export had issues: {violation_result.details}")
+
+        # Step 6f
+        logger.info("Step 6f: Exporting method comparison reports...")
+        comparison_result = validator.export_method_comparison_reports()
+        results.append(comparison_result)
+        if not comparison_result.passed:
+            logger.warning(f"Comparison export had issues: {comparison_result.details}")
+
+        # Step 6g
+        logger.info("Step 6g: Generating comprehensive quality report...")
+        quality_result = validator.generate_quality_report()
+        results.append(quality_result)
+        if not quality_result.passed:
+            logger.warning(f"Quality report issues: {quality_result.details}")
+
+        # Summary
+        validator.print_final_summary()
+
+        critical_failures = [r for r in results if not r.passed and r.step_name in 
+                           ["Validate Dual-Method Tables", "Export Project Deliverables"]]
+        success = len(critical_failures) == 0
+        return success, validator
+
+
+
+# Example usage
+if __name__ == "__main__":
+    from eda.data.nba_possession_engine import run_dual_method_possession_engine
+
+    database_path = "mavs_enhanced.duckdb"
+
+    # Run Step 5 first to ensure dual-method data is available
+    print("Running Step 5: Dual-Method Possession Engine...")
+    step5_success = run_dual_method_possession_engine(database_path)
+    if not step5_success:
+        print("❌ Step 5 failed - dual-method data not available")
+        exit(1)
+
+    # Run Step 6: Dual-Method Final Export
+    print("\nRunning Step 6: Dual-Method Final Export...")
+    success, validator = run_dual_method_final_export(database_path)
+
+    if success:
+        print("\n✅ Step 6 Complete: Dual-method results validated and exported")
+        print("📊 Exported files:")
+        print("   - project1_lineups_traditional.csv")
+        print("   - project1_lineups_enhanced.csv") 
+        print("   - project2_players_traditional.csv")
+        print("   - project2_players_enhanced.csv")
+        print("   - traditional_lineup_violations.csv")
+        print("   - method_comparison_summary.csv")
+        print("   - method_effectiveness_report.txt")
+        print("   - base_dataset_violations.txt")
+        print("🎯 Both traditional and enhanced methods ready for project submission")
+    else:
+        print("\n❌ Step 6 Failed: Dual-method validation errors")
+        print("🔧 Review validation messages above and fix export issues")
+

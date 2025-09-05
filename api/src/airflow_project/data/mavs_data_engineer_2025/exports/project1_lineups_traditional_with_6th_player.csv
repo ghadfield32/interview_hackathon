@@ -1,0 +1,21 @@
+Team,Player 1,Player 2,Player 3,Player 4,Player 5,Player 6,Lineup Size,Offensive possessions played,Defensive possessions played,Offensive rating,Defensive rating,Net rating
+DAL,Kyrie Irving,Klay Thompson,Anthony Davis,P.J. Washington,Daniel Gafford,,5,34,34,97.1,58.8,38.2
+DAL,Klay Thompson,Anthony Davis,Dante Exum,P.J. Washington,,,4,25,25,80.0,84.0,-4.0
+DAL,Klay Thompson,Spencer Dinwiddie,P.J. Washington,Daniel Gafford,,,4,24,21,41.7,128.6,-86.9
+DAL,Klay Thompson,Anthony Davis,Spencer Dinwiddie,P.J. Washington,,,4,22,23,59.1,52.2,6.9
+DAL,Klay Thompson,P.J. Washington,Daniel Gafford,Max Christie,,,4,21,24,123.8,70.8,53.0
+DAL,Klay Thompson,Spencer Dinwiddie,Daniel Gafford,Max Christie,,,4,3,6,233.3,50.0,183.3
+DAL,Kyrie Irving,Klay Thompson,Anthony Davis,Spencer Dinwiddie,P.J. Washington,Daniel Gafford,6,2,5,100.0,40.0,60.0
+DAL,Kyrie Irving,Klay Thompson,P.J. Washington,Daniel Gafford,,,4,2,3,200.0,133.3,66.7
+HOU,Steven Adams,Jae'Sean Tate,Cam Whitmore,Reed Sheppard,,,4,37,36,110.8,83.3,27.5
+HOU,Dillon Brooks,Jalen Green,Alperen Sengun,Tari Eason,Amen Thompson,,5,26,25,57.7,104.0,-46.3
+HOU,Jalen Green,Alperen Sengun,Tari Eason,Amen Thompson,,,4,18,17,61.1,70.6,-9.5
+HOU,Steven Adams,Aaron Holiday,Jae'Sean Tate,Cam Whitmore,Reed Sheppard,,5,10,10,50.0,60.0,-10.0
+HOU,Steven Adams,Jae'Sean Tate,Amen Thompson,Reed Sheppard,,,4,9,5,66.7,140.0,-73.3
+HOU,Steven Adams,Jae'Sean Tate,Tari Eason,Cam Whitmore,,,4,9,8,33.3,150.0,-116.7
+HOU,Steven Adams,Dillon Brooks,Jae'Sean Tate,Amen Thompson,Reed Sheppard,,5,8,9,50.0,66.7,-16.7
+HOU,Aaron Holiday,Jae'Sean Tate,Tari Eason,Cam Whitmore,Reed Sheppard,,5,7,4,28.6,150.0,-121.4
+HOU,Aaron Holiday,Jae'Sean Tate,Amen Thompson,Cam Whitmore,Reed Sheppard,,5,6,6,116.7,100.0,16.7
+HOU,Steven Adams,Aaron Holiday,Jae'Sean Tate,Tari Eason,Amen Thompson,Reed Sheppard,6,5,6,80.0,16.7,63.3
+HOU,Steven Adams,Dillon Brooks,Aaron Holiday,Jae'Sean Tate,Amen Thompson,Reed Sheppard,6,3,3,133.3,66.7,66.7
+HOU,Steven Adams,Jalen Green,Jae'Sean Tate,Tari Eason,,,4,3,4,133.3,25.0,108.3

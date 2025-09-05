@@ -1,0 +1,8 @@
+method,team_id,team_abbrev,lineup_player_ids_json,occurrences,lineup_player_names_json
+traditional,1610612742,DAL,"[202681, 202691, 203076, 1629023, 1629655]",160,"[""Kyrie Irving"", ""Klay Thompson"", ""Anthony Davis"", ""P.J. Washington"", ""Daniel Gafford""]"
+traditional,1610612742,DAL,"[202681, 202691, 203076, 203915, 1629023]",1,"[""Kyrie Irving"", ""Klay Thompson"", ""Anthony Davis"", ""Spencer Dinwiddie"", ""P.J. Washington""]"
+traditional,1610612742,DAL,"[202681, 202691, 203076, 203957, 1629023]",1,"[""Kyrie Irving"", ""Klay Thompson"", ""Anthony Davis"", ""Dante Exum"", ""P.J. Washington""]"
+traditional,1610612745,HOU,"[1628415, 1630224, 1630578, 1631106, 1641708]",133,"[""Dillon Brooks"", ""Jalen Green"", ""Alperen Sengun"", ""Tari Eason"", ""Amen Thompson""]"
+traditional,1610612745,HOU,"[203500, 1628415, 1630224, 1630578, 1641708]",66,"[""Steven Adams"", ""Dillon Brooks"", ""Jalen Green"", ""Alperen Sengun"", ""Amen Thompson""]"
+traditional,1610612745,HOU,"[203500, 1628415, 1628988, 1630578, 1641708]",11,"[""Steven Adams"", ""Dillon Brooks"", ""Aaron Holiday"", ""Alperen Sengun"", ""Amen Thompson""]"
+traditional,1610612745,HOU,"[203500, 1630224, 1630256, 1631106, 1641715]",1,"[""Steven Adams"", ""Jalen Green"", ""Jae'Sean Tate"", ""Tari Eason"", ""Cam Whitmore""]"

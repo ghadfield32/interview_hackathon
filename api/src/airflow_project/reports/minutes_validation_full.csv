@@ -1,0 +1,22 @@
+player_id,player_name,team,calc_seconds,box_seconds,abs_diff_seconds,segments_count
+203076,Anthony Davis,DAL,1856.2,1856.0,0.2,3
+1629655,Daniel Gafford,DAL,1548.6,1548.0,0.6,6
+203957,Dante Exum,DAL,1503.0,1261.0,242.0,6
+1630556,Kessler Edwards,DAL,37.2,37.0,0.2,1
+202691,Klay Thompson,DAL,1207.0,1308.0,101.0,4
+202681,Kyrie Irving,DAL,2273.6,2496.0,222.4,7
+1631108,Max Christie,DAL,1853.0,1951.0,98.0,6
+1630230,Naji Marshall,DAL,1668.0,1500.0,168.0,6
+1641765,Olivier-Maxence Prosper,DAL,37.2,37.0,0.2,1
+1629023,P.J. Washington,DAL,1051.0,972.0,79.0,4
+203915,Spencer Dinwiddie,DAL,1365.2,1432.0,66.8,6
+1628988,Aaron Holiday,HOU,203.3,203.0,0.3,2
+1630578,Alperen Sengun,HOU,2374.0,2265.0,109.0,5
+1641708,Amen Thompson,HOU,2106.0,2215.0,109.0,5
+1641715,Cam Whitmore,HOU,1151.0,1186.0,35.0,5
+1628415,Dillon Brooks,HOU,2300.7,2203.0,97.7,7
+1630256,Jae'Sean Tate,HOU,244.0,306.0,62.0,3
+1630224,Jalen Green,HOU,2576.0,2471.0,105.0,6
+1642263,Reed Sheppard,HOU,307.0,433.0,126.0,2
+203500,Steven Adams,HOU,1250.2,1338.0,87.8,7
+1631106,Tari Eason,HOU,1887.8,1778.0,109.8,9

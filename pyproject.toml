@@ -1,18 +1,17 @@
 [project]
-name = "react_fastapi_railway"
-version = "0.1.0"
-description = "Pytorch and Jax GPU docker container"
+name = "nba_data_engineering"
+version = "0.2.0"
+description = "NBA lineup analysis and player rim defense data pipeline"
 authors = [
-  { name = "Geoffrey Hadfield" },
+  { name = "Data Engineering Team" },
 ]
 license = "MIT"
 readme = "README.md"
 
-# ─── Restrict to Python 3.10–3.12 ──────────────────────────────
 requires-python = ">=3.10,<3.13"
 
 dependencies = [
-  # Core web framework
+  # Core web framework and API
   "fastapi>=0.104.0",
   "uvicorn[standard]>=0.24.0",
   "python-dotenv>=1.0.0",
@@ -21,76 +20,115 @@ dependencies = [
   "pydantic>=2.0.0",
   "pydantic-settings>=2.0.0",
 
-  # HTTP client and multipart parsing
-  "httpx>=0.24.0",
-  "python-multipart>=0.0.6",
+  # Data processing core
+  "pandas>=2.1.0,<2.3.0",
+  "numpy>=1.24.0,<1.27.0",
+  "pyarrow>=12.0.0,<16.0.0",
 
-  # Data & ML basics
-  "numpy>=1.24.0",
-  "pandas>=2.1.0",
-  "scikit-learn>=1.3.0",
-  "mlflow>=2.8.0",
+  # High-performance analytics
+  "duckdb>=0.10.0,<0.11.0",
 
-  # (Your existing extras—keep if you still need them)
-  "matplotlib>=3.4.0",
-  "pymc>=5.0.0",
-  "arviz>=0.14.0",
-  "statsmodels>=0.13.0",
+  # Airflow and orchestration
+  "apache-airflow==2.10.4",
+  "apache-airflow-providers-postgres>=6.2.1,<7.0.0",
+  "apache-airflow-providers-standard>=1.4.1,<2.0.0",
+  "apache-airflow-providers-http>=4.5.0,<5.0.0",
+
+  # Database connectivity
+  "sqlalchemy>=1.4.49,<2.0.0",
+  "psycopg2-binary>=2.9.9",
+
+  # Data quality and validation
+  "tabulate>=0.9.0",
+  "scipy>=1.7.0,<1.12.0",
+
+  # Development and analysis
   "jupyterlab>=3.0.0",
   "seaborn>=0.11.0",
-  "tabulate>=0.9.0",
-  "shap>=0.40.0",
-  "xgboost>=1.5.0",
-  "lightgbm>=3.3.0",
-  "catboost>=1.2.8,<1.3.0",
-  "scipy>=1.7.0",
-  "shapash[report]>=2.3.0",
-  "shapiq>=0.1.0",
-  "explainerdashboard==0.5.1",
-  "ipywidgets>=8.0.0",
-  "nutpie>=0.7.1",
-  "numpyro>=0.18.0,<1.0.0",
-  "jax==0.6.0",
-  "jaxlib==0.6.0",
-  "pytensor>=2.18.3",
-  "aesara>=2.9.4",
+  "matplotlib>=3.4.0",
+  "ipykernel>=6.25.0",
+
+  # Utilities
   "tqdm>=4.67.0",
-  "pyarrow>=12.0.0",
-  "optuna>=3.0.0",
-  "optuna-integration[mlflow]>=0.2.0",
-  "omegaconf>=2.3.0,<2.4.0",
-  "hydra-core>=1.3.2,<1.4.0",
-  "aiosqlite>=0.19.0", 
+  "psutil>=5.0.0,<8.0.0",
   "python-jose[cryptography]>=3.3.0",
   "passlib[bcrypt]>=1.7.4",
-  "bcrypt==4.0.1",  # Pin bcrypt version to resolve warning
-  # Rate limiting
-  "fastapi-limiter>=0.1.5",
-  "aioredis>=2.0.0",
-  "httpx>=0.24.0",
-  "psutil>=5.0.0,<8.0.0",
-  "ipykernel>=6.25.0",
+  "bcrypt==4.0.1",
 ]
 
 [project.optional-dependencies]
 dev = [
   "pytest>=7.0.0",
+  "pytest-cov>=4.0.0",
   "black>=23.0.0",
   "isort>=5.0.0",
   "flake8>=5.0.0",
   "mypy>=1.0.0",
-  "invoke>=2.2",
+  "pre-commit>=3.0.0",
 ]
 
-cuda = [
-  "cupy-cuda12x>=12.0.0",
+test = [
+  "pytest>=7.0.0",
+  "pytest-cov>=4.0.0",
+  "pytest-mock>=3.10.0",
+  "pytest-xdist>=3.0.0",
 ]
 
-[tool.pytensor]
-device    = "cuda"
-floatX    = "float32"
-allow_gc  = true
-optimizer = "fast_run"
+performance = [
+  "memory-profiler>=0.60.0",
+  "py-spy>=0.3.14",
+]
 
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
 
+[tool.black]
+line-length = 100
+target-version = ['py310', 'py311', 'py312']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
 
+[tool.isort]
+profile = "black"
+line_length = 100
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "-v",
+    "--strict-markers",
+    "--tb=short",
+    "--cov=eda",
+    "--cov=utils",
+    "--cov-report=html",
+    "--cov-report=term-missing"
+]
+markers = [
+    "slow: marks tests as slow",
+    "integration: marks tests as integration tests",
+    "unit: marks tests as unit tests",
+]

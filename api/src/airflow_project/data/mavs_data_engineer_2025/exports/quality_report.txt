@@ -1,0 +1,33 @@
+NBA PLAY-BY-PLAY PIPELINE - QUALITY REPORT
+================================================================================
+Generated: 2025-09-05 18:45:30
+
+PIPELINE EXECUTION SUMMARY:
+  Total Validation Steps: 0
+  Passed: 0
+  Failed: 0
+  Total Warnings: 0
+
+VALIDATION STEP DETAILS:
+DATA QUALITY METRICS:
+
+  LINEUP STATISTICS:
+    Total Records: 27
+    Avg Offensive Possessions: 6.8
+    Avg Defensive Possessions: 6.8
+    Avg Offensive Rating: 113.2
+    Avg Defensive Rating: 123.3
+
+  PLAYER RIM DEFENSE:
+    Player Records: 21
+    Avg Rim Attempts (On): 10.95
+    Avg Rim Attempts (Off): 12.24
+    Avg Rim Makes (On): 5.95
+    Avg Rim Makes (Off): 6.52
+    Avg Rim FG% (On): 59.1%
+    Avg Rim FG% (Off): 59.8%
+    Avg On/Off Difference: -0.019
+    Rim Attempts per Def Possession (On): 0.2155
+    Rim Attempts per Def Possession (Off): 1.2158
+    Rim Attempts per 100 Def Poss (On): 21.55
+    Rim Attempts per 100 Def Poss (Off): 121.58

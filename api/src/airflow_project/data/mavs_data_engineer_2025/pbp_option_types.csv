@@ -1,0 +1,17 @@
+Event,EventType,Option1,Option2,Option3,Option4,Description
+MadeShot,1,Points,"0 = not fast break
+1 = fast break",,,Indicates the number of points (2 or 3)
+MissedShot,2,Points,"0 = not fast break
+1 = fast break",,,Indicates a 2-pt or 3-pt shot
+FreeThrow,3,1,"0 = not fast break
+1 = fast break",Points,,Made Free Throw
+FreeThrow,3,2,"0 = not fast break
+1 = fast break",0,,Missed Free Throw
+FreeThrow,3,6,"0 = not fast break
+1 = fast break",0,,Shooter Lane Violation
+Rebound,4,0,,,,Defensive Rebound
+Rebound,4,1,,,,Offensive Rebound
+Turnover,5,1,,,,Indicates that a steal occurred
+Foul,6,"0 = not in penalty
+1 = in penalty","0 = not fast break
+1 = fast break",Shots,,Indicates the number of upcoming free throw attempts if applicable
